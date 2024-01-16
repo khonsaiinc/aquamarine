@@ -1,9 +1,10 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: เกมส์มีปัญหา กดแจ้ง "ที่นี่"
 title: ''
-labels: ''
+labels: 'bug'
 assignees: ''
+projects: 'khonsaiinc/3'
 
 ---
 
