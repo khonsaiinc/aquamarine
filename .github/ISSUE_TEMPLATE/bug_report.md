@@ -1,10 +1,10 @@
 ---
 name: Bug report
 about: เกมส์มีปัญหา กดแจ้ง "ที่นี่"
-title: ''
+title: '[Bug Report]: '
 labels: 'bug'
 assignees: ''
-projects: 'khonsaiinc/projects/3'
+projects: ["khonsaiinc/projects/3"]
 
 ---
 
