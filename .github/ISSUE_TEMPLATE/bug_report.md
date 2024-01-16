@@ -4,7 +4,6 @@ about: เกมส์มีปัญหา กดแจ้ง "ที่นี�
 title: '[Bug Report]: '
 labels: 'bug'
 assignees: ''
-projects: 'aquamarine's bug tracker'
 
 ---
 
