@@ -1,5 +1,5 @@
 name: Test Build in Play Mode
-on: [pull_request, workflow_dispatch]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
   testAllModes:
