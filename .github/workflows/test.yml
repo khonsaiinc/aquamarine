@@ -1,4 +1,4 @@
-name: Test Build in Playmode
+name: Test Build (Unity)
 on:
   push:
     branches: [ "develop", "main" ]
