@@ -1,9 +1,10 @@
-name: Test Build in Play Mode
+name: Test Build in Playmode
 on:
   push:
     branches: [ "develop" ]
   pull_request:
     branches: [ "develop" ]
+    
   workflow_dispatch:
 
 jobs:
