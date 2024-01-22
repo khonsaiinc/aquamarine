@@ -9,10 +9,13 @@ on:
   
 jobs:
   test:
-    name: run test (prepare)
+    name: test build
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
     steps:
       # Checkout (without LFS)
       - name: Checkout repository
@@ -45,3 +48,19 @@ jobs:
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           unityVersion: 2022.3.17f1
+          
+      # Build
+      - name: Build project
+        uses: game-ci/unity-builder@v4
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
+
+      # Output
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
