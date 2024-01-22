@@ -6,49 +6,32 @@ on:
     branches: [ "develop" ]
     
   workflow_dispatch:
-
+  
 jobs:
-  testAllModes:
-    name: Test in ${{ matrix.testMode }}
+  test:
+    name: Test my project 🧪
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        projectPath:
-          - aquamarine
-        testMode:
-          - playmode
     steps:
-      - uses: actions/checkout@v4
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           lfs: true
+
+      # Cache
       - uses: actions/cache@v3
         with:
-          path: ${{ matrix.projectPath }}/Library
-          key: Library-${{ matrix.projectPath }}
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
           restore-keys: |
             Library-
-      - uses: game-ci/unity-test-runner@v4
-        id: aquamarine
+
+      # Test
+      - name: Run tests
+        uses: game-ci/unity-test-runner@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
-          unityVersion: 2022.3.17f1
-          projectPath: ${{ matrix.projectPath }}
-          testMode: ${{ matrix.testMode }}
-          artifactsPath: ${{ matrix.testMode }}-artifacts
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          checkName: ${{ matrix.testMode }} Test Results
-          # coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: Test results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.artifactsPath }}
-      - uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: Coverage results for ${{ matrix.testMode }}
-          path: ${{ steps.tests.outputs.coveragePath }}
