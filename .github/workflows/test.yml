@@ -15,11 +15,9 @@ jobs:
       fail-fast: false
       matrix:
         projectPath:
-          - test-project
+          - aquamarine
         testMode:
           - playmode
-          - editmode
-          - standalone
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,7 +41,7 @@ jobs:
           artifactsPath: ${{ matrix.testMode }}-artifacts
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: ${{ matrix.testMode }} Test Results
-          # coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
+          coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
       - uses: actions/upload-artifact@v3
         if: always()
         with:
