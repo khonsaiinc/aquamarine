@@ -1,5 +1,5 @@
 name: Test Build in Play Mode
-on: [workflow_dispatch]
+on: workflow_dispatch
 
 jobs:
   testAllModes:
