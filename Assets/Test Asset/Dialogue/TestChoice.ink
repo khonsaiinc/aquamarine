@@ -1,6 +1,6 @@
 -> Testline
 === Testline ===
-1 #speaker:girl #portait:girl_speaking
+1 #speaker:girl #portait:girl_speaking #layout:left
 2
 3
 
