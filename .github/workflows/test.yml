@@ -1,7 +1,7 @@
 name: Test Build (Unity)
 on:
   push:
-    branches: [ "develop", "main" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "develop" ]
     
