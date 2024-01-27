@@ -1,13 +1,7 @@
--> Testline
-=== Testline ===
-1 #speaker:girl #portait:girl_speaking #layout:left
-2
-3
-
 -> main
 === main ===
-
-Foods Menu
+Hungry? #speaker:>w0 #portait:girl_speaking
+So, what do you want to eat?#speaker:>w0 #portait:girl_question
     +[Spicy prawn soup]
         -> chosen("Spicy prawn soup")
     +[Fried rice]
@@ -16,13 +10,9 @@ Foods Menu
         -> chosen("Papaya salad")
 
 === chosen(Food) ===
-
-Chosen {Food}!
-
--> Testline2
-=== Testline2 ===
-
-3
-2
-1
+I want to eat {Food}.#speaker:player #portait:player_speaking
+Even though I'm not sure if it will make it maybe not delicious.#speaker:>w0 #portait:girl_idle
+But I'll try. hehehe~~~~#speaker:>w0 #portait:girl_fighting
+Thank you.#speaker:player #portait:player_smile
+Your welcome.#speaker:>w0 #portait:girl_smile
 -> END

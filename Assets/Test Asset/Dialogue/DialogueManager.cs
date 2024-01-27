@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] TextMeshProUGUI dialogueText;
+    [SerializeField] TextMeshProUGUI displayNameText;
+    [SerializeField] Animator portaitAnimator;
 
     [Header("Choice UI")]
     [SerializeField] GameObject[] choices;
@@ -18,6 +20,9 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying{get;set;}
 
     static DialogueManager instance;
+
+    const string SPEAKER_TAG = "speaker";
+    const string PORTRAIT_TAG = "portait";
 
     void Awake()
     {
@@ -67,6 +72,9 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        
+        displayNameText.text = "???";
+        portaitAnimator.Play("default");
 
         ContinueStory();
     }
@@ -76,12 +84,41 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
+            HandleTags(currentStory.currentTags);
         }
         else
         {
             StartCoroutine(ExitDialogueMode());
         }
     }
+
+    void HandleTags(List<string> currentTags)
+    {
+        foreach(string tag in currentTags)
+        {
+            string[] splitTag = tag.Split(':');
+            if(splitTag.Length !=2)
+            {
+                Debug.LogError("Tag have more 1");
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            switch(tagKey)
+            {
+                case SPEAKER_TAG:
+                    displayNameText.text = tagValue;
+                    break;
+                case PORTRAIT_TAG:
+                    portaitAnimator.Play(tagValue);
+                    break;
+                default:
+                    Debug.LogWarning("Tag not current");
+                    break;
+            }
+        }
+    }
+
     IEnumerator ExitDialogueMode()
     {
         Debug.Log("End Dialogue");
