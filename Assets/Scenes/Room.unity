@@ -450,8 +450,8 @@ GameObject:
   m_Component:
   - component: {fileID: 250414740}
   - component: {fileID: 250414741}
-  - component: {fileID: 250414743}
   - component: {fileID: 250414742}
+  - component: {fileID: 250414743}
   m_Layer: 0
   m_Name: Door room
   m_TagString: Untagged
@@ -580,9 +580,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 250414739}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e72b5f3f281a21e4789bf11741ad2b61, type: 3}
+  m_Script: {fileID: 11500000, guid: fd724da27e549cc4d85bbf8f0cf582b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door: {fileID: 202298274}
 --- !u!1 &452401758
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,8 +643,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choice 3
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
+  m_sharedMaterial: {fileID: 5291627720097369775, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1375,8 +1376,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
+  m_sharedMaterial: {fileID: 5291627720097369775, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1593,8 +1594,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
+  m_sharedMaterial: {fileID: 5291627720097369775, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2013,8 +2014,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choice 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
+  m_sharedMaterial: {fileID: 5291627720097369775, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2368,8 +2369,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Choice 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
+  m_sharedMaterial: {fileID: 5291627720097369775, guid: 9eab9eb19930f7d48af5a182dd4390c3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2525,7 +2526,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1474778255}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545354269}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1474778255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2762,6 +2775,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 634321229}
   dialogueText: {fileID: 998782946}
+  displayNameText: {fileID: 951654779}
+  portaitAnimator: {fileID: 729928872}
   choices:
   - {fileID: 638021054}
   - {fileID: 1764671970}
@@ -3164,7 +3179,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1764671973}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1545354269}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1764671973
 MonoBehaviour:
   m_ObjectHideFlags: 0
