@@ -21,8 +21,8 @@ public class DialogueManager : MonoBehaviour
 
     static DialogueManager instance;
 
-    const string SPEAKER_TAG = "speaker";
-    const string PORTRAIT_TAG = "portait";
+    const string SPEAKER_TAG = "character";
+    const string PORTRAIT_TAG = "image";
 
     void Awake()
     {

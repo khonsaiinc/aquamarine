@@ -1,7 +1,7 @@
 -> main
 === main ===
-Hungry? #speaker:>w0 #portait:girl_speaking
-So, what do you want to eat?#speaker:>w0 #portait:girl_question
+Hungry? #character:>w0 #image:girl_speaking
+So, what do you want to eat?#character:>w0 #image:girl_question
     +[Spicy prawn soup]
         -> chosen("Spicy prawn soup")
     +[Fried rice]
@@ -10,9 +10,9 @@ So, what do you want to eat?#speaker:>w0 #portait:girl_question
         -> chosen("Papaya salad")
 
 === chosen(Food) ===
-I want to eat {Food}.#speaker:player #portait:player_speaking
-Even though I'm not sure if it will make it maybe not delicious.#speaker:>w0 #portait:girl_idle
-But I'll try. hehehe~~~~#speaker:>w0 #portait:girl_fighting
-Thank you.#speaker:player #portait:player_smile
-Your welcome.#speaker:>w0 #portait:girl_smile
+I want to eat {Food}.#character:player #image:player_speaking
+Even though I'm not sure if it will make it maybe not delicious.#character:>w0 #image:girl_idle
+But I'll try. hehehe~~~~#character:>w0 #image:girl_fighting
+Thank you.#character:player #image:player_smile
+Your welcome.#character:>w0 #image:girl_smile
 -> END
