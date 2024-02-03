@@ -22,14 +22,14 @@ public class DialogueManager1 : MonoBehaviour
     static DialogueManager1 instance;
 
     void Awake()
+{
+    if (instance != null)
     {
-        if(instance != null)
-        {
-            
-        }
-        instance = this;
-
+        Destroy(gameObject); // Destroy duplicate instances
+        return;
     }
+    instance = this;
+}
 
     public static DialogueManager1 GetInstance()
     {
@@ -77,17 +77,17 @@ public class DialogueManager1 : MonoBehaviour
         ContinueStory();
     }
     void ContinueStory()
+{
+    if (currentStory != null && currentStory.canContinue)
     {
-        if(currentStory.canContinue)
-        {
-            dialogueText.text = currentStory.Continue();
-            DisplayChoices();
-        }
-        else
-        {
-            StartCoroutine(ExitDialogueMode());
-        }
+        dialogueText.text = currentStory.Continue();
+        DisplayChoices();
     }
+    else
+    {
+        StartCoroutine(ExitDialogueMode());
+    }
+}
     IEnumerator ExitDialogueMode()
     {
         Debug.Log("End Dialogue");
