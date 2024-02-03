@@ -1755,7 +1755,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: -2123486336, guid: e80d5fb0eaaecd4489a484d680dbca65, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.26, y: 0.86}
@@ -1939,8 +1939,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1203985065}
-  - component: {fileID: 1203985066}
   - component: {fileID: 1203985067}
+  - component: {fileID: 1203985068}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -1963,20 +1963,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 202298275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1203985066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203985064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 030c997e2247c374c9b3963077287c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactIcon: {fileID: 116062567}
-  inkJSON: {fileID: 4900000, guid: 5fdc3d825d86fad449c8f7f6e72e5e37, type: 3}
 --- !u!61 &1203985067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2022,6 +2008,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0933323, y: 3.8771896}
   m_EdgeRadius: 0
+--- !u!114 &1203985068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203985064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 030c997e2247c374c9b3963077287c08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactIcon: {fileID: 116062567}
+  inkJSON: {fileID: 4900000, guid: 5fdc3d825d86fad449c8f7f6e72e5e37, type: 3}
 --- !u!1 &1269367667
 GameObject:
   m_ObjectHideFlags: 0
