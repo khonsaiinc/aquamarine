@@ -61,17 +61,17 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if(currentStory.currentChoices.Count == 0 && Input.GetMouseButtonDown(0))
+        /*if(currentStory.currentChoices.Count == 0 && Input.GetMouseButtonDown(0))
         {
             Debug.Log("Click");
             ContinueStory();
-        }
+        }*/
     }
 
     public void Continue(InputAction.CallbackContext context)
     {
         // Check for left mouse button click using the new Input System
-        if (context.performed)
+        if (currentStory.currentChoices.Count == 0 && context.performed)
         {
             Debug.Log("Click");
             ContinueStory();

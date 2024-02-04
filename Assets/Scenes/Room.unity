@@ -982,7 +982,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.495283, g: 1, b: 0.5746312, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2099,7 +2099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactIcon: {fileID: 116062567}
-  inkJSON: {fileID: 4900000, guid: 5fdc3d825d86fad449c8f7f6e72e5e37, type: 3}
+  inkJSON: {fileID: 4900000, guid: 9de3c25a1c51e6340b56671b67131956, type: 3}
 --- !u!1 &1269367667
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2652,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.495283, g: 1, b: 0.5746312, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2851,7 +2851,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 638021054}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!114 &1517767784
@@ -2871,9 +2871,9 @@ MonoBehaviour:
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
   m_ActionsAsset: {fileID: -944628639613478452, guid: aef93a09368718942b2d07d2198fb010, type: 3}
-  m_PointAction: {fileID: 4335616359599715396, guid: aef93a09368718942b2d07d2198fb010, type: 3}
-  m_MoveAction: {fileID: 0}
-  m_SubmitAction: {fileID: 6816990846227326048, guid: aef93a09368718942b2d07d2198fb010, type: 3}
+  m_PointAction: {fileID: 0}
+  m_MoveAction: {fileID: -2756408953247186567, guid: aef93a09368718942b2d07d2198fb010, type: 3}
+  m_SubmitAction: {fileID: 1808920255956863577, guid: aef93a09368718942b2d07d2198fb010, type: 3}
   m_CancelAction: {fileID: 0}
   m_LeftClickAction: {fileID: 0}
   m_MiddleClickAction: {fileID: 0}
@@ -2894,6 +2894,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1545354268}
   - component: {fileID: 1545354269}
+  - component: {fileID: 1545354270}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -2936,6 +2937,80 @@ MonoBehaviour:
   - {fileID: 638021054}
   - {fileID: 1764671970}
   - {fileID: 1474778252}
+--- !u!114 &1545354270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545354267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: aef93a09368718942b2d07d2198fb010, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bfed7de7-5dca-4fcb-9fbf-c3bc26322f97
+    m_ActionName: PlayerInput/Movement[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 74eb5147-6ca7-485c-903d-2ac93df051ee
+    m_ActionName: PlayerInput/PointerPosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b948ed00-41cf-43bc-b292-954ccaa57eed
+    m_ActionName: PlayerInput/Interact[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 938a7cdd-d6e0-49e9-bc89-293685929489
+    m_ActionName: PlayerInput/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 90d10174-c9d3-4c57-880f-c7835fdb7a84
+    m_ActionName: PlayerInput/Continue[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 36ef371a-00ee-4e29-afc2-809e26e59ec5
+    m_ActionName: PlayerInput1/Movement[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1545354269}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
+        m_MethodName: Continue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3e503b86-47ba-42b3-8fe7-d69617fcb178
+    m_ActionName: PlayerInput1/Continue[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5efc5959-6722-4fbf-be96-9d928e52429d
+    m_ActionName: PlayerInput1/New action
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: UI
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1630861217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,7 +3390,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 0.495283, g: 1, b: 0.5746312, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
