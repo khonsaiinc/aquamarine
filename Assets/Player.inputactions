@@ -57,7 +57,7 @@
                 {
                     "name": "",
                     "id": "f4e35fb6-a47b-4188-8b95-1fdcde281b61",
-                    "path": "<XInputController>/buttonEast",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -243,30 +243,8 @@
                 },
                 {
                     "name": "",
-                    "id": "a5299476-9a5e-41e6-81d5-65ecacdf53cc",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "24523137-ff4c-4e7a-b2fa-8de7a5899e2c",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "b10782d0-a72b-452b-8543-ecbaf4334127",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -309,6 +287,61 @@
                 }
             ],
             "bindings": [
+                {
+                    "name": "DPad",
+                    "id": "c11412f5-2379-4058-b7d7-c1cfc6b5c304",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "96ce2150-d551-42b4-9863-d755b32e1515",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "520bbb6c-d91c-48ab-8e45-795c64d273a4",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "e0988061-d68b-45d6-882d-8c845648a46c",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "54950ab9-4956-4c90-b27c-1df925d97a05",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
                 {
                     "name": "Arrow",
                     "id": "c96b000f-63e3-4ba6-819a-671a2d4f8e43",
@@ -444,7 +477,7 @@
                 {
                     "name": "",
                     "id": "ddd9f76c-96a9-463c-9f3e-0b3a6fbd920d",
-                    "path": "<XInputController>/buttonSouth",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -466,7 +499,18 @@
                 {
                     "name": "",
                     "id": "d1dac567-bfd6-4c11-a1dd-2766627481ce",
-                    "path": "<XInputController>/buttonEast",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "31fa423f-eee8-4cb9-9656-e3f1bfb60d5e",
+                    "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
