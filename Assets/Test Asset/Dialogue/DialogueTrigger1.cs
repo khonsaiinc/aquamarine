@@ -20,19 +20,19 @@ public class DialogueTrigger1 : MonoBehaviour
 
     public void interact(InputAction.CallbackContext context)
     {
-        if (playerInRange && !DialogueManager1.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             interactIcon.SetActive(true);
             if(context.performed)
             {
-                DialogueManager1.GetInstance().EnterDialogueMode(inkJSON);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
         }
     }
 
     void Update()
     {
-        if (playerInRange && !DialogueManager1.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             interactIcon.SetActive(true);
         }

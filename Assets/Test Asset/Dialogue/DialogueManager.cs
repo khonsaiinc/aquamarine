@@ -4,6 +4,7 @@ using Ink.Runtime;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
@@ -67,6 +68,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void Continue(InputAction.CallbackContext context)
+    {
+        // Check for left mouse button click using the new Input System
+        if (context.performed)
+        {
+            Debug.Log("Click");
+            ContinueStory();
+        }
+    }
     public void EnterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
