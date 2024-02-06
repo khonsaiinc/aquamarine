@@ -6,4 +6,4 @@
 	url = https://github.com/khonsaiinc/aquamarine-script.git
 [submodule "Assets/Plugins"]
 	path = Assets/Plugins
-	url = https://github.com/beersanp/aquamarine-plugins
+	url = https://github.com/khonsaiinc/aquamarine-plugins.git
