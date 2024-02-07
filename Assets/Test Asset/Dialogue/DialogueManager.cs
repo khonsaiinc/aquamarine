@@ -22,6 +22,9 @@ public class DialogueManager : MonoBehaviour
 
     static DialogueManager instance;
 
+    // for disable input when dialogue is playing
+    public PlayerController playerController; // import playercontroller from Assets\Script\PlayerController.cs
+
     const string SPEAKER_TAG = "character";
     const string PORTRAIT_TAG = "image";
 
@@ -79,6 +82,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void EnterDialogueMode(TextAsset inkJSON)
     {
+        DisablePlayerInput();
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
@@ -132,6 +136,7 @@ public class DialogueManager : MonoBehaviour
     IEnumerator ExitDialogueMode()
     {
         Debug.Log("End Dialogue");
+        EnablePlayerInput();
         yield return new WaitForSeconds(0.2f);
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -181,5 +186,14 @@ public class DialogueManager : MonoBehaviour
         currentStory.ChooseChoiceIndex(choiceIndex);
         //Input.GetMouseButtonDown(0);
         ContinueStory();
+    }
+
+    void EnablePlayerInput()
+    {
+        playerController.enabled = true;
+    }
+    void DisablePlayerInput()
+    {
+        playerController.enabled = false;
     }
 }
