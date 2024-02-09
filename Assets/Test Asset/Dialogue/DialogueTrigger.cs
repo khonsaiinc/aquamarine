@@ -8,6 +8,8 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink Json")]
     [SerializeField] TextAsset inkJSON;
 
+    [Header("Vase")]
+    [SerializeField] SetVase setVase;
     bool playerInRange;
 
     void Awake()
@@ -23,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour
             interactIcon.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON,setVase);
             }
         }
         else
