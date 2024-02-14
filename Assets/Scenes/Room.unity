@@ -2953,6 +2953,7 @@ MonoBehaviour:
   - {fileID: 638021054}
   - {fileID: 1764671970}
   - {fileID: 1474778252}
+  playerController: {fileID: 1119794275}
 --- !u!114 &1545354270
 MonoBehaviour:
   m_ObjectHideFlags: 0
