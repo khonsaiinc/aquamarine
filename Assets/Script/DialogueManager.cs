@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Ink.Runtime;
@@ -25,6 +26,7 @@ public class DialogueManager : MonoBehaviour
     // for disable input when dialogue is playing
     public PlayerController playerController; // import playercontroller from Assets\Script\PlayerController.cs
 
+    InkExternalFunctions inkExternalFunctions;
     const string SPEAKER_TAG = "character";
     const string PORTRAIT_TAG = "image";
 
@@ -35,6 +37,8 @@ public class DialogueManager : MonoBehaviour
             
         }
         instance = this;
+
+        inkExternalFunctions = new InkExternalFunctions();
 
     }
 
@@ -73,20 +77,21 @@ public class DialogueManager : MonoBehaviour
 
     public void Continue(InputAction.CallbackContext context)
     {
-        // Check for left mouse button click using the new Input System
         if (currentStory.currentChoices.Count == 0 && context.performed)
         {
             Debug.Log("Click");
             ContinueStory();
         }
     }
-    public void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON , SetVase setVase)
     {
         DisablePlayerInput();
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-        
+
+        inkExternalFunctions.Bind(currentStory,setVase);
+
         displayNameText.text = "???";
         portaitAnimator.Play("default");
 
@@ -96,9 +101,11 @@ public class DialogueManager : MonoBehaviour
     {
         if(currentStory.canContinue)
         {
+
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
             HandleTags(currentStory.currentTags);
+            
         }
         else
         {
@@ -136,8 +143,12 @@ public class DialogueManager : MonoBehaviour
     IEnumerator ExitDialogueMode()
     {
         Debug.Log("End Dialogue");
+
         EnablePlayerInput();
         yield return new WaitForSeconds(0.2f);
+
+        inkExternalFunctions.Unbind(currentStory);
+
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text ="";
@@ -146,6 +157,7 @@ public class DialogueManager : MonoBehaviour
     void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
+        
 
         //ตรวจว่าตัวเลือกมีมากกว่าปุ่มUIของตัวเลือกรีเปล่า
         if(currentChoices.Count > choices.Length)
