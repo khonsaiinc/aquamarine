@@ -1,9 +1,8 @@
 using UnityEngine;
 
-namespace DS
+
+public class DoorRoomTrigger : MonoBehaviour
 {
-    public class DoorRoomTrigger : MonoBehaviour
-    {
         
         [SerializeField] GameObject door;
 
@@ -11,14 +10,19 @@ namespace DS
         {
             if(coll.tag == "Player")
             {
-                door.SetActive(true);
+                if(door != null)
+                {
+                    door.SetActive(true);
+                }
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
         void OnTriggerExit2D(Collider2D coll)
         {
-                door.SetActive(false);
+                if(door != null)
+                {
+                    door.SetActive(false);
+                }
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }
-    }
 }

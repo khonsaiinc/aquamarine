@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 373693869}
   - component: {fileID: 373693868}
   m_Layer: 0
-  m_Name: Postman
+  m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
