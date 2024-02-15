@@ -1,18 +1,18 @@
-name: Test Build (Pull Request)
+name: Build Multiplatform
 on:
-  pull_request:
-    branches: [ "develop" ]
-  workflow_dispatch:
+    workflow_dispatch:
   
 jobs:
   test:
-    name: Test
+    name: Build
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
         targetPlatform:
-          - StandaloneWindows64
+          - StandaloneWindows64 # windows_x64
+          #- StandaloneWindows # windows_x86 (disable for now)
+          - StandaloneLinux64 # linux_binary
     steps:
       # Checkout (without LFS)
       - name: Checkout repository
@@ -20,7 +20,6 @@ jobs:
         with:
           token: ${{ secrets.GH_PAT }}
           submodules: true
-      #if have cache, auto restore
       - uses: actions/cache@v3
         with:
           path: Library
@@ -45,7 +44,7 @@ jobs:
           git reset --hard
 
       # Build
-      - name: Test project
+      - name: Build project
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
@@ -54,3 +53,8 @@ jobs:
         with:
           unityVersion: 2022.3.17f1
           targetPlatform: ${{ matrix.targetPlatform }}
+      # export to artifact
+      - uses: actions/upload-artifact@v3 # output
+        with:
+          name: aquamarineBuild-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
