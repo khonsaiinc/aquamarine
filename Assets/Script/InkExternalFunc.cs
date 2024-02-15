@@ -6,6 +6,7 @@ public class InkExternalFunctions
     public void Bind(Story story,SetVase setVase)
     {
         story.BindExternalFunction("grabItem", (string itemName) => grabItemManager(itemName,setVase));
+
         story.BindExternalFunction("clearNPC", (string destroyNPC) => ClearNPC(destroyNPC,setVase));
 
     }
@@ -13,6 +14,7 @@ public class InkExternalFunctions
     public void Unbind(Story story) 
     {
         story.UnbindExternalFunction("grabItem");
+        
         story.UnbindExternalFunction("clearNPC");
     }
 

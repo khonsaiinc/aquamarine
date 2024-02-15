@@ -4,24 +4,24 @@ using UnityEngine;
 public class DoorRoomTrigger : MonoBehaviour
 {
         
-        [SerializeField] GameObject door;
-
+        [SerializeField] GameObject postMan;
+        
         void OnTriggerStay2D(Collider2D coll)
         {
             if(coll.tag == "Player")
             {
-                if(door != null)
+                if(postMan != null)
                 {
-                    door.SetActive(true);
+                    postMan.SetActive(true);
                 }
                 gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
         void OnTriggerExit2D(Collider2D coll)
         {
-                if(door != null)
+                if(postMan != null)
                 {
-                    door.SetActive(false);
+                    postMan.SetActive(false);
                 }
                 gameObject.GetComponent<SpriteRenderer>().enabled = true;
         }

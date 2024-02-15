@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd724da27e549cc4d85bbf8f0cf582b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 202298274}
+  postMan: {fileID: 202298274}
 --- !u!1 &318795341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,6 +2654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vase: {fileID: 942231778}
+  NPC: {fileID: 202298274}
 --- !u!1 &1269367667
 GameObject:
   m_ObjectHideFlags: 0
