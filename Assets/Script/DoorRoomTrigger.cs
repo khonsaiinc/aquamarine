@@ -1,28 +1,73 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class DoorRoomTrigger : MonoBehaviour
 {
-        
+        [SerializeField] GameObject interactIcon;
         [SerializeField] GameObject postMan;
-        
-        void OnTriggerStay2D(Collider2D coll)
+        bool playerInRange;
+        bool isClosed;
+
+        public void interact(InputAction.CallbackContext context)
         {
-            if(coll.tag == "Player")
+            if (playerInRange)
             {
-                if(postMan != null)
+                if(context.performed)
                 {
-                    postMan.SetActive(true);
+                    DoorSwitch();
                 }
-                gameObject.GetComponent<SpriteRenderer>().enabled = false;
             }
         }
-        void OnTriggerExit2D(Collider2D coll)
+
+        public void DoorSwitch()
         {
-                if(postMan != null)
-                {
-                    postMan.SetActive(false);
-                }
-                gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            isClosed = !isClosed;
+
+            if(isClosed)
+            {
+                OpenDoor();
+            }
+            else
+            {
+                CloseDoor();
+            }
         }
+
+    #region DoorFunction
+        void OpenDoor()
+        {
+            postMan.SetActive(true);
+            Debug.Log("Door is Open");
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        }
+    
+        void CloseDoor()
+        {
+            postMan.SetActive(false);
+            Debug.Log("Door is Closed");
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        }
+    #endregion
+
+    #region ShowInteractIcon
+        void OnTriggerEnter2D(Collider2D collider)
+        {
+            if(collider.gameObject.CompareTag("Player"))
+            {
+                interactIcon.SetActive(true);
+                playerInRange = true;
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D collider)
+        {
+            if(collider.gameObject.CompareTag("Player"))
+            {
+                interactIcon.SetActive(false);
+                playerInRange = false;
+            }
+        }
+#endregion
+
 }
