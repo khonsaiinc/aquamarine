@@ -4,70 +4,119 @@ using UnityEngine.InputSystem;
 
 public class DoorRoomTrigger : MonoBehaviour
 {
-        [SerializeField] GameObject interactIcon;
-        [SerializeField] GameObject postMan;
-        bool playerInRange;
-        bool isClosed;
+    [SerializeField] GameObject interactIcon;
+    [SerializeField] GameObject postMan;
+    [SerializeField] GameObject DoorPostMan;
+    [SerializeField] GameObject doorReal;
+    [SerializeField] GameObject doorFake;
 
-        public void interact(InputAction.CallbackContext context)
+    bool playerInRange;
+    bool isClosed;
+
+    public void interact(InputAction.CallbackContext context)
+    {
+        if (playerInRange)
         {
-            if (playerInRange)
+            if (context.performed)
             {
-                if(context.performed)
-                {
-                    DoorSwitch();
-                }
+                DoorSwitch();
             }
         }
+    }
 
-        public void DoorSwitch()
+    void Update()
+    {
+        if (playerInRange)
         {
-            isClosed = !isClosed;
-
-            if(isClosed)
+            if(postMan != null)
             {
-                OpenDoor();
+                if(!postMan.activeInHierarchy)
+                {
+                    interactIcon.SetActive(true);
+                }else interactIcon.SetActive(false);
+                
             }
-            else
+        }
+        else
+        {
+            interactIcon.SetActive(false);
+        }
+
+        if(postMan == null)
+        {
+            doorReal.SetActive(true);
+            Destroy(DoorPostMan);
+        }
+    }
+
+    public void DoorSwitch()
+    {
+        isClosed = !isClosed;
+
+        if (isClosed)
+        {
+            if (postMan != null)
             {
+                interactIcon.SetActive(false);
+            }
+
+            OpenDoor();
+
+            if (doorFake != null)
+            {
+                doorFake.SetActive(true);
+            }
+        }
+        else
+        {
+            if (postMan == null)
+            {
+                if (doorFake != null)
+                {
+                    Destroy(doorFake);
+                }
+
                 CloseDoor();
             }
         }
+    }
 
     #region DoorFunction
-        void OpenDoor()
+    void OpenDoor()
+    {
+        if (postMan != null)
         {
+            interactIcon.SetActive(false);
             postMan.SetActive(true);
-            Debug.Log("Door is Open");
-            gameObject.GetComponent<SpriteRenderer>().enabled = false;
         }
-    
-        void CloseDoor()
-        {
-            postMan.SetActive(false);
-            Debug.Log("Door is Closed");
-            gameObject.GetComponent<SpriteRenderer>().enabled = true;
-        }
+        Debug.Log("Door is Open");
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+    }
+
+    void CloseDoor()
+    {
+        //postMan.SetActive(false);
+        Debug.Log("Door is Closed");
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+    }
     #endregion
 
     #region ShowInteractIcon
-        void OnTriggerEnter2D(Collider2D collider)
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
         {
-            if(collider.gameObject.CompareTag("Player"))
-            {
-                interactIcon.SetActive(true);
-                playerInRange = true;
-            }
+            playerInRange = true;
         }
+    }
 
-        void OnTriggerExit2D(Collider2D collider)
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
         {
-            if(collider.gameObject.CompareTag("Player"))
-            {
-                interactIcon.SetActive(false);
-                playerInRange = false;
-            }
+            playerInRange = false;
         }
-#endregion
+    }
+    #endregion
 
 }
