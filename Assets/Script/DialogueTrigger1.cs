@@ -10,6 +10,8 @@ public class DialogueTrigger1 : MonoBehaviour
     [SerializeField] TextAsset inkJSON;
     [Header("Vase")]
     [SerializeField] SetVase setVase;
+    //[SerializeField] Transform standHere;
+    //[SerializeField] Transform playerPos;
     bool playerInRange;
 
 
@@ -26,6 +28,7 @@ public class DialogueTrigger1 : MonoBehaviour
             interactIcon.SetActive(true);
             if(context.performed)
             {
+                //playerPos.position = new Vector2(standHere.position.x,playerPos.position.y);
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON,setVase);
             }
         }
