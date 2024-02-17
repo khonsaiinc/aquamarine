@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Transform groundCheck;
     public LayerMask groundLayer;
+    public Animator animator;
 
     private float horizontal;
     private float speed = 8f;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
     }
 
     private void FixedUpdate()
