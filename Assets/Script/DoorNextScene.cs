@@ -1,38 +1,31 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-public class DialogueTrigger1 : MonoBehaviour
+
+public class DoorNextScene : MonoBehaviour
 {
-    [Header("Interact Icon")]
     [SerializeField] GameObject interactIcon;
 
-    [Header("Ink Json")]
-    [SerializeField] TextAsset inkJSON;
+    [TextArea(minLines:1,maxLines:2)]
+    [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
 
     bool playerInRange;
 
-
-    void Awake()
-    {
-        playerInRange = false;
-        interactIcon.SetActive(false);
-    }
-
     public void interact(InputAction.CallbackContext context)
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange)
         {
-            interactIcon.SetActive(true);
             if(context.performed)
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                DoorEnter();
             }
         }
     }
 
     void Update()
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange)
         {
             interactIcon.SetActive(true);
         }
@@ -42,9 +35,15 @@ public class DialogueTrigger1 : MonoBehaviour
         }
     }
 
+    public void DoorEnter()
+    {
+        SceneManager.LoadScene(locationName);
+    }
+
+    #region CheckCollider Player
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             playerInRange = true;
         }
@@ -52,9 +51,11 @@ public class DialogueTrigger1 : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.gameObject.CompareTag("Player"))
+        if (collider.gameObject.CompareTag("Player"))
         {
             playerInRange = false;
         }
     }
+    #endregion
 }
+

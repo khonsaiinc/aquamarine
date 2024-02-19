@@ -1,16 +1,19 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTrigger1 : MonoBehaviour
 {
     [Header("Interact Icon")]
     [SerializeField] GameObject interactIcon;
 
     [Header("Ink Json")]
     [SerializeField] TextAsset inkJSON;
-
     [Header("Vase")]
     [SerializeField] SetVase setVase;
+    //[SerializeField] Transform standHere;
+    //[SerializeField] Transform playerPos;
     bool playerInRange;
+
 
     void Awake()
     {
@@ -18,15 +21,24 @@ public class DialogueTrigger : MonoBehaviour
         interactIcon.SetActive(false);
     }
 
-    void Update()
+    public void interact(InputAction.CallbackContext context)
     {
-        if(playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             interactIcon.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.E))
+            if(context.performed)
             {
+                //playerPos.position = new Vector2(standHere.position.x,playerPos.position.y);
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON,setVase);
             }
+        }
+    }
+
+    void Update()
+    {
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            interactIcon.SetActive(true);
         }
         else
         {
@@ -36,14 +48,15 @@ public class DialogueTrigger : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if(collider.gameObject.CompareTag("Player"))
         {
             playerInRange = true;
         }
     }
+
     void OnTriggerExit2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "Player")
+        if(collider.gameObject.CompareTag("Player"))
         {
             playerInRange = false;
         }
