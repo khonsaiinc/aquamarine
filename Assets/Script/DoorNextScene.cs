@@ -6,8 +6,10 @@ using UnityEngine.SceneManagement;
 public class DoorNextScene : MonoBehaviour
 {
     [SerializeField] GameObject interactIcon;
+    [SerializeField] Transform spawnPlayer;
+    [SerializeField] GameObject player;
 
-    [TextArea(minLines:1,maxLines:2)]
+    [TextArea(minLines: 1, maxLines: 2)]
     [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
 
     bool playerInRange;
@@ -16,11 +18,20 @@ public class DoorNextScene : MonoBehaviour
     {
         if (playerInRange)
         {
-            if(context.performed)
+            if (context.performed)
             {
                 DoorEnter();
             }
         }
+    }
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (QuestCheck.fistStart)
+        {
+            player.transform.position = spawnPlayer.position;
+        }else{QuestCheck.fistStart = true;}
     }
 
     void Update()

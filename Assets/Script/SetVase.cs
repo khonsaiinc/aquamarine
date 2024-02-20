@@ -2,12 +2,20 @@ using System.Collections;
 using UnityEngine;
     public class SetVase : MonoBehaviour
     {
-        [SerializeField] GameObject vase;
+        [SerializeField] GameObject box;
         [SerializeField] GameObject NPC; 
         
+        void Start()
+        {
+            if(!QuestCheck.questDelivery)
+            {
+                box.SetActive(false);
+            }
+        }
+
         public void ShowVaseImage()
         {
-            vase.SetActive(true);
+            box.SetActive(true);
         }
 
         public void NPCDestroy()

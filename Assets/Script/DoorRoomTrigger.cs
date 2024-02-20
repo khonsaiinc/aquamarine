@@ -13,6 +13,7 @@ public class DoorRoomTrigger : MonoBehaviour
     bool playerInRange;
     bool isClosed;
 
+
     public void interact(InputAction.CallbackContext context)
     {
         if (playerInRange)
@@ -22,6 +23,16 @@ public class DoorRoomTrigger : MonoBehaviour
                 DoorSwitch();
             }
         }
+    }
+
+    void Start()
+    {
+        if(QuestCheck.questDelivery)
+        {
+            doorReal.SetActive(true);
+            Destroy(DoorPostMan);
+            Destroy(postMan);
+        }else{doorReal.SetActive(false);}
     }
 
     void Update()
@@ -44,6 +55,7 @@ public class DoorRoomTrigger : MonoBehaviour
 
         if(postMan == null)
         {
+            QuestCheck.questDelivery = true;
             doorReal.SetActive(true);
             Destroy(DoorPostMan);
         }

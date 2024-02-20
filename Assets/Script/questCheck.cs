@@ -1,8 +1,7 @@
-using UnityEngine;
-
-public class questCheck : MonoBehaviour
+//ไว้เก็บ true/false ต่างๆ ระหว่าง scenes
+public static class QuestCheck
 {
-    /*bool quest1 = false;
-    bool quest2 = false;
-    bool quest3 = true;*/
+    public static bool fistStart{get;set;}
+    public static bool questDelivery{get;set;}
 }
+
