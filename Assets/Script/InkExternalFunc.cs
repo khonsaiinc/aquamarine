@@ -22,7 +22,7 @@ public class InkExternalFunctions
         switch (itemName)
         {
             case "Box":
-                vase.ShowVaseImage();
+                vase.GetBox();
                 break;
 
             default:

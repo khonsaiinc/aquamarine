@@ -3,5 +3,11 @@ public static class QuestCheck
 {
     public static bool fistStart{get;set;}
     public static bool questDelivery{get;set;}
+
+    #region Inventory
+
+    public static bool getBox{get;set;}
+
+    #endregion
 }
 

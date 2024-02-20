@@ -1,31 +1,34 @@
-using System.Collections;
 using UnityEngine;
-    public class SetVase : MonoBehaviour
-    {
-        [SerializeField] GameObject box;
-        [SerializeField] GameObject NPC; 
-        
-        void Start()
-        {
-            if(!QuestCheck.questDelivery)
-            {
-                box.SetActive(false);
-            }
-        }
+public class SetVase : MonoBehaviour
+{
+    [SerializeField] GameObject box;
+    [SerializeField] GameObject NPC;
 
-        public void ShowVaseImage()
+    void Start()
+    {
+        CheckBox();
+    }
+
+    public void GetBox()
+    {
+        box.SetActive(true);
+        QuestCheck.getBox = true;
+    }
+
+    public void NPCDestroy()
+    {
+        Destroy(NPC);
+    }
+
+    public void CheckBox()
+    {
+        if (QuestCheck.questDelivery && QuestCheck.getBox)
         {
             box.SetActive(true);
         }
-
-        public void NPCDestroy()
+        else
         {
-            StartCoroutine(DelayDestroyNPC());
-        }
-
-        IEnumerator DelayDestroyNPC()
-        {
-            Destroy(NPC);
-            yield return new WaitForSeconds(0.3f);
+            box.SetActive(false);
         }
     }
+}

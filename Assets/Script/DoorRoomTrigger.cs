@@ -101,14 +101,11 @@ public class DoorRoomTrigger : MonoBehaviour
             interactIcon.SetActive(false);
             postMan.SetActive(true);
         }
-        Debug.Log("Door is Open");
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     void CloseDoor()
     {
-        //postMan.SetActive(false);
-        Debug.Log("Door is Closed");
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
     #endregion
