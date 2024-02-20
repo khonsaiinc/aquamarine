@@ -3298,7 +3298,7 @@ Transform:
   m_GameObject: {fileID: 1344610944}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.166842, y: -0.099989995, z: -10}
+  m_LocalPosition: {x: 5.1685667, y: -0.099989995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4110,6 +4110,7 @@ MonoBehaviour:
   - {fileID: 1764671970}
   - {fileID: 1474778252}
   playerController: {fileID: 1119794275}
+  playerInput: {fileID: 1846478695}
 --- !u!114 &1545354270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4797,6 +4798,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1846478695 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6301108320605428150, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
+  m_PrefabInstance: {fileID: 8192867360278981494}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1854098223
 GameObject:
   m_ObjectHideFlags: 0
