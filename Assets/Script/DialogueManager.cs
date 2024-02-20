@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     // for disable input when dialogue is playing
     public PlayerController playerController; // import playercontroller from Assets\Script\PlayerController.cs
+    public PlayerInput playerInput;
 
     InkExternalFunctions inkExternalFunctions;
     const string SPEAKER_TAG = "character";
@@ -202,9 +203,11 @@ public class DialogueManager : MonoBehaviour
     void EnablePlayerInput()
     {
         playerController.enabled = true;
+        playerInput.enabled = true;
     }
     void DisablePlayerInput()
     {
         playerController.enabled = false;
+        playerInput.enabled = false;
     }
 }
