@@ -2423,6 +2423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorSuperMarket: {fileID: 4495096}
+  triggerTakeda: {fileID: 1772552524}
 --- !u!1 &679378442
 GameObject:
   m_ObjectHideFlags: 0
