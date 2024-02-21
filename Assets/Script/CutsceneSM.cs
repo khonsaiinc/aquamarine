@@ -3,30 +3,38 @@ using UnityEngine;
 using UnityEngine.Video;
 public class CutsceneSM : MonoBehaviour
 {
-    //Cutscene ตัวเอกเดินข้างนอก
+    //Cutscene C2
 
-    VideoPlayer videoPlayer;
-    PlayerController playerController;
+    [SerializeField] VideoPlayer videoPlayer;
+    [SerializeField] PlayerController playerController;
+    [SerializeField] GameObject screenVideo;
 
     void Start()
     {
         videoPlayer.playOnAwake = false;
+        if(QuestCheck.isPlayedC2)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))
         {
-            videoPlayer.playOnAwake = true;
-            playerController.enabled = false;
-            CheckCutScene();
+            Debug.Log("Player is Here");
+            StartCoroutine(CheckCutScene());
         }
     }
 
     IEnumerator CheckCutScene()
     {
+        playerController.enabled = false;
+        videoPlayer.Play();
         yield return new WaitForSeconds(3f);
         playerController.enabled = true;
+        screenVideo.SetActive(false);
+        QuestCheck.isPlayedC2 = true;
         Destroy(gameObject);
     }
 

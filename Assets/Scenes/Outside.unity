@@ -647,6 +647,11 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 400286402}
   m_Damping: 0
   m_MaxWindowSize: -1
+--- !u!1 &322790640 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5549536419702991005, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+  m_PrefabInstance: {fileID: 436179715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &329555535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1291,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 919873807438774915, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599272341256633791, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599272341256633791, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599272341256633791, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599272341256633791, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599272341256633791, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1600
+      objectReference: {fileID: 0}
+    - target: {fileID: 2599272341256633791, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 2677214109512435090, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: 220dec0eac5440345a346a0ab893b233, type: 2}
+    - target: {fileID: 5549536419702991005, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5681782229202896575, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1537,6 +1578,39 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &454191236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 454191237}
+  m_Layer: 0
+  m_Name: Cutscene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &454191237
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454191236}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1138543023}
+  - {fileID: 1177992168}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &530570576
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,12 +3182,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1138543021}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -104.92932, y: 0.19376338, z: -0.026788212}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -104.92932, y: 0.19376338, z: -0.026788235}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 454191237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1140978682
 GameObject:
@@ -3156,6 +3230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177992168}
   - component: {fileID: 1177992170}
+  - component: {fileID: 1177992171}
   - component: {fileID: 1177992169}
   m_Layer: 0
   m_Name: CutsceneCheck
@@ -3177,7 +3252,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 454191237}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1177992169
 MonoBehaviour:
@@ -3282,6 +3357,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.316284, y: 3.0600283}
   m_EdgeRadius: 0
+--- !u!114 &1177992171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177992167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae96f366e2f765429fa7499690b4abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoPlayer: {fileID: 1138543022}
+  playerController: {fileID: 582603559}
+  screenVideo: {fileID: 322790640}
 --- !u!1 &1215989161
 GameObject:
   m_ObjectHideFlags: 0
@@ -5173,5 +5263,4 @@ SceneRoots:
   - {fileID: 881938749}
   - {fileID: 451639893}
   - {fileID: 582603558}
-  - {fileID: 1138543023}
-  - {fileID: 1177992168}
+  - {fileID: 454191237}
