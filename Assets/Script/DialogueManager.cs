@@ -82,14 +82,14 @@ public class DialogueManager : MonoBehaviour
             ContinueStory();
         }
     }
-    public void EnterDialogueMode(TextAsset inkJSON , SetVase setVase)
+    public void EnterDialogueMode(TextAsset inkJSON , DialogueTalking afterTalking)
     {
         DisablePlayerInput();
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        inkExternalFunctions.Bind(currentStory,setVase);
+        inkExternalFunctions.Bind(currentStory,afterTalking);
 
         displayNameText.text = "???";
         portaitAnimator.Play("default");

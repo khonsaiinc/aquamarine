@@ -3,6 +3,7 @@ public static class QuestCheck
 {
     public static bool fistStart{get;set;}
     public static bool questDelivery{get;set;}
+    public static bool questTalkTakeda{get;set;}
 
     #region isCutscenePlayed
     public static bool isPlayedC1;
