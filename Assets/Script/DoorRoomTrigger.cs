@@ -1,15 +1,23 @@
 using UnityEngine;
+using UnityEngine.Video;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 
 public class DoorRoomTrigger : MonoBehaviour
 {
     [SerializeField] GameObject interactIcon;
+    //[SerializeField] PlayerController playerController;
     [SerializeField] GameObject postMan;
+
+    [Header("Door")]
     [SerializeField] GameObject DoorPostMan;
     [SerializeField] GameObject doorReal;
     [SerializeField] GameObject doorFake;
 
+    [Header("Video")]
+    [SerializeField] VideoPlayer videoPlayer;
+    [SerializeField] GameObject screenVideo;
     bool playerInRange;
     bool isClosed;
 
@@ -27,25 +35,27 @@ public class DoorRoomTrigger : MonoBehaviour
 
     void Start()
     {
-        if(QuestCheck.questDelivery)
+        if (QuestCheck.questDelivery)
         {
             doorReal.SetActive(true);
             Destroy(DoorPostMan);
             Destroy(postMan);
-        }else{doorReal.SetActive(false);}
+        }
+        else { doorReal.SetActive(false); }
     }
 
     void Update()
     {
         if (playerInRange)
         {
-            if(postMan != null)
+            if (postMan != null)
             {
-                if(!postMan.activeInHierarchy)
+                if (!postMan.activeInHierarchy)
                 {
                     interactIcon.SetActive(true);
-                }else interactIcon.SetActive(false);
-                
+                }
+                else interactIcon.SetActive(false);
+
             }
         }
         else
@@ -53,7 +63,7 @@ public class DoorRoomTrigger : MonoBehaviour
             interactIcon.SetActive(false);
         }
 
-        if(postMan == null)
+        if (postMan == null)
         {
             QuestCheck.questDelivery = true;
             doorReal.SetActive(true);
@@ -64,6 +74,8 @@ public class DoorRoomTrigger : MonoBehaviour
     public void DoorSwitch()
     {
         isClosed = !isClosed;
+
+        StartCoroutine(isVideoEnd());
 
         if (isClosed)
         {
@@ -91,6 +103,13 @@ public class DoorRoomTrigger : MonoBehaviour
                 CloseDoor();
             }
         }
+    }
+
+    IEnumerator isVideoEnd()
+    {
+        videoPlayer.Play();
+        yield return new WaitForSeconds(3f);
+        screenVideo.SetActive(false);
     }
 
     #region DoorFunction
