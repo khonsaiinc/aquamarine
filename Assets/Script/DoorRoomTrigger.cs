@@ -20,7 +20,7 @@ public class DoorRoomTrigger : MonoBehaviour
     [SerializeField] GameObject screenVideo;
     bool playerInRange;
     bool isClosed;
-
+    bool isPlayed;
 
     public void interact(InputAction.CallbackContext context)
     {
@@ -35,6 +35,8 @@ public class DoorRoomTrigger : MonoBehaviour
 
     void Start()
     {
+        screenVideo.SetActive(false);
+
         if (QuestCheck.questDelivery)
         {
             doorReal.SetActive(true);
@@ -75,7 +77,10 @@ public class DoorRoomTrigger : MonoBehaviour
     {
         isClosed = !isClosed;
 
-        StartCoroutine(isVideoEnd());
+        if (!isPlayed)
+        {
+            StartCoroutine(isVideoEnd());
+        }
 
         if (isClosed)
         {
@@ -107,6 +112,8 @@ public class DoorRoomTrigger : MonoBehaviour
 
     IEnumerator isVideoEnd()
     {
+        isPlayed = true;
+        screenVideo.SetActive(true);
         videoPlayer.Play();
         yield return new WaitForSeconds(3f);
         screenVideo.SetActive(false);

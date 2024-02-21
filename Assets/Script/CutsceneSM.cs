@@ -11,6 +11,7 @@ public class CutsceneSM : MonoBehaviour
 
     void Start()
     {
+        screenVideo.SetActive(false);
         videoPlayer.playOnAwake = false;
         if(QuestCheck.isPlayedC2)
         {
@@ -30,6 +31,7 @@ public class CutsceneSM : MonoBehaviour
     IEnumerator CheckCutScene()
     {
         playerController.enabled = false;
+        screenVideo.SetActive(true);
         videoPlayer.Play();
         yield return new WaitForSeconds(3f);
         playerController.enabled = true;
