@@ -6,8 +6,16 @@ public static class QuestCheck
     public static bool questTalkTakeda{get;set;}
 
     #region isCutscenePlayed
+
     public static bool isPlayedC1;
     public static bool isPlayedC2;
+
+    #endregion
+
+    #region Scenebefore
+
+    public static string sceneBefore = "Room";
+
     #endregion
 
     #region Inventory
@@ -15,5 +23,6 @@ public static class QuestCheck
     public static bool getBox{get;set;}
 
     #endregion
+    
 }
 

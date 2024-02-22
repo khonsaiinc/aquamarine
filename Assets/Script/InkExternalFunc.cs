@@ -52,7 +52,7 @@ public class InkExternalFunctions
     {
         switch (whoTalked)
         {
-            case "TakedaFontSuperMarket":
+            case "TakedaFrontSuperMarket":
                 QuestCheck.questTalkTakeda = true;
                 afterTalking.takedaOutside.isTalkedEnableDoor();
                 break;
