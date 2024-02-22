@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     [SerializeField] TextAsset inkJSON;
 
     [Header("Vase")]
-    [SerializeField] SetVase setVase;
+    [SerializeField] DialogueTalking afterTalking;
     bool playerInRange;
 
     void Awake()
@@ -25,7 +25,7 @@ public class DialogueTrigger : MonoBehaviour
             interactIcon.SetActive(true);
             if(Input.GetKeyDown(KeyCode.E))
             {
-                DialogueManager.GetInstance().EnterDialogueMode(inkJSON,setVase);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON,afterTalking);
             }
         }
         else
