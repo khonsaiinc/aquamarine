@@ -175,6 +175,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 1140978683}
   sceneController: {fileID: 6423137760024260971}
   locationName: SuperMarket
+  currentScene: Outside
 --- !u!61 &4495099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -586,7 +587,7 @@ Transform:
   m_GameObject: {fileID: 289064688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.061722, y: -0.9528328, z: -8.697165}
+  m_LocalPosition: {x: -15.061722, y: -0.9528328, z: -8.697165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1753,6 +1754,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 611582340}
   sceneController: {fileID: 6423137760024260971}
   locationName: Room
+  currentScene: Outside
 --- !u!61 &530570581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2145,7 +2147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154507525479232564, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.48
+      value: -74.48
       objectReference: {fileID: 0}
     - target: {fileID: 7154507525479232564, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5291,7 +5293,7 @@ Transform:
   m_GameObject: {fileID: 2079167150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.0617065, y: -1.0928428, z: -8.697165}
+  m_LocalPosition: {x: -15.061707, y: -1.0928428, z: -8.697165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5438,6 +5440,14 @@ PrefabInstance:
       propertyPath: m_VideoClip
       value: 
       objectReference: {fileID: 32900000, guid: 9c51cde794407394aab2b7ff69e5d1f2, type: 3}
+    - target: {fileID: 568373976111025071, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 857318845012470801, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7024404869854093421, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: screenVideo
       value: 
@@ -5503,6 +5513,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1104351721}
     m_Modifications:
+    - target: {fileID: 275836865532885218, guid: ff4cdc7553c709d42a29b5e7e9bc993a, type: 3}
+      propertyPath: currentScene
+      value: Outside
+      objectReference: {fileID: 0}
     - target: {fileID: 275836865532885218, guid: ff4cdc7553c709d42a29b5e7e9bc993a, type: 3}
       propertyPath: transformsSpawn.Array.size
       value: 2

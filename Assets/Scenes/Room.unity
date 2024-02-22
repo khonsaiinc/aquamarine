@@ -1553,6 +1553,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 118571695}
     m_Modifications:
     - target: {fileID: 275836865532885218, guid: ff4cdc7553c709d42a29b5e7e9bc993a, type: 3}
+      propertyPath: currentScene
+      value: Room
+      objectReference: {fileID: 0}
+    - target: {fileID: 275836865532885218, guid: ff4cdc7553c709d42a29b5e7e9bc993a, type: 3}
       propertyPath: transformsSpawn.Array.size
       value: 1
       objectReference: {fileID: 0}
