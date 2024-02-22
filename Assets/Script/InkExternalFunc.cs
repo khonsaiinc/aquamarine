@@ -3,11 +3,13 @@ using Ink.Runtime;
 
 public class InkExternalFunctions
 {  
-    public void Bind(Story story,SetVase setVase)
+    public void Bind(Story story,DialogueTalking afterTalking)
     {
-        story.BindExternalFunction("grabItem", (string itemName) => grabItemManager(itemName,setVase));
+        story.BindExternalFunction("grabItem", (string itemName) => grabItemManager(itemName,afterTalking));
 
-        story.BindExternalFunction("clearNPC", (string destroyNPC) => ClearNPC(destroyNPC,setVase));
+        story.BindExternalFunction("clearNPC", (string destroyNPC) => ClearNPC(destroyNPC,afterTalking));
+
+        story.BindExternalFunction("questCheck", (string whoTalked) => Talked(whoTalked,afterTalking));
 
     }
 
@@ -18,11 +20,11 @@ public class InkExternalFunctions
         story.UnbindExternalFunction("clearNPC");
     }
 
-    public void grabItemManager(string itemName,SetVase vase){
+    public void grabItemManager(string itemName,DialogueTalking afterTalking){
         switch (itemName)
         {
             case "Box":
-                vase.ShowVaseImage();
+                afterTalking.setVase.GetBox();
                 break;
 
             default:
@@ -31,12 +33,28 @@ public class InkExternalFunctions
         }
     }
 
-    public void ClearNPC(string destroyNPC,SetVase vase)
+    public void ClearNPC(string destroyNPC,DialogueTalking afterTalking)
     {
         switch (destroyNPC)
         {
             case "Destroy":
-                vase.NPCDestroy();
+                afterTalking.setVase.NPCDestroy();
+                break;
+
+            default:
+                Debug.Log("it's not correct on argument, dosen't work");
+                break;
+        }
+        
+    }
+
+    public void Talked(string whoTalked,DialogueTalking afterTalking)
+    {
+        switch (whoTalked)
+        {
+            case "TakedaFrontSuperMarket":
+                QuestCheck.questTalkTakeda = true;
+                afterTalking.takedaOutside.isTalkedEnableDoor();
                 break;
 
             default:
