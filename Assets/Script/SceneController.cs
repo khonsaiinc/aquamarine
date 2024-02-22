@@ -33,21 +33,21 @@ public class SceneController : MonoBehaviour
             case "Outside":
                 if (currentScene == "SuperMarket")
                 {
-                    player.transform.position = transformsSpawn[0].position;//เกิดที่ประตู supermarket(ข้างใน)
+                    player.transform.position = transformsSpawn[0].position;//เกิดที่ประตู Apartment(ข้างนอก)
                 }
                 else if (currentScene == "Room")
                 {
-                    player.transform.position = transformsSpawn[0].position;//เกิดที่ประตู Apartment(ข้างใน)
+                    player.transform.position = transformsSpawn[0].position;//เกิดที่ประตู supermarket(ข้างน้อง)
                 }
                 break;
             case "SuperMarket":
                 if (currentScene == "Outside")
                 {
-                    player.transform.position = transformsSpawn[1].position;//เกิดที่ประตู supermarket(ข้างนอก)
+                    player.transform.position = transformsSpawn[1].position;//เกิดที่ประตู Apartment(ข้างนอก)
                 }
                 else if (currentScene == "StorageRoom")
                 {
-                    player.transform.position = transformsSpawn[0].position;//เกิดที่ประตู StorageRoom(ข้างใน)
+                    player.transform.position = transformsSpawn[0].position;//เกิดที่ประตู supermarket(ข้างน้อง)
                 }
                 break;
             case "StorageRoom":

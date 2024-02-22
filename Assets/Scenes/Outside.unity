@@ -175,6 +175,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 1140978683}
   sceneController: {fileID: 6423137760024260971}
   locationName: SuperMarket
+  currentScene: Outside
 --- !u!61 &4495099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1757,6 +1758,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 611582340}
   sceneController: {fileID: 6423137760024260971}
   locationName: Room
+  currentScene: Outside
 --- !u!61 &530570581
 BoxCollider2D:
   m_ObjectHideFlags: 0
