@@ -8,10 +8,8 @@ public class DialogueTrigger1 : MonoBehaviour
 
     [Header("Ink Json")]
     [SerializeField] TextAsset inkJSON;
-    [Header("Vase")]
+    [Header("DialogueTalking")]
     [SerializeField] DialogueTalking afterTalking;
-    //[SerializeField] Transform standHere;
-    //[SerializeField] Transform playerPos;
     bool playerInRange;
 
 

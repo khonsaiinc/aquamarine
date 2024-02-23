@@ -29,7 +29,6 @@ public class CutSceneOldLady : MonoBehaviour
 
     IEnumerator CheckCutScene()
     {
-        //playerController.enabled = false;
         screenTexture.Release();
 
         screenVideo.SetActive(true);
@@ -37,7 +36,6 @@ public class CutSceneOldLady : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
 
-        //playerController.enabled = true;
 
         screenVideo.SetActive(false);
         QuestCheck.isPlayedC3 = true;

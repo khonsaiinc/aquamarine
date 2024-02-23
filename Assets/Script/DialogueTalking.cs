@@ -2,8 +2,10 @@ using UnityEngine;
 
     public class DialogueTalking : MonoBehaviour
     {
+        // ไว้ใช้ใน EXTERNAL
         public SetVase setVase;
         public TakedaOutside takedaOutside;
+        public OldLadyTalking oldLadyTalking;
 
         void Start()
         {
@@ -11,7 +13,8 @@ using UnityEngine;
                 return;
             if(takedaOutside == null)
                 return;
-            
+            if(oldLadyTalking == null)
+                return;
         }
     }
 
