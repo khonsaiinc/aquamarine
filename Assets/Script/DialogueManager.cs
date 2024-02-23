@@ -113,6 +113,14 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(DialogueDelay());
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
+            // ข้ามข้อความเปล่า (ยังบัคอยู่)
+            /*string nextLine = currentStory.Continue(); //ตัวที่บัค
+            /*if (nextLine.Equals("") && !currentStory.canContinue)
+            {
+                StartCoroutine(ExitDialogueMode());
+            }*/
+
+            //handleTag
             HandleTags(currentStory.currentTags);
         }
         else
@@ -196,17 +204,16 @@ public class DialogueManager : MonoBehaviour
         //StartCoroutine(SelectFirstChoice());
     }
 
-    IEnumerator SelectFirstChoice()
+    /*IEnumerator SelectFirstChoice()
     {
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
-    }
+    }*/
 
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
-        //Input.GetMouseButtonDown(0);
         ContinueStory();
     }
 
