@@ -2239,7 +2239,10 @@ Transform:
   m_LocalPosition: {x: 2.5, y: -1, z: 0}
   m_LocalScale: {x: 0.7, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 728843080}, {fileID: 1984665216}, {fileID: 1098431308}]
+  m_Children:
+  - {fileID: 728843080}
+  - {fileID: 1984665216}
+  - {fileID: 1098431308}
   m_Father: {fileID: 288845378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &931227938
@@ -2258,7 +2261,6 @@ MonoBehaviour:
   spawnPlayer: {fileID: 1984665216}
   sceneController: {fileID: 218819399}
   locationName: Outside
-  currentScene: 
 --- !u!114 &931227939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3157,7 +3159,11 @@ Transform:
   m_LocalPosition: {x: -33.550575, y: -0.29, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 226692979}, {fileID: 1326717289}, {fileID: 81472440}, {fileID: 1804376572}]
+  m_Children:
+  - {fileID: 226692979}
+  - {fileID: 1326717289}
+  - {fileID: 81472440}
+  - {fileID: 1804376572}
   m_Father: {fileID: 288845378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1355091609
