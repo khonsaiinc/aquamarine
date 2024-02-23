@@ -106,22 +106,17 @@ public class DialogueManager : MonoBehaviour
     }
     void ContinueStory()
     {
-        if (!canShowDialogue)
-            return;
-
         if (currentStory.canContinue)
         {
-            Debug.Log("ContinueStory");
-            canShowDialogue = false;
-            StartCoroutine(DialogueDelay());
+            
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
             // ข้ามข้อความเปล่า (ยังบัคอยู่)
-            string nextLine = dialogueText.text; //ตัวที่บัค
-            if (nextLine.Equals("") && !currentStory.canContinue)
+            /*string nextLine = currentStory.Continue(); //ตัวที่บัค
+            /*if (nextLine.Equals("") && !currentStory.canContinue)
             {
                 StartCoroutine(ExitDialogueMode());
-            }
+            }*/
 
             //handleTag
             HandleTags(currentStory.currentTags);
@@ -172,7 +167,6 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
-        OnDialogueMode = false;
     }
 
     void DisplayChoices()
