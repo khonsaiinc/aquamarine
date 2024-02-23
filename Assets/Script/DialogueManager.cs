@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     TextMeshProUGUI[] choicesText;
 
     Story currentStory;
-    public bool dialogueIsPlaying{get;set;}
+    public bool dialogueIsPlaying { get; set; }
 
     static DialogueManager instance;
 
@@ -31,9 +31,9 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
-            
+
         }
         instance = this;
 
@@ -53,7 +53,7 @@ public class DialogueManager : MonoBehaviour
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
-        foreach(GameObject choice in choices)
+        foreach (GameObject choice in choices)
         {
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if(!dialogueIsPlaying)
+        if (!dialogueIsPlaying)
         {
             return;
         }
@@ -82,14 +82,14 @@ public class DialogueManager : MonoBehaviour
             ContinueStory();
         }
     }
-    public void EnterDialogueMode(TextAsset inkJSON , DialogueTalking afterTalking)
+    public void EnterDialogueMode(TextAsset inkJSON, DialogueTalking afterTalking)
     {
         DisablePlayerInput();
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        inkExternalFunctions.Bind(currentStory,afterTalking);
+        inkExternalFunctions.Bind(currentStory, afterTalking);
 
         displayNameText.text = "???";
         portaitAnimator.Play("default");
@@ -98,13 +98,20 @@ public class DialogueManager : MonoBehaviour
     }
     void ContinueStory()
     {
-        if(currentStory.canContinue)
+        if (currentStory.canContinue)
         {
-
+            
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
+            // ข้ามข้อความเปล่า (ยังบัคอยู่)
+            /*string nextLine = currentStory.Continue(); //ตัวที่บัค
+            /*if (nextLine.Equals("") && !currentStory.canContinue)
+            {
+                StartCoroutine(ExitDialogueMode());
+            }*/
+
+            //handleTag
             HandleTags(currentStory.currentTags);
-            
         }
         else
         {
@@ -114,17 +121,17 @@ public class DialogueManager : MonoBehaviour
 
     void HandleTags(List<string> currentTags)
     {
-        foreach(string tag in currentTags)
+        foreach (string tag in currentTags)
         {
             string[] splitTag = tag.Split(':');
-            if(splitTag.Length !=2)
+            if (splitTag.Length != 2)
             {
                 Debug.LogError("Tag have more 1");
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
 
-            switch(tagKey)
+            switch (tagKey)
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
@@ -150,25 +157,25 @@ public class DialogueManager : MonoBehaviour
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
-        dialogueText.text ="";
+        dialogueText.text = "";
     }
 
     void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
-        
+
 
         //ตรวจว่าตัวเลือกมีมากกว่าปุ่มUIของตัวเลือกรีเปล่า
-        if(currentChoices.Count > choices.Length)
+        if (currentChoices.Count > choices.Length)
         {
             Debug.Log("More choice were given than the UI can suppport. Number of choices given:"
              + currentChoices);
-            
+
         }
 
         //เพิ่มตัวเลือก
         int index = 0;
-        foreach(Choice choice in currentChoices)
+        foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -176,7 +183,7 @@ public class DialogueManager : MonoBehaviour
         }
 
 
-        for (int i = index; i < choices.Length;i++)
+        for (int i = index; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
 
@@ -185,17 +192,16 @@ public class DialogueManager : MonoBehaviour
         //StartCoroutine(SelectFirstChoice());
     }
 
-    IEnumerator SelectFirstChoice()
+    /*IEnumerator SelectFirstChoice()
     {
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
-    }
+    }*/
 
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
-        //Input.GetMouseButtonDown(0);
         ContinueStory();
     }
 

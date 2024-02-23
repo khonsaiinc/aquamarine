@@ -175,7 +175,6 @@ MonoBehaviour:
   spawnPlayer: {fileID: 1140978683}
   sceneController: {fileID: 6423137760024260971}
   locationName: SuperMarket
-  currentScene: Outside
 --- !u!61 &4495099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1326,7 +1325,7 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: 220dec0eac5440345a346a0ab893b233, type: 2}
     - target: {fileID: 5549536419702991005, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5681782229202896575, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_Name
@@ -1754,7 +1753,6 @@ MonoBehaviour:
   spawnPlayer: {fileID: 611582340}
   sceneController: {fileID: 6423137760024260971}
   locationName: Room
-  currentScene: Outside
 --- !u!61 &530570581
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5453,6 +5451,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 322790640}
     - target: {fileID: 7024404869854093421, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: screenTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 220dec0eac5440345a346a0ab893b233, type: 2}
+    - target: {fileID: 7024404869854093421, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: playerController
       value: 
       objectReference: {fileID: 582603559}
@@ -5499,6 +5501,10 @@ PrefabInstance:
     - target: {fileID: 8408071498426405477, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: m_Name
       value: Cutscene
+      objectReference: {fileID: 0}
+    - target: {fileID: 8408071498426405477, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

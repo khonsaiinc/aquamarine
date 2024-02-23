@@ -8,6 +8,7 @@ public class CutsceneSM : MonoBehaviour
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject screenVideo;
+    [SerializeField] RenderTexture screenTexture;
 
     void Start()
     {
@@ -30,13 +31,20 @@ public class CutsceneSM : MonoBehaviour
 
     IEnumerator CheckCutScene()
     {
-        playerController.enabled = false;
+        //playerController.enabled = false;
+        screenTexture.Release();
+
         screenVideo.SetActive(true);
         videoPlayer.Play();
+
         yield return new WaitForSeconds(3f);
-        playerController.enabled = true;
+
+        //playerController.enabled = true;
+
         screenVideo.SetActive(false);
         QuestCheck.isPlayedC2 = true;
+        screenTexture.Release();
+
         Destroy(gameObject);
     }
 
