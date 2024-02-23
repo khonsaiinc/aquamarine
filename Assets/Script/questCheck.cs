@@ -4,6 +4,7 @@ public static class QuestCheck
     public static bool fistStarted{get;set;}
     public static bool questDelivery{get;set;}
     public static bool questTalkTakeda{get;set;}
+    public static bool questTalkOldLady{get;set;}
 
     public static bool isUnlockStorageRoom{get;set;}
 

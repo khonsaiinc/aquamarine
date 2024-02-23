@@ -11,6 +11,7 @@ public class InkExternalFunctions
 
         story.BindExternalFunction("questCheck", (string whoTalked) => Talked(whoTalked,afterTalking));
 
+
     }
 
     public void Unbind(Story story) 
@@ -56,7 +57,11 @@ public class InkExternalFunctions
                 QuestCheck.questTalkTakeda = true;
                 afterTalking.takedaOutside.isTalkedEnableDoor();
                 break;
-
+            case "MoveOldlady":
+                QuestCheck.questTalkOldLady = true;
+                afterTalking.oldLadyTalking.oldladyStillHere = true;
+                afterTalking.oldLadyTalking.moveOldlady();
+                break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
                 break;
