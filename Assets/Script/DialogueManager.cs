@@ -21,6 +21,8 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Choice UI")]
     [SerializeField] GameObject[] choices;
+    [SerializeField] Transform targetTranform;
+    [SerializeField] float duration;
     TextMeshProUGUI[] choicesText;
 
     Story currentStory;
@@ -96,6 +98,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        LeanTween.moveY(dialoguePanel, transform.position.y, duration);
 
         inkExternalFunctions.Bind(currentStory, afterTalking);
 
