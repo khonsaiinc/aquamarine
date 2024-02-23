@@ -5,10 +5,13 @@ public static class QuestCheck
     public static bool questDelivery{get;set;}
     public static bool questTalkTakeda{get;set;}
 
+    public static bool isUnlockStorageRoom{get;set;}
+
     #region isCutscenePlayed
 
     public static bool isPlayedC1;
     public static bool isPlayedC2;
+    public static bool isPlayedC3{get;set;}
 
     #endregion
 
