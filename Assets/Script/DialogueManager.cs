@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 public class DialogueManager : MonoBehaviour
 {
+    public static bool OnDialogueMode = false;
+    private bool canShowDialogue = true;
+
     [Header("Dialogue UI")]
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] TextMeshProUGUI dialogueText;
@@ -18,7 +21,7 @@ public class DialogueManager : MonoBehaviour
     TextMeshProUGUI[] choicesText;
 
     Story currentStory;
-    public bool dialogueIsPlaying{get;set;}
+    public bool dialogueIsPlaying { get; set; }
 
     static DialogueManager instance;
 
@@ -32,12 +35,10 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        if(instance != null)
-        {
-            
-        }
-        instance = this;
-
+        if (instance == null)
+            instance = this;
+        else
+            Debug.LogError("DialogueManager have more than one instance");
         inkExternalFunctions = new InkExternalFunctions();
 
     }
@@ -54,7 +55,7 @@ public class DialogueManager : MonoBehaviour
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
-        foreach(GameObject choice in choices)
+        foreach (GameObject choice in choices)
         {
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
@@ -63,7 +64,7 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if(!dialogueIsPlaying)
+        if (!dialogueIsPlaying)
         {
             return;
         }
@@ -77,20 +78,23 @@ public class DialogueManager : MonoBehaviour
 
     public void Continue(InputAction.CallbackContext context)
     {
-        if (currentStory.currentChoices.Count == 0 && context.performed)
+        if (currentStory != null && currentStory.currentChoices.Count == 0
+        && context.performed)
         {
-            Debug.Log("Click");
+            Debug.Log("Continue");
             ContinueStory();
         }
     }
-    public void EnterDialogueMode(TextAsset inkJSON , DialogueTalking afterTalking)
+    public void EnterDialogueMode(TextAsset inkJSON, DialogueTalking afterTalking)
     {
+        Debug.Log("EnterDialogueMode");
+        OnDialogueMode = true;
         DisablePlayerInput();
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
 
-        inkExternalFunctions.Bind(currentStory,afterTalking);
+        inkExternalFunctions.Bind(currentStory, afterTalking);
 
         displayNameText.text = "???";
         portaitAnimator.Play("default");
@@ -99,33 +103,38 @@ public class DialogueManager : MonoBehaviour
     }
     void ContinueStory()
     {
-        if(currentStory.canContinue)
-        {
+        if (!canShowDialogue)
+            return;
 
+        if (currentStory.canContinue)
+        {
+            Debug.Log("ContinueStory");
+            canShowDialogue = false;
+            StartCoroutine(DialogueDelay());
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
             HandleTags(currentStory.currentTags);
-            
         }
         else
         {
+            Debug.Log("Story Ended");
             StartCoroutine(ExitDialogueMode());
         }
     }
 
     void HandleTags(List<string> currentTags)
     {
-        foreach(string tag in currentTags)
+        foreach (string tag in currentTags)
         {
             string[] splitTag = tag.Split(':');
-            if(splitTag.Length !=2)
+            if (splitTag.Length != 2)
             {
                 Debug.LogError("Tag have more 1");
             }
             string tagKey = splitTag[0].Trim();
             string tagValue = splitTag[1].Trim();
 
-            switch(tagKey)
+            switch (tagKey)
             {
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
@@ -151,25 +160,26 @@ public class DialogueManager : MonoBehaviour
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
-        dialogueText.text ="";
+        dialogueText.text = "";
+        OnDialogueMode = false;
     }
 
     void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
-        
+
 
         //ตรวจว่าตัวเลือกมีมากกว่าปุ่มUIของตัวเลือกรีเปล่า
-        if(currentChoices.Count > choices.Length)
+        if (currentChoices.Count > choices.Length)
         {
             Debug.Log("More choice were given than the UI can suppport. Number of choices given:"
              + currentChoices);
-            
+
         }
 
         //เพิ่มตัวเลือก
         int index = 0;
-        foreach(Choice choice in currentChoices)
+        foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
@@ -177,7 +187,7 @@ public class DialogueManager : MonoBehaviour
         }
 
 
-        for (int i = index; i < choices.Length;i++)
+        for (int i = index; i < choices.Length; i++)
         {
             choices[i].gameObject.SetActive(false);
 
@@ -209,5 +219,11 @@ public class DialogueManager : MonoBehaviour
     {
         playerController.enabled = false;
         playerInput.enabled = false;
+    }
+
+    IEnumerator DialogueDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        canShowDialogue = true;
     }
 }

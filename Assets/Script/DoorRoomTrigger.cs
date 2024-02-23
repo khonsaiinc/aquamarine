@@ -24,6 +24,10 @@ public class DoorRoomTrigger : MonoBehaviour
 
     public void interact(InputAction.CallbackContext context)
     {
+        // ถ้าอยู่ใน dialouge ไม่ทำแม่งเลย
+        if (DialogueManager.OnDialogueMode)
+            return;
+
         if (playerInRange)
         {
             if (context.performed)
@@ -75,6 +79,7 @@ public class DoorRoomTrigger : MonoBehaviour
 
     public void DoorSwitch()
     {
+        Debug.Log("Door Interact");
         isClosed = !isClosed;
 
         if (!isPlayed)
