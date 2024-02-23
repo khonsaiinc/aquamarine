@@ -2783,6 +2783,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
+--- !u!114 &1131652090 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6301108320605428150, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
+  m_PrefabInstance: {fileID: 1131652089}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109276123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1238737428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3439,6 +3450,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 1131652090}
     - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
       propertyPath: dialogueText
       value: 
