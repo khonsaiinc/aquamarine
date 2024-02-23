@@ -467,7 +467,7 @@ MonoBehaviour:
   standHere: {fileID: 386008555}
   interactIcon: {fileID: 3020931}
   tMPCanvas: {fileID: 954598192}
-  oldLadyTalking: {fileID: 0}
+  oldLadyTalking: {fileID: 731032081}
   isTalkOldLady: 0
 --- !u!61 &80954826
 BoxCollider2D:
@@ -2300,8 +2300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playableDirector: {fileID: 1646694383}
   boxColliderDialogueTrigger: {fileID: 731032080}
-  playerController: {fileID: 0}
-  oldladyStillHere: 1
+  playerController: {fileID: 2074810230}
+  oldladyStillHere: 0
 --- !u!1001 &799326483
 PrefabInstance:
   m_ObjectHideFlags: 0
