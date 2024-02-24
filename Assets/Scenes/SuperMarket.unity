@@ -1499,7 +1499,7 @@ PrefabInstance:
     - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: fe08b60d16ec4ae4d893d5b3dd34efcd, type: 3}
+      objectReference: {fileID: 32900000, guid: 3da6f1e42813b424d9063abf95c2c61b, type: 3}
     - target: {fileID: 568373976111025071, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: m_Name
       value: CutsceneCheckC3
