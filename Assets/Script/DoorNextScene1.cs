@@ -1,21 +1,63 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+/*using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
-namespace DS
+
+public class DoorNextScene : MonoBehaviour
 {
-    public class DoorNextScene1 : MonoBehaviour
-    {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+    [SerializeField] GameObject interactIcon;
+    [SerializeField] Transform spawnPlayer;
+    [SerializeField] SceneController sceneController;
 
-        // Update is called once per frame
-        void Update()
+    [TextArea(minLines: 1, maxLines: 2)]
+    [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
+    bool playerInRange;
+
+    public void interact(InputAction.CallbackContext context)
+    {
+        if (playerInRange)
         {
-        
+            if (context.performed)
+            {
+                DoorEnter();
+            }
         }
     }
+
+    void Update()
+    {
+        if (playerInRange)
+        {
+            interactIcon.SetActive(true);
+        }
+        else
+        {
+            interactIcon.SetActive(false);
+        }
+    }
+
+    public void DoorEnter()
+    {
+        SceneManager.LoadScene(locationName);
+    }
+
+    #region CheckCollider Player
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collider)
+    {
+        if (collider.gameObject.CompareTag("Player"))
+        {
+            playerInRange = false;
+        }
+    }
+    #endregion
 }
+
+*/

@@ -22,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Choice UI")]
     [SerializeField] GameObject[] choices;
     [SerializeField] Transform targetTranform;
+    [SerializeField] Transform targetExitTranform;
     [SerializeField] float duration;
     TextMeshProUGUI[] choicesText;
 
@@ -98,7 +99,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-        LeanTween.moveY(dialoguePanel, transform.position.y, duration);
+        LeanTween.moveY(dialoguePanel, targetTranform.position.y, duration);
 
         inkExternalFunctions.Bind(currentStory, afterTalking);
 
@@ -161,9 +162,11 @@ public class DialogueManager : MonoBehaviour
     IEnumerator ExitDialogueMode()
     {
         Debug.Log("End Dialogue");
+        LeanTween.moveY(dialoguePanel, targetExitTranform.position.y, duration);
+
+        yield return new WaitForSeconds(1f);
 
         EnablePlayerInput();
-        yield return new WaitForSeconds(0.2f);
 
         inkExternalFunctions.Unbind(currentStory);
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -19,7 +20,7 @@ public class DoorNextScene : MonoBehaviour
         {
             if (context.performed)
             {
-                DoorEnter();
+                StartCoroutine(DoorEnter());
             }
         }
     }
@@ -36,8 +37,9 @@ public class DoorNextScene : MonoBehaviour
         }
     }
 
-    public void DoorEnter()
+    IEnumerator DoorEnter()
     {
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(locationName);
     }
 
