@@ -5,7 +5,7 @@ public static class QuestCheck
     public static bool questDelivery{get;set;}
     public static bool questTalkTakeda{get;set;}
     public static bool questTalkOldLady{get;set;}
-    public static bool questTalkTakeda_inSuperMarket{get;set;}
+    public static bool questTalkTakeda_inSuperMarket{get;set;} = true;
     public static bool questGoToSleep{get;set;}
 
     public static bool isUnlockStorageRoom{get;set;}
@@ -28,6 +28,7 @@ public static class QuestCheck
     #region Inventory
 
     public static bool getBox{get;set;}
+    public static bool isOpenBox{get;set;}
 
     #endregion
     
