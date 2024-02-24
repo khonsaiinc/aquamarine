@@ -1,10 +1,10 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
-public class CutsceneSM : MonoBehaviour
-{
-    //Cutscene C2
 
+public class CutSceneOldLady : MonoBehaviour
+{
+    // CutScene C3
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject screenVideo;
@@ -14,19 +14,17 @@ public class CutsceneSM : MonoBehaviour
     {
         screenVideo.SetActive(false);
         videoPlayer.playOnAwake = false;
-        if(QuestCheck.isPlayedC2)
+
+        if (QuestCheck.isPlayedC3)
         {
             Destroy(gameObject);
         }
+
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
+    public void CutScenePlay()
     {
-        if (collider.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player is Here");
-            StartCoroutine(CheckCutScene());
-        }
+        StartCoroutine(CheckCutScene());
     }
 
     IEnumerator CheckCutScene()
@@ -37,15 +35,16 @@ public class CutsceneSM : MonoBehaviour
         screenVideo.SetActive(true);
         videoPlayer.Play();
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(4f);
 
         //playerController.enabled = true;
 
         screenVideo.SetActive(false);
-        QuestCheck.isPlayedC2 = true;
+        QuestCheck.isPlayedC3 = true;
         screenTexture.Release();
 
         Destroy(gameObject);
     }
 
 }
+

@@ -1,17 +1,18 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 
-public class DoorNextScene : MonoBehaviour
+public class CashierCounter : MonoBehaviour
 {
+    [SerializeField] GameObject player;
+    [SerializeField] PlayerController playerController;
+    [SerializeField] Transform standHere;
     [SerializeField] GameObject interactIcon;
-    [SerializeField] Transform spawnPlayer;
-    [SerializeField] SceneController sceneController;
 
-    [TextArea(minLines: 1, maxLines: 2)]
-    [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
+    [SerializeField] TMPCanvas tMPCanvas;
+
     bool playerInRange;
+    bool isEnterCashier;
 
     public void interact(InputAction.CallbackContext context)
     {
@@ -19,7 +20,7 @@ public class DoorNextScene : MonoBehaviour
         {
             if (context.performed)
             {
-                DoorEnter();
+                EnterCashier();
             }
         }
     }
@@ -36,9 +37,27 @@ public class DoorNextScene : MonoBehaviour
         }
     }
 
-    public void DoorEnter()
+    void EnterCashier()
     {
-        SceneManager.LoadScene(locationName);
+        if (!isEnterCashier)
+        {
+
+            player.GetComponent<SpriteRenderer>().sortingOrder = -2;
+            player.transform.position = standHere.position;
+            isEnterCashier = true;
+            playerController.enabled = false;
+            tMPCanvas.FadeIn();
+
+        }
+        else
+        {
+            player.GetComponent<SpriteRenderer>().sortingOrder = 0;
+            isEnterCashier = false;
+            playerController.enabled = true;
+        }
+
+        
+
     }
 
     #region CheckCollider Player

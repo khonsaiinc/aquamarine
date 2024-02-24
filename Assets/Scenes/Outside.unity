@@ -586,7 +586,7 @@ Transform:
   m_GameObject: {fileID: 289064688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.061722, y: -0.9528328, z: -8.697165}
+  m_LocalPosition: {x: -15.061722, y: -0.9528328, z: -8.697165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -784,6 +784,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 582603560}
     - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1325,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 8400000, guid: 220dec0eac5440345a346a0ab893b233, type: 2}
     - target: {fileID: 5549536419702991005, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5681782229202896575, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_Name
@@ -2145,7 +2149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154507525479232564, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.48
+      value: -74.48
       objectReference: {fileID: 0}
     - target: {fileID: 7154507525479232564, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2197,6 +2201,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 882f883e5a3d94840b9298da8bf8b1ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &582603560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6301108320605428150, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
+  m_PrefabInstance: {fileID: 582603558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &611582339
@@ -5291,7 +5306,7 @@ Transform:
   m_GameObject: {fileID: 2079167150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.0617065, y: -1.0928428, z: -8.697165}
+  m_LocalPosition: {x: -15.061707, y: -1.0928428, z: -8.697165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5438,10 +5453,22 @@ PrefabInstance:
       propertyPath: m_VideoClip
       value: 
       objectReference: {fileID: 32900000, guid: 9c51cde794407394aab2b7ff69e5d1f2, type: 3}
+    - target: {fileID: 568373976111025071, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 857318845012470801, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7024404869854093421, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: screenVideo
       value: 
       objectReference: {fileID: 322790640}
+    - target: {fileID: 7024404869854093421, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: screenTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 220dec0eac5440345a346a0ab893b233, type: 2}
     - target: {fileID: 7024404869854093421, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: playerController
       value: 
@@ -5490,6 +5517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cutscene
       objectReference: {fileID: 0}
+    - target: {fileID: 8408071498426405477, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5503,6 +5534,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1104351721}
     m_Modifications:
+    - target: {fileID: 275836865532885218, guid: ff4cdc7553c709d42a29b5e7e9bc993a, type: 3}
+      propertyPath: currentScene
+      value: Outside
+      objectReference: {fileID: 0}
     - target: {fileID: 275836865532885218, guid: ff4cdc7553c709d42a29b5e7e9bc993a, type: 3}
       propertyPath: transformsSpawn.Array.size
       value: 2
