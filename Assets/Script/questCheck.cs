@@ -29,6 +29,7 @@ public static class QuestCheck
 
     public static bool getBox{get;set;}
     public static bool isOpenBox{get;set;}
+    public static bool isCloseBox{get;set;}
 
     #endregion
     
