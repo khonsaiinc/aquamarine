@@ -7,8 +7,8 @@ public class SetVase : MonoBehaviour
     [SerializeField] GameObject interactIcon;
     [SerializeField] GameObject dialogueBoxC5;
 
-    bool playerInRange;
     bool isOpenBox;
+    bool isCloseBox;
 
 
     void Start()
@@ -33,6 +33,11 @@ public class SetVase : MonoBehaviour
         {
             vase.SetActive(true);
             Destroy(gameObject); // ถ้าเลือกเปิดกล่องให้ทำลายเมื่อเข้าออก Room ใน Day2
+        }
+
+        if(QuestCheck.isCloseBox)
+        {
+            Destroy(dialogueBoxC5);
         }
 
         if(!QuestCheck.questTalkTakeda_inSuperMarket)
@@ -61,6 +66,15 @@ public class SetVase : MonoBehaviour
             QuestCheck.isOpenBox = true;
             vase.SetActive(true);
             Destroy(gameObject); // ทำลายถ้าเลือกเปิดกล่องใน C5.0
+        }
+    }
+
+    public void CloseBox()
+    {
+        if (QuestCheck.questTalkTakeda_inSuperMarket && !isOpenBox)
+        {
+            QuestCheck.isCloseBox = true;
+            dialogueBoxC5.SetActive(false);
         }
     }
 }

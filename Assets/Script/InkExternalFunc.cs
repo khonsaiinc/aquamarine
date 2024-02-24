@@ -41,6 +41,9 @@ public class InkExternalFunctions
             case "OpenBox":
                 afterTalking.setVase.OpenBox();
                 break;
+            case "CloseBox":
+                afterTalking.setVase.CloseBox();
+                break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
                 break;
