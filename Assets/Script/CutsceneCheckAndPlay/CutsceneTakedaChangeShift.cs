@@ -2,9 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Video;
 
-public class CutSceneOldLady : MonoBehaviour
+
+public class CutsceneTakedaChangeShift : MonoBehaviour
 {
-    // CutScene C3
+    
+// CutScene C4
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] PlayerController playerController;
     [SerializeField] GameObject screenVideo;
@@ -15,8 +17,9 @@ public class CutSceneOldLady : MonoBehaviour
         screenVideo.SetActive(false);
         videoPlayer.playOnAwake = false;
 
-        if (QuestCheck.isPlayedC3)
+        if (QuestCheck.isPlayedC4) // ทำลาย gameobject เมื่อเคยเล่นไปแล้ว
         {
+            Destroy(videoPlayer.gameObject);
             Destroy(gameObject);
         }
 
@@ -36,13 +39,16 @@ public class CutSceneOldLady : MonoBehaviour
 
         yield return new WaitForSeconds(4f);
 
-
         screenVideo.SetActive(false);
-        QuestCheck.isPlayedC3 = true;
-        screenTexture.Release();
+        QuestCheck.isPlayedC4 = true;
 
+        screenTexture.Release(); // รีเซ็ต VideoScreen ให้เป็นสีดำ
+
+        Destroy(videoPlayer.gameObject);
         Destroy(gameObject);
     }
+
+    
 
 }
 

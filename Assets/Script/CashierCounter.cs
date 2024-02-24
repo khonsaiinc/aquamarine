@@ -5,17 +5,14 @@ using UnityEngine.InputSystem;
 public class CashierCounter : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] PlayerController playerController;
+    [SerializeField] DontMoveGlobal playerController;
     [SerializeField] Transform standHere;
     [SerializeField] GameObject interactIcon;
-
-    [SerializeField] TMPCanvas tMPCanvas;
-    [SerializeField] OldLadyTalking oldLadyTalking;
+    [SerializeField] FadingScreen fadingScreen;
 
     bool playerInRange;
     bool isEnterCashier;
-
-    public bool isTalkOldLady;
+    public bool isStartEventday1;
 
     public void interact(InputAction.CallbackContext context)
     {
@@ -23,7 +20,9 @@ public class CashierCounter : MonoBehaviour
         {
             if (context.performed)
             {
+
                 EnterCashier();
+
             }
         }
     }
@@ -46,10 +45,9 @@ public class CashierCounter : MonoBehaviour
             interactIcon.SetActive(false);
         }
 
-        isTalkOldLady = oldLadyTalking.oldladyStillHere;
-        if(isTalkOldLady && oldLadyTalking != null)
+        if (isStartEventday1)
         {
-            playerController.enabled = false;
+            playerController.PlayerCanMove(false);
         }
     }
     void EnterCashier()
@@ -60,25 +58,25 @@ public class CashierCounter : MonoBehaviour
             player.GetComponent<SpriteRenderer>().sortingOrder = -2;
             player.transform.position = standHere.position;
             isEnterCashier = true;
-            playerController.enabled = false;
+            playerController.PlayerCanMove(false);
+
+            //เริ่มเล่น C3 ถ้ายังไม่เคยเล่น
             if (!QuestCheck.isPlayedC3)
             {
-                tMPCanvas.FadeIn();
+                isStartEventday1 = true;
+                fadingScreen.FadeIn();
             }
+
         }
         else
         {
-                if (QuestCheck.questTalkOldLady)
-                {
-                    player.GetComponent<SpriteRenderer>().sortingOrder = 0;
-                    isEnterCashier = false;
-                    if (isTalkOldLady && oldLadyTalking == null)
-                    {
-                        isTalkOldLady = false;
-                        playerController.enabled = true;
-                    }
-                    playerController.enabled = true;
-                }
+            if (!isStartEventday1)
+            {
+
+                player.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                isEnterCashier = false;
+                playerController.PlayerCanMove(true);
+            }
         }
 
 
