@@ -21,9 +21,6 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Choice UI")]
     [SerializeField] GameObject[] choices;
-    [SerializeField] Transform targetTranform;
-    [SerializeField] Transform targetExitTranform;
-    [SerializeField] float duration;
     TextMeshProUGUI[] choicesText;
 
     Story currentStory;
