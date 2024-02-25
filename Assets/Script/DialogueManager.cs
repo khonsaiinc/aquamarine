@@ -15,6 +15,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] TextMeshProUGUI displayNameText;
     [SerializeField] Animator portaitAnimator;
+    [SerializeField] Transform targetTranform;
+    [SerializeField] Transform targetExitTranform;
+    [SerializeField] float duration;
 
     [Header("Choice UI")]
     [SerializeField] GameObject[] choices;
@@ -114,11 +117,11 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
             // ข้ามข้อความเปล่า (ยังบัคอยู่)
-            /*string nextLine = currentStory.Continue(); //ตัวที่บัค
-            /*if (nextLine.Equals("") && !currentStory.canContinue)
+            string nextLine = dialogueText.text; //ตัวที่บัค
+            if (nextLine.Equals("") && !currentStory.canContinue)
             {
                 StartCoroutine(ExitDialogueMode());
-            }*/
+            }
 
             //handleTag
             HandleTags(currentStory.currentTags);
