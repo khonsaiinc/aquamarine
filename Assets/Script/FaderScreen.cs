@@ -1,21 +1,22 @@
-using System.Collections;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Video;
 
-public class TMPCanvas : MonoBehaviour
+
+public class FaderScreen : MonoBehaviour
 {
     [SerializeField] CanvasGroup canvasGroup;
-    [SerializeField] CutSceneOldLady cutSceneOldLady;
     [SerializeField] TextMeshProUGUI text;
-    [SerializeField] float timeToShowText;
     [SerializeField] float fadeSpeed;
 
-    public bool fadeIn;
-    public bool fadeOut;
+    [Header("PlayerControllGlobal")]
+    [SerializeField] DontMoveGlobal dontMoveGlobal;
+
+    bool fadeIn;
+    bool fadeOut;
 
     void Start()
     {
+        text.text = "";
         text.enabled = false;
         canvasGroup.alpha = 0;
     }
@@ -24,42 +25,36 @@ public class TMPCanvas : MonoBehaviour
     {
         if (fadeIn == true)
         {
+            dontMoveGlobal.PlayerCanMove(false);
             if (canvasGroup.alpha < 1)
             {
                 canvasGroup.alpha += fadeSpeed * Time.deltaTime;
                 if (canvasGroup.alpha >= 1)
                 {
-                    text.enabled = true;
                     fadeIn = false;
-                    if (cutSceneOldLady != null)
-                    {
-                        StartCoroutine(WaitMoment());
-                    }
                 }
             }
         }
 
-
         if (fadeOut == true)
+        {
+            
             if (canvasGroup.alpha >= 0)
             {
                 text.enabled = false;
+
                 canvasGroup.alpha -= fadeSpeed * Time.deltaTime;
                 if (canvasGroup.alpha == 0)
                 {
+                    dontMoveGlobal.PlayerCanMove(true);
                     fadeOut = false;
                 }
             }
+        }
 
     }
 
-    IEnumerator WaitMoment()
-    {
-        yield return new WaitForSeconds(timeToShowText);
-        cutSceneOldLady.CutScenePlay();
-        yield return new WaitForSeconds(3f);
-        fadeOut = true;
-    }
+    #region FadeSate
 
     public void FadeIn()
     {
@@ -69,4 +64,6 @@ public class TMPCanvas : MonoBehaviour
     {
         fadeOut = true;
     }
+
+    #endregion
 }
