@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -6,19 +7,20 @@ using UnityEngine.SceneManagement;
 public class DoorNextScene : MonoBehaviour
 {
     [SerializeField] GameObject interactIcon;
+    [SerializeField] Transform spawnPlayer;
+    [SerializeField] SceneController sceneController;
 
-    [TextArea(minLines:1,maxLines:2)]
+    [TextArea(minLines: 1, maxLines: 2)]
     [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
-
     bool playerInRange;
 
     public void interact(InputAction.CallbackContext context)
     {
         if (playerInRange)
         {
-            if(context.performed)
+            if (context.performed)
             {
-                DoorEnter();
+                StartCoroutine(DoorEnter());
             }
         }
     }
@@ -35,8 +37,9 @@ public class DoorNextScene : MonoBehaviour
         }
     }
 
-    public void DoorEnter()
+    IEnumerator DoorEnter()
     {
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(locationName);
     }
 
