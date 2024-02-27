@@ -117,7 +117,18 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(DialogueDelay());
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
-            HandleTags(currentStory.currentTags);
+
+            string nextLine = dialogueText.text;
+
+            if(nextLine.Equals("") && !currentStory.canContinue)
+            {
+                StartCoroutine(ExitDialogueMode());
+            }
+            else
+            {
+                HandleTags(currentStory.currentTags);
+            }
+            
         }
         else
         {
