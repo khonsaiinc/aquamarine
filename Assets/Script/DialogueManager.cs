@@ -7,11 +7,17 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 public class DialogueManager : MonoBehaviour
 {
+    public static bool OnDialogueMode = false;
+    private bool canShowDialogue = true;
+
     [Header("Dialogue UI")]
     [SerializeField] GameObject dialoguePanel;
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] TextMeshProUGUI displayNameText;
     [SerializeField] Animator portaitAnimator;
+    [SerializeField] Transform targetTranform;
+    [SerializeField] Transform targetExitTranform;
+    [SerializeField] float duration;
 
     [Header("Choice UI")]
     [SerializeField] GameObject[] choices;
@@ -24,6 +30,7 @@ public class DialogueManager : MonoBehaviour
 
     // for disable input when dialogue is playing
     public PlayerController playerController; // import playercontroller from Assets\Script\PlayerController.cs
+    public PlayerInput playerInput;
 
     InkExternalFunctions inkExternalFunctions;
     const string SPEAKER_TAG = "character";
@@ -31,12 +38,10 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance != null)
-        {
-
-        }
-        instance = this;
-
+        if (instance == null)
+            instance = this;
+        else
+            Debug.LogError("DialogueManager have more than one instance");
         inkExternalFunctions = new InkExternalFunctions();
 
     }
@@ -76,18 +81,22 @@ public class DialogueManager : MonoBehaviour
 
     public void Continue(InputAction.CallbackContext context)
     {
-        if (currentStory.currentChoices.Count == 0 && context.performed)
+        if (currentStory != null && currentStory.currentChoices.Count == 0
+        && context.performed)
         {
-            Debug.Log("Click");
+            Debug.Log("Continue");
             ContinueStory();
         }
     }
     public void EnterDialogueMode(TextAsset inkJSON, DialogueTalking afterTalking)
     {
+        Debug.Log("EnterDialogueMode");
+        OnDialogueMode = true;
         DisablePlayerInput();
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
+        LeanTween.moveY(dialoguePanel, targetTranform.position.y, duration);
 
         inkExternalFunctions.Bind(currentStory, afterTalking);
 
@@ -98,23 +107,21 @@ public class DialogueManager : MonoBehaviour
     }
     void ContinueStory()
     {
+        if (!canShowDialogue)
+            return;
+
         if (currentStory.canContinue)
         {
-            
+            Debug.Log("ContinueStory");
+            canShowDialogue = false;
+            StartCoroutine(DialogueDelay());
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
-            // ข้ามข้อความเปล่า (ยังบัคอยู่)
-            /*string nextLine = currentStory.Continue(); //ตัวที่บัค
-            /*if (nextLine.Equals("") && !currentStory.canContinue)
-            {
-                StartCoroutine(ExitDialogueMode());
-            }*/
-
-            //handleTag
             HandleTags(currentStory.currentTags);
         }
         else
         {
+            Debug.Log("Story Ended");
             StartCoroutine(ExitDialogueMode());
         }
     }
@@ -149,9 +156,11 @@ public class DialogueManager : MonoBehaviour
     IEnumerator ExitDialogueMode()
     {
         Debug.Log("End Dialogue");
+        LeanTween.moveY(dialoguePanel, targetExitTranform.position.y, duration);
+
+        yield return new WaitForSeconds(1f);
 
         EnablePlayerInput();
-        yield return new WaitForSeconds(0.2f);
 
         inkExternalFunctions.Unbind(currentStory);
 
@@ -208,9 +217,17 @@ public class DialogueManager : MonoBehaviour
     void EnablePlayerInput()
     {
         playerController.enabled = true;
+        playerInput.enabled = true;
     }
     void DisablePlayerInput()
     {
         playerController.enabled = false;
+        playerInput.enabled = false;
+    }
+
+    IEnumerator DialogueDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        canShowDialogue = true;
     }
 }

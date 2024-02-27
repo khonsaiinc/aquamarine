@@ -785,6 +785,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 582603560}
+    - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 436179719}
@@ -792,6 +796,10 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 436179722}
+    - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
+      propertyPath: targetTranform
+      value: 
+      objectReference: {fileID: 427767685}
     - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
       propertyPath: displayNameText
       value: 
@@ -804,6 +812,10 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 582603559}
+    - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
+      propertyPath: targetExitTranform
+      value: 
+      objectReference: {fileID: 1805813189}
     - target: {fileID: 1821089792685344124, guid: e035355804d8f424c8cb4b86a104ef27, type: 3}
       propertyPath: choices.Array.data[0]
       value: 
@@ -1201,6 +1213,11 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!224 &427767685 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5060518731662704377, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+  m_PrefabInstance: {fileID: 436179715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &431588582
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,6 +2214,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 882f883e5a3d94840b9298da8bf8b1ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &582603560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6301108320605428150, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
+  m_PrefabInstance: {fileID: 582603558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &611582339
@@ -4473,6 +4501,11 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!224 &1805813189 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5762427870298985518, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+  m_PrefabInstance: {fileID: 436179715}
+  m_PrefabAsset: {fileID: 0}
 --- !u!115 &1833791805
 MonoScript:
   m_ObjectHideFlags: 0
@@ -5291,7 +5324,7 @@ Transform:
   m_GameObject: {fileID: 2079167150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.061707, y: -1.0928428, z: -8.697165}
+  m_LocalPosition: {x: -15.061699, y: -1.0928428, z: -8.697165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
