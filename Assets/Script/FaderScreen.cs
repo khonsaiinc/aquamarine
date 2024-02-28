@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FaderScreen : MonoBehaviour
 {
+    // ใช้งานทั่วไป
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] float fadeSpeed;

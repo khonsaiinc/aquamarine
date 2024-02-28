@@ -18,6 +18,9 @@ public class DoorRoomTrigger : MonoBehaviour
     [Header("Video")]
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] GameObject screenVideo;
+
+    [Header("Fader")]
+    FaderScreen faderScreen;
     bool playerInRange;
     bool isClosed;
     bool isPlayed;
