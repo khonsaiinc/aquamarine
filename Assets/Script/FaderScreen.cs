@@ -7,7 +7,7 @@ public class FaderScreen : MonoBehaviour
     // ใช้งานทั่วไป
     [SerializeField] CanvasGroup canvasGroup;
     [SerializeField] TextMeshProUGUI text;
-    [SerializeField] float fadeSpeed;
+    [SerializeField]  public float fadeSpeed;
 
     [Header("PlayerControllGlobal")]
     [SerializeField] DontMoveGlobal dontMoveGlobal;

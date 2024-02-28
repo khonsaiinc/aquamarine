@@ -18,9 +18,10 @@ public class DoorRoomTrigger : MonoBehaviour
     [Header("Video")]
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] GameObject screenVideo;
+    [SerializeField] RenderTexture renderTexture;
 
     [Header("Fader")]
-    FaderScreen faderScreen;
+    [SerializeField] FaderScreen faderScreen;
     bool playerInRange;
     bool isClosed;
     bool isPlayed;
@@ -120,10 +121,16 @@ public class DoorRoomTrigger : MonoBehaviour
 
     IEnumerator isVideoEnd()
     {
+        faderScreen.FadeIn();
+        yield return new WaitForSeconds(faderScreen.fadeSpeed);
         isPlayed = true;
         screenVideo.SetActive(true);
         videoPlayer.Play();
+        postMan.SetActive(true);
         yield return new WaitForSeconds(3f);
+        renderTexture.Release();
+        faderScreen.FadeOut();
+        yield return new WaitForSeconds(faderScreen.fadeSpeed);
         screenVideo.SetActive(false);
     }
 
@@ -133,7 +140,6 @@ public class DoorRoomTrigger : MonoBehaviour
         if (postMan != null)
         {
             interactIcon.SetActive(false);
-            postMan.SetActive(true);
         }
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }

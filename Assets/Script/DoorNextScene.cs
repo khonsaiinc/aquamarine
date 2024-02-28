@@ -9,6 +9,7 @@ public class DoorNextScene : MonoBehaviour
     [SerializeField] GameObject interactIcon;
     [SerializeField] Transform spawnPlayer;
     [SerializeField] SceneController sceneController;
+    [SerializeField] FaderScreen faderScreen;
 
     [TextArea(minLines: 1, maxLines: 2)]
     [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
@@ -39,7 +40,8 @@ public class DoorNextScene : MonoBehaviour
 
     IEnumerator DoorEnter()
     {
-        yield return new WaitForSeconds(1f);
+        faderScreen.FadeIn(); // เรียก fade in
+        yield return new WaitForSeconds(faderScreen.fadeSpeed); // รอเท่ากับเวลาการ fade
         SceneManager.LoadScene(locationName);
     }
 
