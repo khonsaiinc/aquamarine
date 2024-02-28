@@ -2543,8 +2543,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d00b7647a0b0ae244883abf853d57391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 2074810230}
-  canMove: 0
 --- !u!4 &818638788
 Transform:
   m_ObjectHideFlags: 0
@@ -5315,6 +5313,7 @@ GameObject:
   - component: {fileID: 2018152705}
   - component: {fileID: 2018152708}
   - component: {fileID: 2018152709}
+  - component: {fileID: 2018152710}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5474,6 +5473,30 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2018152710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018152704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1600
+  m_RefResolutionY: 900
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &2022745277 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3997416369181569613, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
