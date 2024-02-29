@@ -79,13 +79,18 @@ public class DialogueManager : MonoBehaviour
         }*/
     }
 
+    IEnumerator continueDelay()
+    {
+        yield return new WaitForSeconds(0.1f);
+        ContinueStory();
+    }
     public void Continue(InputAction.CallbackContext context)
     {
         if (currentStory != null && currentStory.currentChoices.Count == 0
         && context.performed)
         {
             Debug.Log("Continue");
-            ContinueStory();
+            StartCoroutine(continueDelay());
         }
     }
     public void EnterDialogueMode(TextAsset inkJSON, DialogueTalking afterTalking)
@@ -103,7 +108,7 @@ public class DialogueManager : MonoBehaviour
         displayNameText.text = "???";
         portaitAnimator.Play("default");
 
-        ContinueStory();
+        StartCoroutine(continueDelay());
     }
     void ContinueStory()
     {
@@ -178,6 +183,8 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
+        StopAllCoroutines(); // disable all coroutine, it's maybe work?
     }
 
     void DisplayChoices()
