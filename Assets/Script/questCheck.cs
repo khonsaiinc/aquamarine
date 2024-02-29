@@ -7,8 +7,14 @@ public static class QuestCheck
     public static bool questTalkOldLady{get;set;}
     public static bool questTalkTakeda_inSuperMarket{get;set;}
     public static bool questGoToSleep{get;set;}
+    public static bool questCheckWakeUpDay2{get;set;}
 
-    public static bool isUnlockStorageRoom{get;set;}
+    #region EventStoryCheck
+
+    public static bool NeighborSurvey{get;set;} //ไว้ใช้เมื่อเลือกออกไปดูข้างห้อง
+    public static bool isUnlockStorageRoom{get;set;} //ปลดล็อคประตูห้องเก็บของ
+
+    #endregion EventStoryCheck
 
     #region isCutscenePlayed
 
