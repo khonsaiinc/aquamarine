@@ -47,6 +47,9 @@ TagManager:
   - name: Bin
     uniqueID: 3385896387
     locked: 0
+  - name: StreetLight
+    uniqueID: 4207667735
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
