@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 2566818903
+    locked: 0
+  - name: SuperMarket
+    uniqueID: 1796410697
+    locked: 0
+  - name: Bin
+    uniqueID: 3385896387
+    locked: 0
+  - name: StreetLight
+    uniqueID: 4207667735
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: InteractIcon
+    uniqueID: 152412459
+    locked: 0
+  - name: Floor
+    uniqueID: 3060931419
     locked: 0

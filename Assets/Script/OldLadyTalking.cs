@@ -4,8 +4,10 @@ using UnityEngine.Playables;
 
 public class OldLadyTalking : MonoBehaviour
 {
-    [SerializeField] PlayableDirector playableDirector;
+    [SerializeField] PlayableDirector goOut;
+    [SerializeField] PlayableDirector moveToCashier;
     [SerializeField] PlayerController playerController;
+
 
 
     // สั่ง oldlady เดิน
@@ -18,9 +20,14 @@ public class OldLadyTalking : MonoBehaviour
         }
     }
 
-    public void moveOldlady()
+    public void moveOldlady() // เดินออกไปข้างนอก
     {
-        playableDirector.Play();
+        goOut.Play();
+    }
+
+    public void moveOldladyToCashier()
+    {
+        moveToCashier.Play();
     }
 
     public void ClearOldlady()

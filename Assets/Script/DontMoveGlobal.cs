@@ -2,12 +2,13 @@ using UnityEngine;
 
     public class DontMoveGlobal : MonoBehaviour
     {
-        [SerializeField] PlayerController playerController;
-        [SerializeField] bool canMove;
+        PlayerController playerController;
+        bool canMove;
 
         void Start()
         {
             canMove = true;
+            playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         }
 
         void Update()

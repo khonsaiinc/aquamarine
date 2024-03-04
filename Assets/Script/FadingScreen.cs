@@ -6,13 +6,18 @@ using UnityEngine.Video;
 public class FadingScreen : MonoBehaviour
 {
     [SerializeField] CanvasGroup canvasGroup;
+    [Header("Video")]
     [SerializeField] CutSceneOldLady cutSceneOldLady;
     [SerializeField] CutsceneTakedaChangeShift cTCS;
-    
+    [Header("NPC")]
     [SerializeField] GameObject oldLady;
     [SerializeField] GameObject takedaChangeShift;
+    [Header("OldladyMoveCashier")]
+    [SerializeField] OldLadyTalking oldLadyTalking;
+    [Header("Text")]
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] float timeToShowText;
+    [Header("FadeSpeed")]
     [SerializeField] float fadeSpeed;
 
     bool fadeIn;
@@ -73,6 +78,8 @@ public class FadingScreen : MonoBehaviour
         cutSceneOldLady.CutScenePlay();
         yield return new WaitForSeconds(3f);
         fadeOut = true;
+        yield return new WaitForSeconds(1f);
+        oldLadyTalking.moveOldladyToCashier();
     }
     IEnumerator WaitCutSceneC4()
     {
