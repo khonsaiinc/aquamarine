@@ -1689,7 +1689,7 @@ PrefabInstance:
     - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 01a3dcb975bbf6347a092c6fe9a110dd, type: 3}
+      objectReference: {fileID: 32900000, guid: 8987916935775fd4f8decf5e55b8a729, type: 3}
     - target: {fileID: 568373976111025071, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: m_Name
       value: CutsceneCheckC3
@@ -3109,7 +3109,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971892264}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 4279683e8deed2b45a172b92228c411e, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 3402194b638b4b54485d3b0bb31e20cf, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
