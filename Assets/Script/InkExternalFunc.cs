@@ -9,6 +9,7 @@ public class InkExternalFunctions
         story.BindExternalFunction("clearNPC", (string destroyNPC) => ClearNPC(destroyNPC, afterTalking));
         story.BindExternalFunction("questCheck", (string whoTalked) => Talked(whoTalked, afterTalking));
         story.BindExternalFunction("openItem", (string itemName) => openItemManager(itemName, afterTalking));
+        story.BindExternalFunction("neighborEvent", (string sleepOrsurvey) => NeighborEvent(sleepOrsurvey, afterTalking));
     }
 
     public void Unbind(Story story)
@@ -87,5 +88,23 @@ public class InkExternalFunctions
                 break;
         }
 
+    }
+
+    public void NeighborEvent(string sleepOrsurvey, DialogueTalking afterTalking)
+    {
+        switch (sleepOrsurvey)
+        {
+            case "Survey":
+                QuestCheck.NeighborSurvey = true;
+                afterTalking.surveyEvent.StartNeighborSurveyEvent();
+                break;
+            case "Sleep":
+                QuestCheck.questCheckWakeUpDay2 = true;
+                afterTalking.surveyEvent.ContinueToSleep();
+                break;
+            default:
+                Debug.Log("it's not correct on argument, dosen't work");
+                break;
+        }
     }
 }

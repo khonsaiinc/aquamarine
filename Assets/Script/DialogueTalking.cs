@@ -7,6 +7,7 @@ public class DialogueTalking : MonoBehaviour
     public TakedaOutside takedaOutside;
     public OldLadyTalking oldLadyTalking;
     public DisableTalking disableTalking;
+    public SurveyEvent surveyEvent;
     void Start()
     {
         if (setVase == null)
@@ -16,6 +17,8 @@ public class DialogueTalking : MonoBehaviour
         if (oldLadyTalking == null)
             return;
         if (disableTalking == null)
+            return;
+        if (surveyEvent == null)
             return;
     }
 }

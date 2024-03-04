@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,6 +6,9 @@ public class BedSleep : MonoBehaviour
 {
     [SerializeField] GameObject interactIcon;
     [SerializeField] FaderScreen faderScreen;
+    [SerializeField] BoxCollider2D bedTrigger;
+    [SerializeField] TextAsset inkJSON;
+    [SerializeField] DialogueTalking afterTalking;
 
     bool playerInRange;
 
@@ -23,7 +27,7 @@ public class BedSleep : MonoBehaviour
     {
         if (!QuestCheck.questTalkTakeda_inSuperMarket)
         {
-            gameObject.SetActive(false);
+            bedTrigger.enabled = false;
         }
     }
 
@@ -41,7 +45,15 @@ public class BedSleep : MonoBehaviour
 
     public void SleepNow()
     {
+        bedTrigger.enabled = false;
+        StartCoroutine(NeighborEvent());
+    }
+
+    IEnumerator NeighborEvent()
+    {
         faderScreen.FadeIn();
+        yield return new WaitForSeconds(faderScreen.fadeSpeed + 3f);
+        DialogueManager.GetInstance().EnterDialogueMode(inkJSON,afterTalking);
     }
 
     #region CheckCollider Player
