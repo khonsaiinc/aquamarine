@@ -376,6 +376,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1248408615}
     m_Modifications:
+    - target: {fileID: 83530098501604310, guid: d43343a22ad9a714fab5ec9d274894de, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 83530098501604310, guid: d43343a22ad9a714fab5ec9d274894de, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 152412459
+      objectReference: {fileID: 0}
     - target: {fileID: 2124538800611139525, guid: d43343a22ad9a714fab5ec9d274894de, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -636,7 +644,7 @@ MonoBehaviour:
   m_Intensity: 0.1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 000000002ba11509
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1236,7 +1244,7 @@ Animator:
   m_GameObject: {fileID: 373693866}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3825a2f2e9d8c1b4b9a78dbd9e126aa1, type: 2}
+  m_Controller: {fileID: 9100000, guid: b1c1b304707c99d44a5c0f3ef26df8a8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2168,8 +2176,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 152412459
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8153091, guid: 35745eb3cea10614ab92043277247649, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4104,8 +4112,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 152412459
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8153091, guid: 35745eb3cea10614ab92043277247649, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
