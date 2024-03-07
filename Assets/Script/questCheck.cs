@@ -24,6 +24,10 @@ public static class QuestCheck
     public static bool isPlayedC4;
 
     #endregion
+    #region Outfit
+    public static bool canChangeOutfit{get;set;}
+    public static string outFit{get;set;} = "BrownPajama";
+    #endregion
 
     #region Scenebefore
 

@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.068553, y: -2.85, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -195,11 +195,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 6947510956453958265}
-  groundCheck: {fileID: 0}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
   animator: {fileID: 3492233216068655221}
+  speed: 1.5
+  workUniform: {fileID: 4132232178553772800, guid: 8f0dbff785574a24397f04361e6ce3df, type: 3}
+  yellowPajama: {fileID: 6903137141185478326, guid: 2242eb713fd273f49b45588df49baa33, type: 3}
 --- !u!114 &6301108320605428150
 MonoBehaviour:
   m_ObjectHideFlags: 0

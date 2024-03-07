@@ -9,6 +9,7 @@ public class DoorRoomTrigger : MonoBehaviour
     [SerializeField] GameObject interactIcon;
     //[SerializeField] PlayerController playerController;
     [SerializeField] GameObject postMan;
+    [SerializeField] ChangeOutfit wardrobe;
 
     [Header("Door")]
     [SerializeField] GameObject DoorPostMan;
@@ -76,6 +77,8 @@ public class DoorRoomTrigger : MonoBehaviour
         if (postMan == null)
         {
             QuestCheck.questDelivery = true;
+            QuestCheck.canChangeOutfit = true;
+            wardrobe.WardrobeOpen();
             doorReal.SetActive(true);
             Destroy(DoorPostMan);
         }
@@ -126,8 +129,8 @@ public class DoorRoomTrigger : MonoBehaviour
         isPlayed = true;
         screenVideo.SetActive(true);
         videoPlayer.Play();
-        postMan.SetActive(true);
         yield return new WaitForSeconds(3f);
+        postMan.SetActive(true);
         renderTexture.Release();
         faderScreen.FadeOut();
         yield return new WaitForSeconds(faderScreen.fadeSpeed);
