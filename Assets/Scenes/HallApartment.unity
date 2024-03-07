@@ -1924,6 +1924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1325597823}
   - component: {fileID: 1325597824}
+  - component: {fileID: 1325597825}
   m_Layer: 0
   m_Name: InteractIcon
   m_TagString: Untagged
@@ -1984,8 +1985,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 152412459
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 8153091, guid: 35745eb3cea10614ab92043277247649, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1998,6 +1999,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1325597825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325597822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 1
+  m_BlendStyleIndex: 0
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: 2ba11509
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: -0.000049978495, y: 0.000049978495, z: 0}
+    m_Extent: {x: 0.50014997, y: 0.50084996, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: -0.5, y: 0.5, z: 0}
 --- !u!114 &1344891626 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1841933259846364017, guid: 10d66600caeaf56498ee9590c5c446b7, type: 3}
@@ -3241,6 +3292,10 @@ PrefabInstance:
     - target: {fileID: 4516692682892151843, guid: a9afaebb06d4aca4095625259cb9d6fe, type: 3}
       propertyPath: m_Name
       value: postman V2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4516692682892151843, guid: a9afaebb06d4aca4095625259cb9d6fe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6423949668380425886, guid: a9afaebb06d4aca4095625259cb9d6fe, type: 3}
       propertyPath: m_LocalPosition.x
