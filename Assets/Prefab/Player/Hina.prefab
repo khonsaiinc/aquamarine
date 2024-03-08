@@ -197,6 +197,7 @@ MonoBehaviour:
   rb: {fileID: 6947510956453958265}
   animator: {fileID: 3492233216068655221}
   speed: 1.5
+  brownPajama: {fileID: 9100000, guid: f1745cedece89084ba4dee3f1b1d9411, type: 2}
   workUniform: {fileID: 4132232178553772800, guid: 8f0dbff785574a24397f04361e6ce3df, type: 3}
   yellowPajama: {fileID: 6903137141185478326, guid: 2242eb713fd273f49b45588df49baa33, type: 3}
 --- !u!114 &6301108320605428150
