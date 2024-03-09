@@ -74,13 +74,21 @@ public class DoorRoomTrigger : MonoBehaviour
             interactIcon.SetActive(false);
         }
 
+
         if (postMan == null)
         {
             QuestCheck.questDelivery = true;
             QuestCheck.canChangeOutfit = true;
             wardrobe.WardrobeOpen();
-            doorReal.SetActive(true); // แสดงประตูจริง
-            Destroy(DoorPostMan);
+            doorFake.SetActive(false);
+            gameObject.GetComponent<SpriteRenderer>().enabled = true;
+
+            if (QuestCheck.orderQuest > 1)
+            {
+                doorReal.SetActive(true); // แสดงประตูจริง
+                Destroy(DoorPostMan);
+            }
+
         }
     }
 

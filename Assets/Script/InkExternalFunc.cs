@@ -57,6 +57,7 @@ public class InkExternalFunctions
         {
             case "Destroy":
                 afterTalking.setVase.NPCDestroy();
+                QuestManager.instance.OnCompleteQuest();
                 break;
 
             default:
@@ -82,6 +83,7 @@ public class InkExternalFunctions
                 QuestCheck.questTalkTakeda_inSuperMarket = true;
                 afterTalking.disableTalking.DisableTirgger();
                 afterTalking.disableTalking.changeShift = false;
+                QuestManager.instance.OnCompleteQuest();
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
@@ -97,10 +99,13 @@ public class InkExternalFunctions
             case "Survey":
                 QuestCheck.NeighborSurvey = true;
                 afterTalking.surveyEvent.StartNeighborSurveyEvent();
+                QuestManager.instance.OnCompleteQuest();
                 break;
             case "Sleep":
                 QuestCheck.questCheckWakeUpDay2 = true;
                 afterTalking.surveyEvent.ContinueToSleep();
+                QuestManager.instance.OnCompleteQuest();
+                QuestManager.instance.OnCompleteQuest();
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");

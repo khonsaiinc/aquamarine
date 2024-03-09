@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 
 public class ChangeOutfit : MonoBehaviour
 {
+    SetVase setVase;
+    BedSleep bedSleep;
     [SerializeField] BoxCollider2D wardrobeTrigger;
     [SerializeField] GameObject interactIcon;
     [SerializeField] PlayerController playerController;
@@ -17,11 +19,28 @@ public class ChangeOutfit : MonoBehaviour
             if (context.performed)
             {
                 //เปลี่ยนชุด
-                if (QuestCheck.questDelivery)
+                if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 9)
                 {
                     playerController.HinaChangeOutfit("WorkUniform");
+
                     wardrobeTrigger.enabled = false;
+
                     QuestCheck.canChangeOutfit = false;
+                    QuestManager.instance.OnCompleteQuest();
+                }
+                else if (QuestCheck.orderQuest == 6)
+                {
+                    playerController.HinaChangeOutfit("YellowPajama");
+
+                    wardrobeTrigger.enabled = false;
+
+                    QuestCheck.canChangeOutfit = false;
+                    QuestManager.instance.OnCompleteQuest();
+                    if (QuestCheck.orderQuest == 7)
+                    {
+                        setVase.CheckBox();
+                        bedSleep.bedTrigger.enabled = true;
+                    }
                 }
             }
         }
@@ -30,6 +49,8 @@ public class ChangeOutfit : MonoBehaviour
     void Start()
     {
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        setVase = GameObject.Find("Box").GetComponent<SetVase>();
+        bedSleep = GameObject.Find("BedSleep").GetComponent<BedSleep>();
         if (QuestCheck.canChangeOutfit)
         {
             WardrobeOpen();

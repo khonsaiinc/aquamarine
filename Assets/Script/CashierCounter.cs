@@ -54,6 +54,10 @@ public class CashierCounter : MonoBehaviour
     {
         if (!isEnterCashier)
         {
+            if(QuestCheck.orderQuest == 3)
+            {
+                QuestManager.instance.OnCompleteQuest();
+            }
 
             player.GetComponent<SpriteRenderer>().sortingOrder = -2;
             player.transform.position = standHere.position;

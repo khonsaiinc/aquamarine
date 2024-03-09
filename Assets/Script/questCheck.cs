@@ -11,7 +11,7 @@ public static class QuestCheck
 
     #region QuestText
 
-    public static string questText{get;set;}
+    public static int orderQuest{get;set;}
     
     #endregion
 
