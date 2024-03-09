@@ -59,9 +59,6 @@ public class ChangeOutfit : MonoBehaviour
         {
             wardrobeTrigger.enabled = false;
         }
-
-
-
     }
 
     public void WardrobeOpen()

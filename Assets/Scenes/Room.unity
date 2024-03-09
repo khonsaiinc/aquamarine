@@ -2243,8 +2243,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: 0, z: 0}
-    m_Extent: {x: 0.50074995, y: 0.5, z: 0}
+    m_Center: {x: 0.00020000339, y: 0.00040000677, z: 0}
+    m_Extent: {x: 0.50049996, y: 0.5004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2764,8 +2764,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000050008297, y: 0.00034999847, z: 0}
-    m_Extent: {x: 0.50025, y: 0.50045, z: 0}
+    m_Center: {x: -0.00009998679, y: -0.00034999847, z: 0}
+    m_Extent: {x: 0.50090003, y: 0.50065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3361,8 +3361,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: -0.00015002489, z: 0}
-    m_Extent: {x: 0.50074995, y: 0.50035, z: 0}
+    m_Center: {x: -0.00025001168, y: -0.00025001168, z: 0}
+    m_Extent: {x: 0.50025, y: 0.50025, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3666,8 +3666,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.000050008297, y: 0.00034999847, z: 0}
-    m_Extent: {x: 0.50005, y: 0.50035, z: 0}
+    m_Center: {x: -0.000049978495, y: 0, z: 0}
+    m_Extent: {x: 0.50084996, y: 0.5008, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4501,8 +4501,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00034999847, y: 0.00025001168, z: 0}
-    m_Extent: {x: 0.50055, y: 0.50025, z: 0}
+    m_Center: {x: 0.00009998679, y: -0.00014999509, z: 0}
+    m_Extent: {x: 0.5001, y: 0.50045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5292,10 +5292,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hina
       objectReference: {fileID: 0}
+    - target: {fileID: 3492233216068655221, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f1745cedece89084ba4dee3f1b1d9411, type: 2}
     - target: {fileID: 4266728828361714438, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: brownPajama
       value: 
-      objectReference: {fileID: 9100000, guid: f1745cedece89084ba4dee3f1b1d9411, type: 2}
+      objectReference: {fileID: 9100000, guid: 8425fc2ac3c37f94a9572ed60f5815ad, type: 2}
     - target: {fileID: 7154507525479232564, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.591
