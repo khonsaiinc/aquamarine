@@ -74,9 +74,9 @@ public class FadingScreen : MonoBehaviour
 
     IEnumerator WaitCutSceneC3()
     {
-        yield return new WaitForSeconds(timeToShowText);
+        yield return new WaitForSeconds(timeToShowText);//แสดงข้อความ
         cutSceneOldLady.CutScenePlay();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3f);//รอcutsceneจบ
         fadeOut = true;
         yield return new WaitForSeconds(1f);
         oldLadyTalking.moveOldladyToCashier();

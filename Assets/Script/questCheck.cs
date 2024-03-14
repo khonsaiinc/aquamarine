@@ -16,7 +16,8 @@ public static class QuestCheck
     #endregion
 
     #region EventStoryCheck
-
+    public static bool isWorkDoneDay1{get;set;}
+    public static bool isWorking{get;set;}
     public static bool NeighborSurvey{get;set;} //ไว้ใช้เมื่อเลือกออกไปดูข้างห้อง
     public static bool isUnlockStorageRoom{get;set;} = true; //ปลดล็อคประตูห้องเก็บของ
 

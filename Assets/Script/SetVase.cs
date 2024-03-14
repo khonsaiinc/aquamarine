@@ -40,7 +40,7 @@ public class SetVase : MonoBehaviour
             Destroy(dialogueBoxC5);
         }
 
-        if(QuestCheck.orderQuest != 7)
+        if(QuestCheck.orderQuest != 8)
         {
             dialogueBoxC5.SetActive(false);
         }else

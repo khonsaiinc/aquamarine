@@ -19,7 +19,7 @@ public class ChangeOutfit : MonoBehaviour
             if (context.performed)
             {
                 //เปลี่ยนชุด
-                if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 9)
+                if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 10)
                 {
                     playerController.HinaChangeOutfit("WorkUniform");
 
@@ -28,7 +28,7 @@ public class ChangeOutfit : MonoBehaviour
                     QuestCheck.canChangeOutfit = false;
                     QuestManager.instance.OnCompleteQuest();
                 }
-                else if (QuestCheck.orderQuest == 6)
+                else if (QuestCheck.orderQuest == 7)
                 {
                     playerController.HinaChangeOutfit("YellowPajama");
 
@@ -36,7 +36,7 @@ public class ChangeOutfit : MonoBehaviour
 
                     QuestCheck.canChangeOutfit = false;
                     QuestManager.instance.OnCompleteQuest();
-                    if (QuestCheck.orderQuest == 7)
+                    if (QuestCheck.orderQuest == 8)
                     {
                         setVase.CheckBox();
                         bedSleep.bedTrigger.enabled = true;

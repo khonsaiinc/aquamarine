@@ -25,7 +25,7 @@ public class BedSleep : MonoBehaviour
 
     void Start()
     {
-        if (QuestCheck.orderQuest != 7)
+        if (QuestCheck.orderQuest != 8)
         {
             bedTrigger.enabled = false;
         }

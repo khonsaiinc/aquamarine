@@ -61,7 +61,7 @@ public class QuestManager : MonoBehaviour
         {
             OnCompleteQuest();
         }
-        else if (QuestCheck.orderQuest == 5 && sceneController.currentScene == "Room")
+        else if (QuestCheck.orderQuest == 6 && sceneController.currentScene == "Room")
         {
             OnCompleteQuest();
         }
