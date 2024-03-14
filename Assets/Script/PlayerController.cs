@@ -15,9 +15,10 @@ public class PlayerController : MonoBehaviour
     [Header("AnimationController")]
     [SerializeField] RuntimeAnimatorController brownPajama;
     [SerializeField] RuntimeAnimatorController workUniform;
+    [SerializeField] RuntimeAnimatorController workUniform_holdingbox;
     [SerializeField] RuntimeAnimatorController yellowPajama;
 
-    void Start() 
+    void Start()
     {
         HinaChangeOutfit(QuestCheck.outFit);
     }
@@ -64,9 +65,13 @@ public class PlayerController : MonoBehaviour
                 animator.runtimeAnimatorController = workUniform; //ชุดทำงาน
                 QuestCheck.outFit = nameOutfit; // บันทึกชุดสำหรับไปซีนอื่น
                 break;
+            case "WorkUniform_HoldingBox":
+                animator.runtimeAnimatorController = workUniform_holdingbox; //ชุดทำงาน
+                QuestCheck.outFit = nameOutfit; // บันทึกชุดสำหรับไปซีนอื่น
+                break;
             case "YellowPajama":
                 animator.runtimeAnimatorController = yellowPajama; //ชุดนอนสีเหลือง
-                 QuestCheck.outFit = nameOutfit;// บันทึกชุดสำหรับไปซีนอื่น
+                QuestCheck.outFit = nameOutfit;// บันทึกชุดสำหรับไปซีนอื่น
                 break;
             default:
                 Debug.LogError("Can't found Outfit");
