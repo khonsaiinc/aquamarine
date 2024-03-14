@@ -50,8 +50,17 @@ TagManager:
   - name: StreetLight
     uniqueID: 4207667735
     locked: 0
+  - name: Furniture
+    uniqueID: 65833391
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NPC
+    uniqueID: 3907126761
+    locked: 0
+  - name: Player
+    uniqueID: 32823305
     locked: 0
   - name: InteractIcon
     uniqueID: 152412459
