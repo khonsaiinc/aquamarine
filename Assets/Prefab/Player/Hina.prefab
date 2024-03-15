@@ -199,6 +199,7 @@ MonoBehaviour:
   speed: 1.5
   brownPajama: {fileID: 9100000, guid: 8425fc2ac3c37f94a9572ed60f5815ad, type: 2}
   workUniform: {fileID: 9100000, guid: f1745cedece89084ba4dee3f1b1d9411, type: 2}
+  workUniform_Holdingbox: {fileID: 9100000, guid: 8425fc2ac3c37f94a9572ed60f5815ad, type: 2}
   yellowPajama: {fileID: 9100000, guid: 28d8233f3c0a16d43a996bc4497e2f77, type: 2}
 --- !u!114 &6301108320605428150
 MonoBehaviour:

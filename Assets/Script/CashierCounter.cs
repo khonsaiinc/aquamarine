@@ -54,7 +54,7 @@ public class CashierCounter : MonoBehaviour
     {
         if (!isEnterCashier)
         {
-            if (QuestCheck.isWorkDoneDay1)
+            if (QuestCheck.orderQuest == 4)
             {
                 if (QuestCheck.orderQuest == 4)
                 {

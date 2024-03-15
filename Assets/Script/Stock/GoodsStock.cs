@@ -12,9 +12,10 @@ public class GoodsStock : MonoBehaviour
     [SerializeField] StockData stockData;
 
     [Header("Goods")]
-    [SerializeField] List<GameObject> goods = new List<GameObject>();
-    [Header("Player")]
+    public List<GameObject> goods = new List<GameObject>();
+    [Header("General")]
     [SerializeField] PlayerController playerController;
+    [SerializeField] BoxCollider2D stockTrigger;
 
 
     bool playerInRange;
@@ -33,6 +34,8 @@ public class GoodsStock : MonoBehaviour
     void Start()
     {
         //เรียก LoadStock
+        LoadStock();
+
     }
 
     void Update()
@@ -45,6 +48,15 @@ public class GoodsStock : MonoBehaviour
         else
         {
             interactIcon.SetActive(false);
+        }
+
+        if(stockData.goodsInStock >= stockData.maxGoods)
+        {
+            stockTrigger.enabled = false;
+        }
+        else
+        {
+            stockTrigger.enabled = true;
         }
         #endregion
     }
@@ -66,11 +78,6 @@ public class GoodsStock : MonoBehaviour
         {
             goods[i].SetActive(true);
         }
-    }
-
-    public void ResetStock()
-    {
-        stockData.goodsInStock = 0;
     }
 
     #region CheckCollider Player

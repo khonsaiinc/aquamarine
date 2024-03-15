@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [Header("AnimationController")]
     [SerializeField] RuntimeAnimatorController brownPajama;
     [SerializeField] RuntimeAnimatorController workUniform;
-    [SerializeField] RuntimeAnimatorController workUniform_holdingbox;
+    [SerializeField] RuntimeAnimatorController workUniform_Holdingbox;
     [SerializeField] RuntimeAnimatorController yellowPajama;
 
     void Start()
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
                 QuestCheck.outFit = nameOutfit; // บันทึกชุดสำหรับไปซีนอื่น
                 break;
             case "WorkUniform_HoldingBox":
-                animator.runtimeAnimatorController = workUniform_holdingbox; //ชุดทำงาน
+                animator.runtimeAnimatorController = workUniform_Holdingbox; //ชุดทำงาน
                 QuestCheck.outFit = nameOutfit; // บันทึกชุดสำหรับไปซีนอื่น
                 break;
             case "YellowPajama":

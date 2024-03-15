@@ -74,6 +74,7 @@ public class InkExternalFunctions
             case "TakedaFrontSuperMarket":
                 QuestCheck.questTalkTakeda = true;
                 afterTalking.takedaOutside.isTalkedEnableDoor();
+                QuestManager.instance.ResetStock();
                 break;
             case "MoveOldlady":
                 QuestCheck.questTalkOldLady = true;

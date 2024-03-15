@@ -15,6 +15,11 @@ public class QuestManager : MonoBehaviour
     int orderQuest;
     [SerializeField] List<DataQuest> dataQuests = new List<DataQuest>();
 
+    [Header("StockData")]
+    [SerializeField] List<StockData> allGoodsInStocks = new List<StockData>();
+    public int maxGoodsInStock;
+    public int currentGoodsInStock;
+
     void Awake()
     {
 
@@ -34,19 +39,64 @@ public class QuestManager : MonoBehaviour
 
         orderQuest = QuestCheck.orderQuest; //โหลดลำดับเควสที่บันทึกไว้ เมื่อเริ่มซีน
         OnStartSceneQuestComplete();
+
+        MaxGoodsInStock();
     }
 
     void Update()
     {
         ShowQuestText();
+        TotalGoodsInStock();
+        WorkingComplete();
     }
 
+    #region StockData
+
+    void MaxGoodsInStock()
+    {
+        for (int i = 0; i < allGoodsInStocks.Count; i++)
+        {
+            maxGoodsInStock += allGoodsInStocks[i].maxGoods;
+        }
+    }
+    void TotalGoodsInStock()
+    {
+        currentGoodsInStock = allGoodsInStocks[0].goodsInStock + allGoodsInStocks[1].goodsInStock;
+    }
+
+    public void ResetStock()
+    {
+        for (int i = 0; i < allGoodsInStocks.Count; i++)
+        {
+            allGoodsInStocks[i].goodsInStock = 0;
+        }
+        QuestCheck.isWorking = true;
+    }
+
+    void WorkingComplete()
+    {
+        if (currentGoodsInStock >= maxGoodsInStock && QuestCheck.isWorking)
+        {
+            QuestCheck.isWorking = false;
+            OnCompleteQuest();
+        }
+    }
+    #endregion
     public void ShowQuestText()
     {
         mainText = dataQuests[orderQuest].titleQuest;//เปลี่ยนหัวข้อเควส
         descriptText = dataQuests[orderQuest].informationQuest;//เปลี่ยนคำอธิบายเควส
 
-        questText.text = mainText + " : " + descriptText;
+        if (QuestCheck.isWorking && QuestCheck.orderQuest == 3)
+        {
+            questText.text = mainText + " : " + descriptText + "(" + currentGoodsInStock + "/" + maxGoodsInStock + ")";
+
+        }
+        else
+        {
+            questText.text = mainText + " : " + descriptText;
+        }
+
     }
 
     public void OnCompleteQuest()
