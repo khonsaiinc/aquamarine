@@ -20,11 +20,11 @@ public class ChangeOutfit : MonoBehaviour
             interactIcon.SetActive(true);
             if (context.performed)
             {
-                source .PlayOneShot(clip);
                 //เปลี่ยนชุด
                 if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 10)
                 {
                     playerController.HinaChangeOutfit("WorkUniform");
+                    source .PlayOneShot(clip);
 
                     wardrobeTrigger.enabled = false;
 
@@ -34,6 +34,7 @@ public class ChangeOutfit : MonoBehaviour
                 else if (QuestCheck.orderQuest == 7)
                 {
                     playerController.HinaChangeOutfit("YellowPajama");
+                    source .PlayOneShot(clip);
 
                     wardrobeTrigger.enabled = false;
 
