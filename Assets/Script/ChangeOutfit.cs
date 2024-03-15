@@ -11,6 +11,8 @@ public class ChangeOutfit : MonoBehaviour
     [SerializeField] PlayerController playerController;
     bool playerInRange;
 
+    public AudioSource source;
+    public AudioClip clip;
     public void interact(InputAction.CallbackContext context)
     {
         if (playerInRange)
@@ -18,6 +20,7 @@ public class ChangeOutfit : MonoBehaviour
             interactIcon.SetActive(true);
             if (context.performed)
             {
+                source .PlayOneShot(clip);
                 //เปลี่ยนชุด
                 if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 10)
                 {
