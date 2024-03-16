@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 75399386}
   - component: {fileID: 75399387}
   - component: {fileID: 75399388}
+  - component: {fileID: 75399389}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -211,6 +212,18 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 227498404}
   m_Damping: 0
   m_MaxWindowSize: -1
+--- !u!114 &75399389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75399385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &94450194
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1831,6 +1844,7 @@ GameObject:
   - component: {fileID: 912760655}
   - component: {fileID: 912760658}
   - component: {fileID: 912760659}
+  - component: {fileID: 912760660}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1881,7 +1895,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.05
+  orthographic size: 0.7875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1990,6 +2004,30 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &912760660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912760654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 100
+  m_RefResolutionX: 1600
+  m_RefResolutionY: 900
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &966602975
 GameObject:
   m_ObjectHideFlags: 3
@@ -2281,8 +2319,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00040000677, y: 0.00025001168, z: 0}
-    m_Extent: {x: 0.5004, y: 0.50025, z: 0}
+    m_Center: {x: -0.00020000339, y: -0.000100016594, z: 0}
+    m_Extent: {x: 0.50020003, y: 0.5007, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
