@@ -35,7 +35,7 @@ public class BlinkLight : MonoBehaviour
                 light2D.enabled = true;
                 rimLight2d.enabled = true;
                 yield return new WaitForSeconds(totalTimeBlink);
-                Debug.Log(totalTimeBlink + " / " + i);
+                //Debug.Log(totalTimeBlink + " / " + i);
             }
         }
 
