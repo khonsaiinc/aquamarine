@@ -64,7 +64,7 @@ public class CutsceneDeathHall : MonoBehaviour
         screenVideo.SetActive(true);
         videoPlayer.Play();
         
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(11f);
 
         renderTexture.Release();
 

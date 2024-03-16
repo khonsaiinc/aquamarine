@@ -2281,8 +2281,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00020000339, z: 0}
-    m_Extent: {x: 0.5009, y: 0.5006, z: 0}
+    m_Center: {x: 0.00040000677, y: 0.00025001168, z: 0}
+    m_Extent: {x: 0.5004, y: 0.50025, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2488,7 +2488,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490797423}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 8145547b7e03df54ab353f6b08c941c5, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 87e152ae5469be549b11e946e1b79d93, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
