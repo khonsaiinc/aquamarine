@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1083442567555156587}
   - component: {fileID: 9206037881045767378}
   m_Layer: 0
-  m_Name: DebugQuestCheck
+  m_Name: DebugChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
