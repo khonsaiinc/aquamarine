@@ -59,12 +59,12 @@ TagManager:
   - name: NPC
     uniqueID: 3907126761
     locked: 0
-  - name: Player
+  - name: Car
     uniqueID: 32823305
-    locked: 0
-  - name: InteractIcon
-    uniqueID: 152412459
     locked: 0
   - name: Floor
     uniqueID: 3060931419
+    locked: 0
+  - name: InteractIcon
+    uniqueID: 152412459
     locked: 0

@@ -15,6 +15,7 @@ MonoBehaviour:
   k_AssetVersion: 3
   m_RenderingLayerNames:
   - Default
+  - Layer 1
   m_ValidRenderingLayers: 3
   lightLayerName0: 
   lightLayerName1: 
