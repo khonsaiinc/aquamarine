@@ -28,6 +28,9 @@ public class SceneController : MonoBehaviour
                 {
                     player.transform.position = transformsSpawn[0].position;//เกิดที่ประตู Apartment(ข้างนอก)
                     break;
+                }else if (currentScene == "HallApartment")
+                {
+                    player.transform.position = transformsSpawn[0].position;//เกิดหน้าห้องของ hina
                 }
                 break;
             case "Outside":

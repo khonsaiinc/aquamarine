@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,14 +6,22 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public Transform groundCheck;
-    public LayerMask groundLayer;
     public Animator animator;
 
     private float horizontal;
     [SerializeField] private float speed = 1f;
-    private float jumpingPower = 14f;
     private bool isFacingRight = true;
+
+    [Header("AnimationController")]
+    [SerializeField] RuntimeAnimatorController brownPajama;
+    [SerializeField] RuntimeAnimatorController workUniform;
+    [SerializeField] RuntimeAnimatorController workUniform_Holdingbox;
+    [SerializeField] RuntimeAnimatorController yellowPajama;
+
+    void Start()
+    {
+        HinaChangeOutfit(QuestCheck.outFit);
+    }
     void Update()
     {
         if (!isFacingRight && horizontal > 0f)
@@ -31,24 +40,6 @@ public class PlayerController : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.performed && IsGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-        }
-
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-    }
-
-    private bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
-
     private void Flip()
     {
         isFacingRight = !isFacingRight;
@@ -62,4 +53,29 @@ public class PlayerController : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
     }
 
+    public void HinaChangeOutfit(string nameOutfit)
+    {
+        switch (nameOutfit)
+        {
+            case "BrownPajama":
+                animator.runtimeAnimatorController = brownPajama; //ชุดนอนสีน้ำตาล
+                QuestCheck.outFit = nameOutfit; // บันทึกชุดสำหรับไปซีนอื่น
+                break;
+            case "WorkUniform":
+                animator.runtimeAnimatorController = workUniform; //ชุดทำงาน
+                QuestCheck.outFit = nameOutfit; // บันทึกชุดสำหรับไปซีนอื่น
+                break;
+            case "WorkUniform_HoldingBox":
+                animator.runtimeAnimatorController = workUniform_Holdingbox; //ชุดทำงาน
+                QuestCheck.outFit = nameOutfit; // บันทึกชุดสำหรับไปซีนอื่น
+                break;
+            case "YellowPajama":
+                animator.runtimeAnimatorController = yellowPajama; //ชุดนอนสีเหลือง
+                QuestCheck.outFit = nameOutfit;// บันทึกชุดสำหรับไปซีนอื่น
+                break;
+            default:
+                Debug.LogError("Can't found Outfit");
+                break;
+        }
+    }
 }

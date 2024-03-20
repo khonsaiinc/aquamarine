@@ -26,7 +26,6 @@ public class DialogueTrigger1 : MonoBehaviour
             interactIcon.SetActive(true);
             if(context.performed)
             {
-                //playerPos.position = new Vector2(standHere.position.x,playerPos.position.y);
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON,afterTalking);
             }
         }

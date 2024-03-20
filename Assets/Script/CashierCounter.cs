@@ -54,18 +54,27 @@ public class CashierCounter : MonoBehaviour
     {
         if (!isEnterCashier)
         {
+            if (QuestCheck.orderQuest == 4)
+            {
+                if (QuestCheck.orderQuest == 4)
+                {
+                    QuestManager.instance.OnCompleteQuest();
+                }
+                //เริ่มเล่น C3 ถ้ายังไม่เคยเล่น
+                if (!QuestCheck.isPlayedC3)
+                {
+                    isStartEventday1 = true;
+                    fadingScreen.FadeIn();
+                }
+            }
+
 
             player.GetComponent<SpriteRenderer>().sortingOrder = -2;
             player.transform.position = standHere.position;
             isEnterCashier = true;
             playerController.PlayerCanMove(false);
 
-            //เริ่มเล่น C3 ถ้ายังไม่เคยเล่น
-            if (!QuestCheck.isPlayedC3)
-            {
-                isStartEventday1 = true;
-                fadingScreen.FadeIn();
-            }
+
 
         }
         else
