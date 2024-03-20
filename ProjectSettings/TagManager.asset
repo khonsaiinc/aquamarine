@@ -41,28 +41,25 @@ TagManager:
   - name: Background
     uniqueID: 2566818903
     locked: 0
-  - name: SuperMarket
-    uniqueID: 1796410697
+  - name: BehideBuilding
+    uniqueID: 42135537
     locked: 0
-  - name: Bin
-    uniqueID: 3385896387
+  - name: Building
+    uniqueID: 1796410697
     locked: 0
   - name: StreetLight
     uniqueID: 4207667735
     locked: 0
-  - name: Furniture
-    uniqueID: 65833391
+  - name: ObjectBack
+    uniqueID: 3385896387
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: NPC
-    uniqueID: 3907126761
-    locked: 0
-  - name: Car
+  - name: ObjectFront
     uniqueID: 32823305
     locked: 0
-  - name: Floor
+  - name: FloorAndCeiling
     uniqueID: 3060931419
     locked: 0
   - name: InteractIcon
