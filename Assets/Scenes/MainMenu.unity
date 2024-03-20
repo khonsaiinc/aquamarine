@@ -206,9 +206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1793792699}
-        m_TargetAssemblyTypeName: ScenceUI, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1793792700}
+        m_TargetAssemblyTypeName: SceneUI, Assembly-CSharp
+        m_MethodName: loadGameSceneFirst
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
