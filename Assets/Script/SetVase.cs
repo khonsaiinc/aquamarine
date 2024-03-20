@@ -6,6 +6,8 @@ public class SetVase : MonoBehaviour
     [SerializeField] GameObject vase;
     [SerializeField] GameObject interactIcon;
     [SerializeField] GameObject dialogueBoxC5;
+    public AudioSource source;
+    public AudioClip clip;
 
     bool isOpenBox;
     bool isCloseBox;
@@ -62,6 +64,7 @@ public class SetVase : MonoBehaviour
     {
         if (QuestCheck.questTalkTakeda_inSuperMarket && !isOpenBox)
         {
+            source .PlayOneShot(clip);
             box.SetActive(false);
             QuestCheck.isOpenBox = true;
             vase.SetActive(true);
