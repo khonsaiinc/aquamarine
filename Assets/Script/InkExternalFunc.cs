@@ -1,5 +1,6 @@
 using UnityEngine;
 using Ink.Runtime;
+using Unity.Mathematics;
 
 public class InkExternalFunctions
 {
@@ -107,6 +108,8 @@ public class InkExternalFunctions
                 afterTalking.surveyEvent.ContinueToSleep();
                 QuestManager.instance.OnCompleteQuest();
                 QuestManager.instance.OnCompleteQuest();
+                QuestCheck.canChangeOutfit = true;
+                afterTalking.changeOutfit.WardrobeOpen();
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");

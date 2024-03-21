@@ -8,6 +8,7 @@ public class DialogueTalking : MonoBehaviour
     public OldLadyTalking oldLadyTalking;
     public DisableTalking disableTalking;
     public SurveyEvent surveyEvent;
+    public ChangeOutfit changeOutfit;
     void Start()
     {
         if (setVase == null)
@@ -19,6 +20,8 @@ public class DialogueTalking : MonoBehaviour
         if (disableTalking == null)
             return;
         if (surveyEvent == null)
+            return;
+        if (changeOutfit == null)
             return;
     }
 }
