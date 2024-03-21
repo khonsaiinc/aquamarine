@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 3718567238061639763}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 835.1194, y: 663.38257, z: 1.9369843}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 0}
-  isPaused: 0
+  firstSelectedButton: {fileID: 0}
+  playerController: {fileID: 0}
+  dontMoveGlobal: {fileID: 0}
 --- !u!1 &7174298760124911954
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6566013860819132758, guid: 4b690315b17f2ed4b9d697327cc26eb1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -462,6 +464,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5968329788766515067, guid: 27f9f50171faad64fa72e8c589d11f96, type: 3}
+      propertyPath: m_CancelAction
+      value: 
+      objectReference: {fileID: -5067260912607722987, guid: aef93a09368718942b2d07d2198fb010, type: 3}
     - target: {fileID: 6877908679551837525, guid: 27f9f50171faad64fa72e8c589d11f96, type: 3}
       propertyPath: m_Name
       value: EventSystem
