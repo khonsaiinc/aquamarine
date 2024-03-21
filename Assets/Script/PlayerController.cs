@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 
 public class PlayerController : MonoBehaviour
 {
+
     public Rigidbody2D rb;
     public Animator animator;
 
@@ -17,6 +19,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] RuntimeAnimatorController workUniform;
     [SerializeField] RuntimeAnimatorController workUniform_Holdingbox;
     [SerializeField] RuntimeAnimatorController yellowPajama;
+
+
+    [Header("External Script")]
+    [SerializeField] GameObject pauseMenuManager;
+
+    public bool pauseGameCheck {get;set;}
 
     void Start()
     {
@@ -53,6 +61,14 @@ public class PlayerController : MonoBehaviour
         horizontal = context.ReadValue<Vector2>().x;
     }
 
+    public void pauseMenu(InputAction.CallbackContext context)
+    {
+        pauseGameCheck = true;
+    }
+    public void exitMenu(InputAction.CallbackContext context)
+    {
+        pauseGameCheck = false;
+    }
     public void HinaChangeOutfit(string nameOutfit)
     {
         switch (nameOutfit)
