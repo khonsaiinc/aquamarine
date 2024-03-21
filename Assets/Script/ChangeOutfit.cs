@@ -24,7 +24,7 @@ public class ChangeOutfit : MonoBehaviour
                 if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 10)
                 {
                     playerController.HinaChangeOutfit("WorkUniform");
-                    source .PlayOneShot(clip);
+                    source.PlayOneShot(clip);
 
                     wardrobeTrigger.enabled = false;
 
@@ -34,7 +34,7 @@ public class ChangeOutfit : MonoBehaviour
                 else if (QuestCheck.orderQuest == 7)
                 {
                     playerController.HinaChangeOutfit("YellowPajama");
-                    source .PlayOneShot(clip);
+                    source.PlayOneShot(clip);
 
                     wardrobeTrigger.enabled = false;
 
@@ -76,6 +76,8 @@ public class ChangeOutfit : MonoBehaviour
     #region IconShow
     void Update()
     {
+
+
         if (playerInRange)
         {
             interactIcon.SetActive(true);

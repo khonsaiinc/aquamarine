@@ -4,6 +4,8 @@ public class DebugQuestCheck : MonoBehaviour
 {
     [SerializeField] NameOutfit nameOutfit;
     PlayerController playerController;
+
+    [SerializeField][Range(0,11)] int QuestOrder;
     void Start()
     {
         nameOutfit = NameOutfit.BrownPajama;
@@ -28,9 +30,10 @@ public class DebugQuestCheck : MonoBehaviour
             break;
         }
         
+        QuestCheck.orderQuest = QuestOrder;
+        Debug.Log(QuestCheck.orderQuest);
         
     }
-
 
 }
 

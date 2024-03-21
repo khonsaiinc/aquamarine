@@ -11,7 +11,7 @@ public class TakedaInCashier : MonoBehaviour
         takedaNPC.SetActive(false);
         if(QuestCheck.questTalkTakeda_inSuperMarket)
         {
-            if(!QuestCheck.questGoToSleep)
+            if(!QuestCheck.questGoToSleep && QuestCheck.orderQuest == 6)
             {
                 takedaNPC.SetActive(true);
                 cashierCounterFake.SetActive(true);
