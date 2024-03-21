@@ -263,8 +263,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactIcon: {fileID: 2953020674067367121}
   spawnPlayer: {fileID: 2124538800611139525}
-  player: {fileID: 0}
+  sceneController: {fileID: 0}
+  faderScreen: {fileID: 0}
   locationName: Outside
+  source: {fileID: 0}
+  clip: {fileID: 8300000, guid: 50af9039bb7aa20409e1f7e828ef7210, type: 3}
 --- !u!114 &2603078380098874433
 MonoBehaviour:
   m_ObjectHideFlags: 0

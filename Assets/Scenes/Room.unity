@@ -468,7 +468,7 @@ PrefabInstance:
     - target: {fileID: 83530098501604310, guid: d43343a22ad9a714fab5ec9d274894de,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 83530098501604310, guid: d43343a22ad9a714fab5ec9d274894de,
         type: 3}
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   postMan: {fileID: 987235793}
   wardrobe: {fileID: 665562690}
   source: {fileID: 1404935551}
-  clip: {fileID: 8300000, guid: daa05c8649ee99a469e815eeffe10ebe, type: 3}
+  clip: {fileID: 8300000, guid: 50af9039bb7aa20409e1f7e828ef7210, type: 3}
   DoorPostMan: {fileID: 1910220410}
   doorReal: {fileID: 306114107}
   doorFake: {fileID: 535815570}
@@ -2852,8 +2852,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: 0.00014999509, z: 0}
-    m_Extent: {x: 0.50055003, y: 0.50014997, z: 0}
+    m_Center: {x: -0.00029999018, y: -0.00034999847, z: 0}
+    m_Extent: {x: 0.5006, y: 0.50035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3012,6 +3012,8 @@ MonoBehaviour:
   vase: {fileID: 1096851625}
   interactIcon: {fileID: 1997227808}
   dialogueBoxC5: {fileID: 26758496}
+  source: {fileID: 1404935551}
+  clip: {fileID: 8300000, guid: 6661a296d61b7b44b95bcad3a6032cae, type: 3}
 --- !u!114 &951654779 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8812875472536349547, guid: f938aed18c4fa3541979f1ee53a6c278,
@@ -3495,8 +3497,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00044998527, y: -0.00049999356, z: 0}
-    m_Extent: {x: 0.50045, y: 0.50049996, z: 0}
+    m_Center: {x: 0.00040000677, y: -0.00025001168, z: 0}
+    m_Extent: {x: 0.5004, y: 0.50025, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4029,7 +4031,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.125
+  orthographic size: 0.955
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4204,8 +4206,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000050008297, y: -0.00020000339, z: 0}
-    m_Extent: {x: 0.50005, y: 0.50020003, z: 0}
+    m_Center: {x: -0.00034999847, y: -0.00009998679, z: 0}
+    m_Extent: {x: 0.50035, y: 0.50049996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4326,7 +4328,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4640,8 +4642,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000100016594, y: 0.000049978495, z: 0}
-    m_Extent: {x: 0.5004, y: 0.50055003, z: 0}
+    m_Center: {x: -0.00029999018, y: 0.00034999847, z: 0}
+    m_Extent: {x: 0.5003, y: 0.50035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5597,8 +5599,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: 0.00020000339, z: 0}
-    m_Extent: {x: 0.50014997, y: 0.50020003, z: 0}
+    m_Center: {x: 0, y: -0.000049978495, z: 0}
+    m_Extent: {x: 0.5, y: 0.50055003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6196,7 +6198,7 @@ PrefabInstance:
     - target: {fileID: 83530098501604310, guid: d43343a22ad9a714fab5ec9d274894de,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 83530098501604310, guid: d43343a22ad9a714fab5ec9d274894de,
         type: 3}
@@ -6244,11 +6246,6 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -909070909
       objectReference: {fileID: 0}
-    - target: {fileID: 4185346564206832119, guid: d43343a22ad9a714fab5ec9d274894de,
-        type: 3}
-      propertyPath: clip
-      value: 
-      objectReference: {fileID: 8300000, guid: daa05c8649ee99a469e815eeffe10ebe, type: 3}
     - target: {fileID: 4185346564206832119, guid: d43343a22ad9a714fab5ec9d274894de,
         type: 3}
       propertyPath: player
