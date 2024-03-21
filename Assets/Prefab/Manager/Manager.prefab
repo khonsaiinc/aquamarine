@@ -83,8 +83,8 @@ Transform:
   - {fileID: 7863888232234411310}
   - {fileID: 1371870243683940024}
   - {fileID: 3865157061312431726}
-  - {fileID: 482353978572984264}
   - {fileID: 3287907162663057281}
+  - {fileID: 482353978572984264}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8613186565035241790
@@ -352,6 +352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0,
+        type: 3}
+      propertyPath: questText
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0,
         type: 3}
