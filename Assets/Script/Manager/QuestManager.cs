@@ -107,7 +107,7 @@ public class QuestManager : MonoBehaviour
 
     public void OnStartSceneQuestComplete()//เมื่อเริ่มซีนให้เควสเสร็จ เช่น ไปสถานที่ต่างๆ
     {
-        if (QuestCheck.orderQuest == 2 && sceneController.currentScene == "SuperMarket")
+        if (QuestCheck.orderQuest == 2 && sceneController.currentScene == "SuperMarket" || QuestCheck.orderQuest == 11 && sceneController.currentScene == "SuperMarket")
         {
             OnCompleteQuest();
         }

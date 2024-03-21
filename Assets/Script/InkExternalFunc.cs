@@ -87,6 +87,11 @@ public class InkExternalFunctions
                 afterTalking.disableTalking.changeShift = false;
                 QuestManager.instance.OnCompleteQuest();
                 break;
+            case "TakedaFrontSuperMarketDay2":
+                QuestCheck.questTalkTakedaDay2 = true;
+                afterTalking.takedaOutsideDay2.isTalkedEnableDoor();
+                QuestManager.instance.ResetStock();
+                break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
                 break;
