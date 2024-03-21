@@ -1,30 +1,39 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    PlayerController playerController;
+    public GameObject firstSelectedButton;
+    public PlayerController playerController;
+    public DontMoveGlobal dontMoveGlobal;
 
-    /* The `#if UNITY_EDITOR` preprocessor directive in C# is used to conditionally compile code based on
-    whether the code is being compiled in the Unity Editor or not. */
-    #if UNITY_EDITOR
-        public bool isPaused = false;
-    #else
-        bool isPaused = false;
-    #endif
+    static bool isPaused {get; set;}
 
-    public void Start() {
+    public void Start()
+    {
+        isPaused = false;
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
-        isPaused = false; 
     }
-    void Update() {
-        if (playerController.pauseGameCheck)
+
+    void FixedUpdate()
+    {
+        if (isPaused)
         {
-            PauseGame();
+            StartCoroutine(DelayPause());
+        }
+        if (!isPaused)
+        {
+            ResumeGame();
         }
     }
+
     public void ResumeGame()
     {
+        StopAllCoroutines();
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -32,8 +41,38 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
+        dontMoveGlobal.PlayerCanMove(false);
         pauseMenuUI.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(firstSelectedButton);
         Time.timeScale = 0f;
         isPaused = true;
+    }
+
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    IEnumerator DelayPause()
+    {
+        yield return new WaitForSeconds(0.1f);
+        PauseGame();
+        Debug.Log("Pause game Finished!");
+    }
+
+    public void OnPauseGame(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            isPaused = true;
+        }
+    }
+
+    public void OnResumeGame(InputAction.CallbackContext context)
+    {
+        if (context.performed) // Check if paused first
+        {
+            isPaused = false;
+        }
     }
 }
