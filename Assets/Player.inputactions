@@ -306,7 +306,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Pause",
+                    "name": "Unpause",
                     "type": "Button",
                     "id": "9176f314-5fc6-418e-ba3e-7a8c21254dba",
                     "expectedControlType": "Button",
@@ -499,7 +499,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Pause",
+                    "action": "Unpause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
