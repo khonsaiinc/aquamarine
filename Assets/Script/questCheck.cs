@@ -8,6 +8,7 @@ public static class QuestCheck
     public static bool questTalkTakeda_inSuperMarket{get;set;}
     public static bool questGoToSleep{get;set;}
     public static bool questCheckWakeUpDay2{get;set;}
+    public static bool questTalkTakedaDay2{get;set;}
 
     #region QuestText
 

@@ -269,9 +269,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0, type: 3}
-      propertyPath: questText
-      value: 
+      propertyPath: dataQuests.Array.size
+      value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0, type: 3}
+      propertyPath: dataQuests.Array.data[12]
+      value: 
+      objectReference: {fileID: 11400000, guid: 545b46d0df9797a4e8a7b1e8ef1b519f, type: 2}
     - target: {fileID: 9044403574169254158, guid: fada1161ba037ce408660e585d6952a0, type: 3}
       propertyPath: m_Name
       value: QuestManager

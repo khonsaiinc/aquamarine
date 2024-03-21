@@ -10,22 +10,23 @@ public class TakedaOutsideDay2 : MonoBehaviour
     [SerializeField] PlayableDirector playableDirector;
     void Start()
     {
-        if(QuestCheck.orderQuest != 11)
+        if (QuestCheck.orderQuest != 11)
         {
             Destroy(gameObject);
         }
-
-        if(QuestCheck.questTalkTakeda){
-            Destroy(gameObject);
-        }else{doorSuperMarket.SetActive(false);}
+        else
+        {
+            doorSuperMarket.SetActive(false);
+        }
     }
 
     public void isTalkedEnableDoor()
     {
-        if(QuestCheck.questTalkTakeda){
+        if (QuestCheck.questTalkTakedaDay2)
+        {
             triggerTakeda.SetActive(false);
             doorSuperMarket.SetActive(true);
-        StartCoroutine(TakadaGoOutScene());
+            StartCoroutine(TakadaGoOutScene());
         }
     }
 

@@ -9,6 +9,7 @@ public class DialogueTalking : MonoBehaviour
     public DisableTalking disableTalking;
     public SurveyEvent surveyEvent;
     public ChangeOutfit changeOutfit;
+    public TakedaOutsideDay2 takedaOutsideDay2;
     void Start()
     {
         if (setVase == null)
@@ -22,6 +23,8 @@ public class DialogueTalking : MonoBehaviour
         if (surveyEvent == null)
             return;
         if (changeOutfit == null)
+            return;
+        if (takedaOutsideDay2 == null)
             return;
     }
 }
