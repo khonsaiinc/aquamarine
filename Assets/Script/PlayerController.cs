@@ -24,8 +24,6 @@ public class PlayerController : MonoBehaviour
     [Header("External Script")]
     [SerializeField] GameObject pauseMenuManager;
 
-    public bool pauseGameCheck {get;set;}
-
     void Start()
     {
         HinaChangeOutfit(QuestCheck.outFit);
@@ -59,15 +57,6 @@ public class PlayerController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
-    }
-
-    public void pauseMenu(InputAction.CallbackContext context)
-    {
-        pauseGameCheck = true;
-    }
-    public void exitMenu(InputAction.CallbackContext context)
-    {
-        pauseGameCheck = false;
     }
     public void HinaChangeOutfit(string nameOutfit)
     {
