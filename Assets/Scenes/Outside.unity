@@ -559,7 +559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &48606798
 SpriteRenderer:
@@ -601,9 +601,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -853,8 +853,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1331, y: -0.070849955, z: 0}
-    m_Extent: {x: 1.099, y: 1.1968501, z: 0}
+    m_Center: {x: 0.13289997, y: -0.07090002, z: 0}
+    m_Extent: {x: 1.0988, y: 1.1970999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1388,8 +1388,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13335001, y: -0.0715, z: 0}
-    m_Extent: {x: 1.09975, y: 1.1968999, z: 0}
+    m_Center: {x: 0.13314998, y: -0.072049975, z: 0}
+    m_Extent: {x: 1.09925, y: 1.19705, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1559,7 +1559,7 @@ Transform:
   m_GameObject: {fileID: 289064688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.87028, y: 0.34716725, z: -8.697165}
+  m_LocalPosition: {x: 46.87028, y: 0.34716725, z: -8.697165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1704,8 +1704,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.08895001, y: 0.14935, z: 0}
-    m_Extent: {x: 0.30265, y: 0.34205002, z: 0}
+    m_Center: {x: 0.0895, y: 0.1491, z: 0}
+    m_Extent: {x: 0.3026, y: 0.3419, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1865,29 +1865,13 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1165964013}
-  - {fileID: 1203653260}
-  - {fileID: 1359577637}
   - {fileID: 885946776}
-  - {fileID: 1671679301}
-  - {fileID: 1199669784}
   - {fileID: 1819195447}
-  - {fileID: 48606797}
-  - {fileID: 1712851140}
   - {fileID: 1483626260}
-  - {fileID: 1728818021}
-  - {fileID: 1201382142}
   - {fileID: 720070016}
-  - {fileID: 1332574858}
-  - {fileID: 1466445510}
   - {fileID: 467166217}
-  - {fileID: 1594344465}
-  - {fileID: 1854531130}
   - {fileID: 137859193}
-  - {fileID: 727308876}
-  - {fileID: 643885134}
   - {fileID: 1890601202}
-  - {fileID: 1501443591}
-  - {fileID: 1204483361}
   m_Father: {fileID: 881938749}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &365529517
@@ -2519,7 +2503,7 @@ Transform:
   m_GameObject: {fileID: 484240894}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.6473, y: 0.22716725, z: 1.3028355}
+  m_LocalPosition: {x: 49.6473, y: 0.22716725, z: 1.3028355}
   m_LocalScale: {x: 8.838301, y: 1.6, z: 1.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3121,7 +3105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7154507525479232564, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.548
+      value: -12.548
       objectReference: {fileID: 0}
     - target: {fileID: 7154507525479232564, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3284,8 +3268,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0801, y: 0.1584, z: 0}
-    m_Extent: {x: 0.3344, y: 0.342, z: 0}
+    m_Center: {x: 0.07965, y: 0.15859999, z: 0}
+    m_Extent: {x: 0.33464998, y: 0.3423, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3327,7 +3311,7 @@ Transform:
   m_GameObject: {fileID: 627679722}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.7321, y: 0.05716729, z: 1.3028355}
+  m_LocalPosition: {x: 43.7321, y: 0.05716729, z: 1.3028355}
   m_LocalScale: {x: 8.884602, y: 1.6, z: 1.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3575,7 +3559,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &643885135
 SpriteRenderer:
@@ -3617,9 +3601,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3928,7 +3912,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &727308877
 SpriteRenderer:
@@ -3970,9 +3954,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4048,8 +4032,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13254997, y: -0.07040006, z: 0}
-    m_Extent: {x: 1.09925, y: 1.1972001, z: 0}
+    m_Center: {x: 0.13329998, y: -0.071100056, z: 0}
+    m_Extent: {x: 1.0999, y: 1.1979, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4143,7 +4127,7 @@ Transform:
   m_GameObject: {fileID: 752687389}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 47.6692, y: 0.7, z: 1.3028355}
+  m_LocalPosition: {x: 46.469128, y: 0.7, z: 1.3028355}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4484,6 +4468,7 @@ Transform:
   m_Children:
   - {fileID: 1463629082}
   - {fileID: 365529516}
+  - {fileID: 1177526853}
   - {fileID: 1733706628}
   - {fileID: 530570577}
   - {fileID: 89609054}
@@ -4603,7 +4588,7 @@ Transform:
   m_GameObject: {fileID: 956160848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.7376, y: 0.34716725, z: 1.3028355}
+  m_LocalPosition: {x: 48.537525, y: 0.34716725, z: 1.3028355}
   m_LocalScale: {x: 8.858611, y: 1.6, z: 1.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4741,8 +4726,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13299999, y: -0.07090002, z: 0}
-    m_Extent: {x: 1.0989, y: 1.1966, z: 0}
+    m_Center: {x: 0.13350001, y: -0.071150005, z: 0}
+    m_Extent: {x: 1.0992, y: 1.19735, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4907,8 +4892,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.1333, y: -0.07080001, z: 0}
-    m_Extent: {x: 1.0996001, y: 1.1968, z: 0}
+    m_Center: {x: 0.13345, y: -0.070850015, z: 0}
+    m_Extent: {x: 1.09925, y: 1.19695, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4990,8 +4975,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00024998188, y: 0.00009998679, z: 0}
-    m_Extent: {x: 0.50035, y: 0.5001, z: 0}
+    m_Center: {x: 0.000050008297, y: -0.00049999356, z: 0}
+    m_Extent: {x: 0.50005, y: 0.50049996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5295,6 +5280,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1177526852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1177526853}
+  m_Layer: 0
+  m_Name: Road
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1177526853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177526852}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1203653260}
+  - {fileID: 1359577637}
+  - {fileID: 1671679301}
+  - {fileID: 1199669784}
+  - {fileID: 48606797}
+  - {fileID: 1712851140}
+  - {fileID: 1728818021}
+  - {fileID: 1201382142}
+  - {fileID: 1332574858}
+  - {fileID: 1466445510}
+  - {fileID: 1594344465}
+  - {fileID: 1854531130}
+  - {fileID: 727308876}
+  - {fileID: 643885134}
+  - {fileID: 1501443591}
+  - {fileID: 1204483361}
+  m_Father: {fileID: 881938749}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1191910651
 GameObject:
   m_ObjectHideFlags: 0
@@ -5360,7 +5392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1199669785
 SpriteRenderer:
@@ -5402,9 +5434,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5444,7 +5476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1201382143
 SpriteRenderer:
@@ -5486,9 +5518,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5524,11 +5556,11 @@ Transform:
   m_GameObject: {fileID: 1203653259}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70, y: -0.034, z: 0}
+  m_LocalPosition: {x: 70, y: -0.033999994, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1203653261
 SpriteRenderer:
@@ -5570,9 +5602,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5612,7 +5644,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1204483362
 SpriteRenderer:
@@ -5654,9 +5686,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5733,8 +5765,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.1686001, y: -0.59045, z: 0}
-    m_Extent: {x: 2.0314, y: 0.86635, z: 0}
+    m_Center: {x: 1.16845, y: -0.59070003, z: 0}
+    m_Extent: {x: 2.03095, y: 0.8671, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6162,7 +6194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1332574859
 SpriteRenderer:
@@ -6204,9 +6236,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6437,7 +6469,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1359577638
 SpriteRenderer:
@@ -6479,9 +6511,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6610,8 +6642,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00020000339, y: -0.00040000677, z: 0}
-    m_Extent: {x: 0.50049996, y: 0.5006, z: 0}
+    m_Center: {x: -0.00034999847, y: -0.00015002489, z: 0}
+    m_Extent: {x: 0.50035, y: 0.50035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6692,8 +6724,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0891, y: 0.1488, z: 0}
-    m_Extent: {x: 0.3026, y: 0.34149998, z: 0}
+    m_Center: {x: 0.08915, y: 0.14975, z: 0}
+    m_Extent: {x: 0.30234998, y: 0.34155, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6859,8 +6891,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13264999, y: -0.071150005, z: 0}
-    m_Extent: {x: 1.09915, y: 1.19735, z: 0}
+    m_Center: {x: 0.13244998, y: -0.0715, z: 0}
+    m_Extent: {x: 1.09945, y: 1.1975999, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6936,7 +6968,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1466445511
 SpriteRenderer:
@@ -6978,9 +7010,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7140,8 +7172,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13384998, y: -0.07135004, z: 0}
-    m_Extent: {x: 1.09935, y: 1.19755, z: 0}
+    m_Center: {x: 0.13340002, y: -0.07179999, z: 0}
+    m_Extent: {x: 1.0989001, y: 1.197, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7275,8 +7307,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000050008297, y: 0.00020000339, z: 0}
-    m_Extent: {x: 0.50075, y: 0.50020003, z: 0}
+    m_Center: {x: 0.00014999509, y: -0.00009998679, z: 0}
+    m_Extent: {x: 0.50025, y: 0.50049996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7321,7 +7353,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1501443592
 SpriteRenderer:
@@ -7363,9 +7395,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7527,8 +7559,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13345, y: -0.07045001, z: 0}
-    m_Extent: {x: 1.09915, y: 1.1968501, z: 0}
+    m_Center: {x: 0.13375002, y: -0.071150005, z: 0}
+    m_Extent: {x: 1.0992501, y: 1.19765, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7742,7 +7774,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1594344466
 SpriteRenderer:
@@ -7784,9 +7816,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7862,8 +7894,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13234997, y: -0.07075, z: 0}
-    m_Extent: {x: 1.09935, y: 1.19735, z: 0}
+    m_Center: {x: 0.13345, y: -0.0704, z: 0}
+    m_Extent: {x: 1.09935, y: 1.197, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8001,8 +8033,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.27494997, y: -0.42040002, z: 0}
-    m_Extent: {x: 0.76065, y: 0.7429, z: 0}
+    m_Center: {x: -0.27609998, y: -0.4196, z: 0}
+    m_Extent: {x: 0.7603, y: 0.74189997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8053,7 +8085,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.075
+  m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000578cfe98c3add0c9490d136b5b1b72b617eacbfa09d8f401f1ef8202
@@ -8231,7 +8263,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1671679302
 SpriteRenderer:
@@ -8273,9 +8305,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8518,7 +8550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1712851141
 SpriteRenderer:
@@ -8560,9 +8592,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8807,8 +8839,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13314998, y: -0.07105005, z: 0}
-    m_Extent: {x: 1.09865, y: 1.19725, z: 0}
+    m_Center: {x: 0.13294998, y: -0.07095003, z: 0}
+    m_Extent: {x: 1.09945, y: 1.19715, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -8853,7 +8885,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1728818022
 SpriteRenderer:
@@ -8895,9 +8927,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9010,8 +9042,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.13749993, y: 0.022199988, z: 0}
-    m_Extent: {x: 2.6680999, y: 0.9422, z: 0}
+    m_Center: {x: -0.13784993, y: 0.02245, z: 0}
+    m_Extent: {x: 2.6679502, y: 0.94245005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9093,8 +9125,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.27560002, y: -0.41975, z: 0}
-    m_Extent: {x: 0.7613, y: 0.74275005, z: 0}
+    m_Center: {x: -0.2759, y: -0.4192, z: 0}
+    m_Extent: {x: 0.7601, y: 0.7423, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -9498,9 +9530,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 32823305
-  m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingLayerID: -1234035877
+  m_SortingLayer: 2
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: add5006168d408a42890dc4d9498ea0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9521,7 +9553,7 @@ Transform:
   m_GameObject: {fileID: 1793298700}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.445061, y: 0.38, z: 0}
+  m_LocalPosition: {x: -12.445061, y: 0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9731,7 +9763,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 365529516}
+  m_Father: {fileID: 1177526853}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1854531131
 SpriteRenderer:
@@ -9773,9 +9805,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1234035877
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 615a63fc61e631d43954c44ca1209030, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.31132078, g: 0.3098523, b: 0.3098523, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9852,8 +9884,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13280001, y: -0.071150005, z: 0}
-    m_Extent: {x: 1.0995001, y: 1.19805, z: 0}
+    m_Center: {x: 0.13369998, y: -0.07099998, z: 0}
+    m_Extent: {x: 1.0995, y: 1.1974, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10235,8 +10267,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00009998679, y: 0.00014999509, z: 0}
-    m_Extent: {x: 0.5001, y: 0.50055003, z: 0}
+    m_Center: {x: -0.00034999847, y: 0.000100016594, z: 0}
+    m_Extent: {x: 0.50035, y: 0.5003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10317,8 +10349,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 1.16925, y: -0.5912, z: 0}
-    m_Extent: {x: 2.03125, y: 0.867, z: 0}
+    m_Center: {x: 1.1680001, y: -0.5902, z: 0}
+    m_Extent: {x: 2.0317001, y: 0.8666, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10403,7 +10435,7 @@ Transform:
   m_GameObject: {fileID: 2079167150}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 58.87028, y: 0.34716725, z: -8.697165}
+  m_LocalPosition: {x: 46.87028, y: 0.34716725, z: -8.697165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10616,7 +10648,7 @@ Transform:
   m_GameObject: {fileID: 2091659305}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.7449, y: 0.13716722, z: 1.3028355}
+  m_LocalPosition: {x: 43.144863, y: 0.13716722, z: 1.3028355}
   m_LocalScale: {x: 8.86929, y: 1.6, z: 1.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10753,8 +10785,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.13309997, y: -0.07134998, z: 0}
-    m_Extent: {x: 1.0994, y: 1.19715, z: 0}
+    m_Center: {x: 0.13349998, y: -0.07095003, z: 0}
+    m_Extent: {x: 1.0997, y: 1.19725, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -10919,8 +10951,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.0802, y: 0.15945, z: 0}
-    m_Extent: {x: 0.3347, y: 0.34184998, z: 0}
+    m_Center: {x: 0.08064999, y: 0.1593, z: 0}
+    m_Extent: {x: 0.33415002, y: 0.3417, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
