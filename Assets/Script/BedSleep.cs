@@ -9,6 +9,7 @@ public class BedSleep : MonoBehaviour
     [SerializeField] public BoxCollider2D bedTrigger;
     [SerializeField] TextAsset inkJSON;
     [SerializeField] DialogueTalking afterTalking;
+    [SerializeField] ChangeOutfit changeOutfit;
 
     bool playerInRange;
 
@@ -25,7 +26,7 @@ public class BedSleep : MonoBehaviour
 
     void Start()
     {
-        if (QuestCheck.orderQuest != 8)
+        if (QuestCheck.orderQuest != 8 || QuestCheck.orderQuest != 17)
         {
             bedTrigger.enabled = false;
         }
@@ -46,14 +47,31 @@ public class BedSleep : MonoBehaviour
     public void SleepNow()
     {
         bedTrigger.enabled = false;
-        StartCoroutine(NeighborEvent());
+        if (QuestCheck.orderQuest == 8)
+        {
+            StartCoroutine(NeighborEvent());
+        }
+        else
+        {
+            StartCoroutine(SleepNormal());
+            QuestCheck.canChangeOutfit = true;
+            changeOutfit.WardrobeOpen();
+        }
+
+    }
+
+    IEnumerator SleepNormal()
+    {
+        faderScreen.FadeIn();
+        yield return new WaitForSeconds(faderScreen.fadeSpeed + 1f);
+        faderScreen.FadeOut();
     }
 
     IEnumerator NeighborEvent()
     {
         faderScreen.FadeIn();
         yield return new WaitForSeconds(faderScreen.fadeSpeed + 3f);
-        DialogueManager.GetInstance().EnterDialogueMode(inkJSON,afterTalking);
+        DialogueManager.GetInstance().EnterDialogueMode(inkJSON, afterTalking);
     }
 
     #region CheckCollider Player
