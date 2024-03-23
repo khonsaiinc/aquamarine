@@ -9,6 +9,7 @@ public class DebugQuestCheck : MonoBehaviour
     void Start()
     {
         nameOutfit = NameOutfit.BrownPajama;
+        QuestOrder = QuestCheck.orderQuest;
         playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
 

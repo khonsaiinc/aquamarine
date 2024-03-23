@@ -132,6 +132,7 @@ public class InkExternalFunctions
                 break;
             case "UnlockDoor":
                 afterTalking.dialogueInTimeline.OnEndDialogue();
+                QuestCheck.isDoorlockEventPlayed = true;
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
