@@ -127,6 +127,9 @@ public class InkExternalFunctions
     {
         switch (actions)
         {
+            case "StartTimeline":
+                afterTalking.timelineToPlay.Play();
+                break;
             case "UnlockDoor":
                 afterTalking.dialogueInTimeline.OnEndDialogue();
                 break;
