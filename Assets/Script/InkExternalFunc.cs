@@ -1,5 +1,6 @@
 using UnityEngine;
 using Ink.Runtime;
+using Unity.Mathematics;
 
 public class InkExternalFunctions
 {
@@ -10,6 +11,7 @@ public class InkExternalFunctions
         story.BindExternalFunction("questCheck", (string whoTalked) => Talked(whoTalked, afterTalking));
         story.BindExternalFunction("openItem", (string itemName) => openItemManager(itemName, afterTalking));
         story.BindExternalFunction("neighborEvent", (string sleepOrsurvey) => NeighborEvent(sleepOrsurvey, afterTalking));
+        story.BindExternalFunction("doorLockEvent", (string actions) => DoorLockEvent(actions, afterTalking));
     }
 
     public void Unbind(Story story)
@@ -86,6 +88,11 @@ public class InkExternalFunctions
                 afterTalking.disableTalking.changeShift = false;
                 QuestManager.instance.OnCompleteQuest();
                 break;
+            case "TakedaFrontSuperMarketDay2":
+                QuestCheck.questTalkTakedaDay2 = true;
+                afterTalking.takedaOutsideDay2.isTalkedEnableDoor();
+                QuestManager.instance.ResetStock();
+                break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
                 break;
@@ -107,6 +114,21 @@ public class InkExternalFunctions
                 afterTalking.surveyEvent.ContinueToSleep();
                 QuestManager.instance.OnCompleteQuest();
                 QuestManager.instance.OnCompleteQuest();
+                QuestCheck.canChangeOutfit = true;
+                afterTalking.changeOutfit.WardrobeOpen();
+                break;
+            default:
+                Debug.Log("it's not correct on argument, dosen't work");
+                break;
+        }
+    }
+
+    public void DoorLockEvent(string actions, DialogueTalking afterTalking)
+    {
+        switch (actions)
+        {
+            case "UnlockDoor":
+                afterTalking.dialogueInTimeline.OnEndDialogue();
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");

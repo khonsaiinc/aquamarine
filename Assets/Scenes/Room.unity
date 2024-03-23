@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 54352452}
   m_Layer: 0
   m_Name: Light 2D
-  m_TagString: Untagged
+  m_TagString: Lighting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -317,7 +317,8 @@ Transform:
   m_LocalPosition: {x: -2.233, y: 0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 591457395}]
+  m_Children:
+  - {fileID: 591457395}
   m_Father: {fileID: 1000612997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!114 &54352452
@@ -824,7 +825,7 @@ MonoBehaviour:
   m_Intensity: 0.03
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: c3add0c9
+  m_ApplyToSortingLayers: 578cfe98f1ef8202490d136b17eacbfac3add0c90000000009d8f4015b1b72b6
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -963,7 +964,7 @@ GameObject:
   - component: {fileID: 246444874}
   m_Layer: 0
   m_Name: Light 2D (1)
-  m_TagString: Untagged
+  m_TagString: Lighting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -980,7 +981,8 @@ Transform:
   m_LocalPosition: {x: 1.277, y: 0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 1088369239}]
+  m_Children:
+  - {fileID: 1088369239}
   m_Father: {fileID: 1000612997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!114 &246444874
@@ -2404,39 +2406,6 @@ Transform:
   - {fileID: 830160225}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &867876612
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 867876613}
-  m_Layer: 0
-  m_Name: Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &867876613
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867876612}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1192365551}
-  - {fileID: 1789782379}
-  m_Father: {fileID: 1806126818}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &873092101
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,8 +2821,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000049978495, y: -0.00029999018, z: 0}
-    m_Extent: {x: 0.50055003, y: 0.5003, z: 0}
+    m_Center: {x: -0.00014999509, y: -0.00029999018, z: 0}
+    m_Extent: {x: 0.50084996, y: 0.5004, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3314,8 +3283,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 65833391
-  m_SortingLayer: 0
+  m_SortingLayerID: -909070909
+  m_SortingLayer: -1
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: ff1d45ff2dfb87e428d9224db3d9bc89, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3497,8 +3466,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: -0.00029999018, z: 0}
-    m_Extent: {x: 0.50014997, y: 0.5003, z: 0}
+    m_Center: {x: -0.00009998679, y: 0.00034999847, z: 0}
+    m_Extent: {x: 0.5008, y: 0.50035, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3577,11 +3546,11 @@ GameObject:
   - component: {fileID: 1192365552}
   m_Layer: 0
   m_Name: Light 2D
-  m_TagString: Untagged
+  m_TagString: Lighting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1192365551
 Transform:
   m_ObjectHideFlags: 0
@@ -3594,8 +3563,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.120000005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 867876613}
+  m_Children: [{fileID: 1789782379}]
+  m_Father: {fileID: 1806126818}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1192365552
 MonoBehaviour:
@@ -3617,7 +3586,7 @@ MonoBehaviour:
   m_Intensity: 2.64
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: af89ec03
+  m_ApplyToSortingLayers: c3add0c9
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3897,7 +3866,7 @@ GameObject:
   - component: {fileID: 1323461796}
   m_Layer: 0
   m_Name: Light 2D (2)
-  m_TagString: Untagged
+  m_TagString: Lighting
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3914,7 +3883,8 @@ Transform:
   m_LocalPosition: {x: 4.701, y: 0.85, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: [{fileID: 201599808}]
+  m_Children:
+  - {fileID: 201599808}
   m_Father: {fileID: 1000612997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!114 &1323461796
@@ -4206,8 +4176,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00025001168, y: 0.00009998679, z: 0}
-    m_Extent: {x: 0.50025, y: 0.5001, z: 0}
+    m_Center: {x: -0.00030001998, y: 0.00014999509, z: 0}
+    m_Extent: {x: 0.50049996, y: 0.50055003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4642,8 +4612,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00049999356, y: -0.00025001168, z: 0}
-    m_Extent: {x: 0.50049996, y: 0.50055003, z: 0}
+    m_Center: {x: 0.00024998188, y: -0.00044998527, z: 0}
+    m_Extent: {x: 0.50035, y: 0.50045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4806,6 +4776,7 @@ MonoBehaviour:
   bedTrigger: {fileID: 1612177103}
   inkJSON: {fileID: 4900000, guid: adb954469e1aed5439f2e23cdde27586, type: 3}
   afterTalking: {fileID: 1517283527}
+  changeOutfit: {fileID: 665562690}
 --- !u!61 &1612177103
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5052,12 +5023,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789782378}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.007432403, w: 0.9999724}
-  m_LocalPosition: {x: 0, y: 0.120000005, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.00446734, w: 0.99999005}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 867876613}
+  m_Father: {fileID: 1192365551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1789782380
 MonoBehaviour:
@@ -5191,7 +5162,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 867876613}
+  - {fileID: 1192365551}
   m_Father: {fileID: 1412566819}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1846478695 stripped
@@ -5599,8 +5570,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: -0.00034999847, z: 0}
-    m_Extent: {x: 0.50084996, y: 0.50035, z: 0}
+    m_Center: {x: 0.000100016594, y: -0.00034999847, z: 0}
+    m_Extent: {x: 0.5004, y: 0.50065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5641,7 +5612,8 @@ AudioSource:
   m_GameObject: {fileID: 1998752279}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 83acacb8a10a36a4a85d9205b74e891b, type: 2}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 83acacb8a10a36a4a85d9205b74e891b,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 94f0cfeab4f302f42a025964aa86b340, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.25
@@ -6224,6 +6196,11 @@ PrefabInstance:
       propertyPath: surveyEvent
       value: 
       objectReference: {fileID: 1682000599}
+    - target: {fileID: 1954217145380415167, guid: 75b5ae78988ef23438567fb20015c7aa,
+        type: 3}
+      propertyPath: changeOutfit
+      value: 
+      objectReference: {fileID: 665562690}
     - target: {fileID: 4260281052584132762, guid: 75b5ae78988ef23438567fb20015c7aa,
         type: 3}
       propertyPath: playerInput
@@ -6279,16 +6256,31 @@ PrefabInstance:
       propertyPath: choices.Array.data[2]
       value: 
       objectReference: {fileID: 1474778252}
+    - target: {fileID: 4772947964287397338, guid: 75b5ae78988ef23438567fb20015c7aa,
+        type: 3}
+      propertyPath: lightInScene.Array.data[0]
+      value: 
+      objectReference: {fileID: 1192365550}
+    - target: {fileID: 4772947964287397338, guid: 75b5ae78988ef23438567fb20015c7aa,
+        type: 3}
+      propertyPath: lightInScene.Array.data[1]
+      value: 
+      objectReference: {fileID: 54352450}
+    - target: {fileID: 4772947964287397338, guid: 75b5ae78988ef23438567fb20015c7aa,
+        type: 3}
+      propertyPath: lightInScene.Array.data[2]
+      value: 
+      objectReference: {fileID: 246444872}
+    - target: {fileID: 4772947964287397338, guid: 75b5ae78988ef23438567fb20015c7aa,
+        type: 3}
+      propertyPath: lightInScene.Array.data[3]
+      value: 
+      objectReference: {fileID: 1323461794}
     - target: {fileID: 5521829408997210656, guid: 75b5ae78988ef23438567fb20015c7aa,
         type: 3}
       propertyPath: transformsSpawn.Array.data[0]
       value: 
       objectReference: {fileID: 1746360460}
-    - target: {fileID: 7040753809418431827, guid: 75b5ae78988ef23438567fb20015c7aa,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7174298760124911954, guid: 75b5ae78988ef23438567fb20015c7aa,
         type: 3}
       propertyPath: m_Name
@@ -6304,6 +6296,17 @@ PrefabInstance:
       propertyPath: questText
       value: 
       objectReference: {fileID: 424746182}
+    - target: {fileID: 8646894814069249517, guid: 75b5ae78988ef23438567fb20015c7aa,
+        type: 3}
+      propertyPath: dataQuests.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8646894814069249517, guid: 75b5ae78988ef23438567fb20015c7aa,
+        type: 3}
+      propertyPath: dataQuests.Array.data[13]
+      value: 
+      objectReference: {fileID: 11400000, guid: f3daab891e1ab9f4082fed1e9971968b,
+        type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
