@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5719570219207988065}
   - component: {fileID: 4266728828361714438}
   - component: {fileID: 6301108320605428150}
+  - component: {fileID: 1491417447864900541}
   m_Layer: 0
   m_Name: Hina
   m_TagString: Player
@@ -271,3 +272,11 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerInput
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!81 &1491417447864900541
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112798668202330663}
+  m_Enabled: 1
