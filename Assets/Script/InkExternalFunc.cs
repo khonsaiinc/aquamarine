@@ -1,5 +1,6 @@
 using UnityEngine;
 using Ink.Runtime;
+using Unity.Mathematics;
 
 public class InkExternalFunctions
 {
@@ -86,6 +87,11 @@ public class InkExternalFunctions
                 afterTalking.disableTalking.changeShift = false;
                 QuestManager.instance.OnCompleteQuest();
                 break;
+            case "TakedaFrontSuperMarketDay2":
+                QuestCheck.questTalkTakedaDay2 = true;
+                afterTalking.takedaOutsideDay2.isTalkedEnableDoor();
+                QuestManager.instance.ResetStock();
+                break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
                 break;
@@ -107,6 +113,8 @@ public class InkExternalFunctions
                 afterTalking.surveyEvent.ContinueToSleep();
                 QuestManager.instance.OnCompleteQuest();
                 QuestManager.instance.OnCompleteQuest();
+                QuestCheck.canChangeOutfit = true;
+                afterTalking.changeOutfit.WardrobeOpen();
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
