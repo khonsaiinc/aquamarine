@@ -10,6 +10,7 @@ public class DialogueTalking : MonoBehaviour
     public SurveyEvent surveyEvent;
     public ChangeOutfit changeOutfit;
     public TakedaOutsideDay2 takedaOutsideDay2;
+    public DontMoveGlobal dontMoveGlobal;
     void Start()
     {
         if (setVase == null)
@@ -25,6 +26,8 @@ public class DialogueTalking : MonoBehaviour
         if (changeOutfit == null)
             return;
         if (takedaOutsideDay2 == null)
+            return;
+        if (dontMoveGlobal == null)
             return;
     }
 }

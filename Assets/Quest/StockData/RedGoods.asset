@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RedGoods
   m_EditorClassIdentifier: 
   maxGoods: 2
-  goodsInStock: 2
+  goodsInStock: 1
