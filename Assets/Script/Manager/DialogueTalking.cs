@@ -11,6 +11,7 @@ public class DialogueTalking : MonoBehaviour
     public ChangeOutfit changeOutfit;
     public TakedaOutsideDay2 takedaOutsideDay2;
     public DontMoveGlobal dontMoveGlobal;
+    public DialogueInTimeline dialogueInTimeline;
     void Start()
     {
         if (setVase == null)
@@ -28,6 +29,8 @@ public class DialogueTalking : MonoBehaviour
         if (takedaOutsideDay2 == null)
             return;
         if (dontMoveGlobal == null)
+            return;
+        if (dialogueInTimeline == null)
             return;
     }
 }
