@@ -5,7 +5,7 @@ on:
 jobs:
   test:
     name: Build
-    runs-on: beershost-debian
+    runs-on: self-hosted
     strategy:
       fail-fast: false
       matrix:
