@@ -5,7 +5,7 @@ public class DebugQuestCheck : MonoBehaviour
     [SerializeField] NameOutfit nameOutfit;
     PlayerController playerController;
 
-    [SerializeField][Range(0,11)] int QuestOrder;
+    [SerializeField][Range(0,20)] int QuestOrder;
     void Start()
     {
         nameOutfit = NameOutfit.BrownPajama;
@@ -18,20 +18,25 @@ public class DebugQuestCheck : MonoBehaviour
         {
             case NameOutfit.BrownPajama :
             playerController.HinaChangeOutfit("BrownPajama");
+            QuestCheck.outFit = "BrownPajama";
             break;
             case NameOutfit.YellowPajama :
             playerController.HinaChangeOutfit("YellowPajama");
+            QuestCheck.outFit = "YellowPajama";
             break;
             case NameOutfit.WorkUniform :
             playerController.HinaChangeOutfit("WorkUniform");
+            QuestCheck.outFit = "WorkUniform";
             break;
             case NameOutfit.WorkUniform_HoldingBox :
             playerController.HinaChangeOutfit("WorkUniform_HoldingBox");
+            QuestCheck.outFit = "WorkUniform_HoldingBox";
             break;
         }
         
         QuestCheck.orderQuest = QuestOrder;
         Debug.Log(QuestCheck.orderQuest);
+        Debug.Log(QuestCheck.outFit);
         
     }
 
