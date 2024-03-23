@@ -22,6 +22,8 @@ public static class QuestCheck
     public static bool NeighborSurvey{get;set;} //ไว้ใช้เมื่อเลือกออกไปดูข้างห้อง
     public static bool isUnlockStorageRoom{get;set;} = true; //ปลดล็อคประตูห้องเก็บของ
 
+    public static bool isDoorlockEventPlayed{get;set;}
+
     #endregion EventStoryCheck
     #region isCutscenePlayed
 
