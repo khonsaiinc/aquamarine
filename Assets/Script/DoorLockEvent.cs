@@ -14,13 +14,24 @@ public class DoorLockEvent : MonoBehaviour
 
     private void Awake()
     {
-        currentGoodsInStock = QuestManager.instance.currentGoodsInStock;
-        maxGoodsInStock = QuestManager.instance.maxGoodsInStock;
+
     }
 
     void Start()
     {
         OnDoorLockEvent();
+    }
+
+    private void Update()
+    {
+        currentGoodsInStock = QuestManager.instance.currentGoodsInStock;
+        maxGoodsInStock = QuestManager.instance.maxGoodsInStock;
+        if (QuestCheck.isDoorlockEventPlayed == false)
+        {
+            OnDoorLockEvent();
+        }
+
+
     }
 
     void OnDoorLockEvent()
