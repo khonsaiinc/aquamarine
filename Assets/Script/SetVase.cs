@@ -40,7 +40,7 @@ public class SetVase : MonoBehaviour
             Destroy(dialogueBoxC5);
         }
 
-        if(!QuestCheck.questTalkTakeda_inSuperMarket)
+        if(QuestCheck.orderQuest != 8)
         {
             dialogueBoxC5.SetActive(false);
         }else
@@ -48,7 +48,7 @@ public class SetVase : MonoBehaviour
             dialogueBoxC5.SetActive(true);
         }
 
-        if (QuestCheck.questDelivery && QuestCheck.getBox)
+        if (QuestCheck.questDelivery && QuestCheck.getBox) //แสดง/ซ่อน กล่องหลังหลังคุยกับคนส่งของ
         {
             box.SetActive(true);
         }

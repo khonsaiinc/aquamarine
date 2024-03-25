@@ -9,13 +9,19 @@ public static class QuestCheck
     public static bool questGoToSleep{get;set;}
     public static bool questCheckWakeUpDay2{get;set;}
 
-    #region EventStoryCheck
+    #region QuestText
 
+    public static int orderQuest{get;set;}
+    
+    #endregion
+
+    #region EventStoryCheck
+    public static bool isWorkDoneDay1{get;set;}
+    public static bool isWorking{get;set;}
     public static bool NeighborSurvey{get;set;} //ไว้ใช้เมื่อเลือกออกไปดูข้างห้อง
-    public static bool isUnlockStorageRoom{get;set;} //ปลดล็อคประตูห้องเก็บของ
+    public static bool isUnlockStorageRoom{get;set;} = true; //ปลดล็อคประตูห้องเก็บของ
 
     #endregion EventStoryCheck
-
     #region isCutscenePlayed
 
     public static bool isPlayedC1;
@@ -24,13 +30,15 @@ public static class QuestCheck
     public static bool isPlayedC4;
 
     #endregion
-
+    #region Outfit
+    public static bool canChangeOutfit{get;set;}
+    public static string outFit{get;set;} = "BrownPajama";
+    #endregion
     #region Scenebefore
 
     public static string sceneBefore = "";
 
     #endregion
-
     #region Inventory
 
     public static bool getBox{get;set;}

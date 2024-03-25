@@ -6,7 +6,7 @@ public class BedSleep : MonoBehaviour
 {
     [SerializeField] GameObject interactIcon;
     [SerializeField] FaderScreen faderScreen;
-    [SerializeField] BoxCollider2D bedTrigger;
+    [SerializeField] public BoxCollider2D bedTrigger;
     [SerializeField] TextAsset inkJSON;
     [SerializeField] DialogueTalking afterTalking;
 
@@ -25,7 +25,7 @@ public class BedSleep : MonoBehaviour
 
     void Start()
     {
-        if (!QuestCheck.questTalkTakeda_inSuperMarket)
+        if (QuestCheck.orderQuest != 8)
         {
             bedTrigger.enabled = false;
         }

@@ -1,6 +1,6 @@
 # **aquamarine**
 
-[![Test Build](https://github.com/khonsaiinc/aquamarine/actions/workflows/testbuild.yml/badge.svg)](https://github.com/khonsaiinc/aquamarine/actions/workflows/testbuild.yml)
+[![Build Multiplatform](https://github.com/khonsaiinc/aquamarine/actions/workflows/deploymulti.yml/badge.svg?branch=develop)](https://github.com/khonsaiinc/aquamarine/actions/workflows/deploymulti.yml)
 
 using unity 2022.3.17 **only**
 
