@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Dialogue UI")]
     [SerializeField] GameObject dialoguePanel;
+    [SerializeField] GameObject bgDialoguechoice;
     [SerializeField] TextMeshProUGUI dialogueText;
     [SerializeField] TextMeshProUGUI displayNameText;
     [SerializeField] Animator portaitAnimator;
@@ -25,6 +26,10 @@ public class DialogueManager : MonoBehaviour
 
     Story currentStory;
     public bool dialogueIsPlaying { get; set; }
+
+
+    // * check for choicedialogue is enable -> with "bgDialoguechoice"
+    public static bool choiceDialogueCheck {get; set;}
 
     static DialogueManager instance;
 
@@ -54,6 +59,10 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueIsPlaying = false;
+        
+        // choiceDialogueCheck is false is default;
+        choiceDialogueCheck = false;
+        bgDialoguechoice.SetActive(false);
         dialoguePanel.SetActive(false);
 
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -95,7 +104,8 @@ public class DialogueManager : MonoBehaviour
     }
     public void EnterDialogueMode(TextAsset inkJSON, DialogueTalking afterTalking)
     {
-        Debug.Log("EnterDialogueMode");
+        Debug.Log("Enter Dialogue Mode, load INK json!");
+        bgDialoguechoice.SetActive(false);
         OnDialogueMode = true;
         DisablePlayerInput();
         currentStory = new Story(inkJSON.text);
@@ -119,6 +129,7 @@ public class DialogueManager : MonoBehaviour
         {
             Debug.Log("ContinueStory");
             canShowDialogue = false;
+            bgDialoguechoice.SetActive(false);
             StartCoroutine(DialogueDelay());
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
@@ -184,7 +195,7 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
 
-        StopAllCoroutines(); // disable all coroutine, it's maybe work?
+        StopCoroutine(ExitDialogueMode()); // disable all coroutine, it's maybe work?
     }
 
     void DisplayChoices()
@@ -205,6 +216,7 @@ public class DialogueManager : MonoBehaviour
         foreach (Choice choice in currentChoices)
         {
             choices[index].gameObject.SetActive(true);
+            bgDialoguechoice.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
         }
