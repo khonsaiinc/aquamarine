@@ -14,8 +14,8 @@ public class BlinkLight : MonoBehaviour
     [SerializeField] Light2D light2D;
     [SerializeField] Light2D rimLight2d;
 
-    public AudioSource source;
-    public AudioClip clip;
+    /*public AudioSource source;
+    public AudioClip clip;*/
 
     private void Start()
     {
@@ -34,7 +34,7 @@ public class BlinkLight : MonoBehaviour
             {
                 light2D.enabled = false;
                 rimLight2d.enabled = false;
-                source .PlayOneShot(clip);
+                AudioManager.instance.PlaySFX("lightflicker");
                 yield return new WaitForSeconds(totalTimeBlink);
                 light2D.enabled = true;
                 rimLight2d.enabled = true;

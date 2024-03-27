@@ -24,11 +24,14 @@ public class AudioManager : MonoBehaviour
             case "opendoor":
                 SoundObjectCreation(openDoor);
                 break;
+            case "marketdooropen":
+                SoundObjectCreation(marketDoorOpen);
+                break;
             case "changeuniform":
                 SoundObjectCreation(changeUniform);
                 break;
-            case "marketdooropen":
-                SoundObjectCreation(marketDoorOpen);
+            case "lightflicker":
+                SoundObjectCreation(lightsFlicker);
                 break;
         }
     }
