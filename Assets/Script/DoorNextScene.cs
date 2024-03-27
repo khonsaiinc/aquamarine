@@ -10,11 +10,13 @@ public class DoorNextScene : MonoBehaviour
     [SerializeField] Transform spawnPlayer;
     [SerializeField] SceneController sceneController;
     [SerializeField] FaderScreen faderScreen;
+    [Header("SFXDoorName")]
+    [SerializeField] string nameSFXDoor;
 
     [TextArea(minLines: 1, maxLines: 2)]
     [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
     bool playerInRange;
-    
+
 
     public void interact(InputAction.CallbackContext context)
     {
@@ -22,7 +24,7 @@ public class DoorNextScene : MonoBehaviour
         {
             if (context.performed)
             {
-                AudioManager.instance.PlaySFX("opendoor");
+                AudioManager.instance.PlaySFX(nameSFXDoor);
                 StartCoroutine(DoorEnter());
             }
         }
