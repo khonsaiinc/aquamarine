@@ -10,8 +10,6 @@ public class DoorRoomTrigger : MonoBehaviour
     //[SerializeField] PlayerController playerController;
     [SerializeField] GameObject postMan;
     [SerializeField] ChangeOutfit wardrobe;
-    public AudioSource source;
-    public AudioClip clip;
 
     [Header("Door")]
     [SerializeField] GameObject DoorPostMan;
@@ -134,7 +132,7 @@ public class DoorRoomTrigger : MonoBehaviour
 
     IEnumerator isVideoEnd()
     {
-        source .PlayOneShot(clip);
+        AudioManager.instance.PlaySFX("opendoor");
         faderScreen.FadeIn();
         yield return new WaitForSeconds(faderScreen.fadeSpeed);
         isPlayed = true;

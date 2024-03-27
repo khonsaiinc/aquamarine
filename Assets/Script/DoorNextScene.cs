@@ -14,8 +14,7 @@ public class DoorNextScene : MonoBehaviour
     [TextArea(minLines: 1, maxLines: 2)]
     [SerializeField] string locationName; //ใส่ชื่อ scene ที่จะโหลด ปล.ตัวอักษรต้องตรงเหมือนกันหมด
     bool playerInRange;
-    public AudioSource source;
-    public AudioClip clip;
+    
 
     public void interact(InputAction.CallbackContext context)
     {
@@ -23,7 +22,7 @@ public class DoorNextScene : MonoBehaviour
         {
             if (context.performed)
             {
-                source .PlayOneShot(clip);
+                AudioManager.instance.PlaySFX("opendoor");
                 StartCoroutine(DoorEnter());
             }
         }

@@ -11,8 +11,6 @@ public class ChangeOutfit : MonoBehaviour
     [SerializeField] PlayerController playerController;
     bool playerInRange;
 
-    public AudioSource source;
-    public AudioClip clip;
     public void interact(InputAction.CallbackContext context)
     {
         if (playerInRange)
@@ -24,7 +22,7 @@ public class ChangeOutfit : MonoBehaviour
                 if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 10)
                 {
                     playerController.HinaChangeOutfit("WorkUniform");
-                    source.PlayOneShot(clip);
+                    AudioManager.instance.PlaySFX("changeuniform");
 
                     wardrobeTrigger.enabled = false;
 
@@ -34,7 +32,7 @@ public class ChangeOutfit : MonoBehaviour
                 else if (QuestCheck.orderQuest == 7)
                 {
                     playerController.HinaChangeOutfit("YellowPajama");
-                    source.PlayOneShot(clip);
+                    AudioManager.instance.PlaySFX("changeuniform");
 
                     wardrobeTrigger.enabled = false;
 
