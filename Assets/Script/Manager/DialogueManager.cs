@@ -28,8 +28,6 @@ public class DialogueManager : MonoBehaviour
     public bool dialogueIsPlaying { get; set; }
 
 
-    // * check for choicedialogue is enable -> with "bgDialoguechoice"
-    public static bool choiceDialogueCheck {get; set;}
 
     static DialogueManager instance;
 
@@ -60,8 +58,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueIsPlaying = false;
         
-        // choiceDialogueCheck is false is default;
-        choiceDialogueCheck = false;
         bgDialoguechoice.SetActive(false);
         dialoguePanel.SetActive(false);
 
