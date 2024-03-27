@@ -60,6 +60,7 @@ public class InkExternalFunctions
             case "Destroy":
                 afterTalking.setVase.NPCDestroy();
                 QuestManager.instance.OnCompleteQuest();
+                AudioManager.instance.PlaySFX("opendoor");
                 break;
 
             default:
