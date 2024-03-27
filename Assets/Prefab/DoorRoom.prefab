@@ -198,7 +198,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
+  m_Size: {x: 0.71, y: 0.96}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -241,7 +241,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.71, y: 0.96}
-    newSize: {x: 19.2, y: 10.8}
+    newSize: {x: 0.71, y: 0.96}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -263,7 +263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactIcon: {fileID: 2953020674067367121}
   spawnPlayer: {fileID: 2124538800611139525}
-  player: {fileID: 0}
+  sceneController: {fileID: 0}
+  faderScreen: {fileID: 0}
   locationName: Outside
 --- !u!114 &2603078380098874433
 MonoBehaviour:
