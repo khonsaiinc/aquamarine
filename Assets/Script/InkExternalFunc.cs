@@ -11,6 +11,7 @@ public class InkExternalFunctions
         story.BindExternalFunction("questCheck", (string whoTalked) => Talked(whoTalked, afterTalking));
         story.BindExternalFunction("openItem", (string itemName) => openItemManager(itemName, afterTalking));
         story.BindExternalFunction("neighborEvent", (string sleepOrsurvey) => NeighborEvent(sleepOrsurvey, afterTalking));
+        story.BindExternalFunction("doorLockEvent", (string actions) => DoorLockEvent(actions, afterTalking));
     }
 
     public void Unbind(Story story)
@@ -115,6 +116,23 @@ public class InkExternalFunctions
                 QuestManager.instance.OnCompleteQuest();
                 QuestCheck.canChangeOutfit = true;
                 afterTalking.changeOutfit.WardrobeOpen();
+                break;
+            default:
+                Debug.Log("it's not correct on argument, dosen't work");
+                break;
+        }
+    }
+
+    public void DoorLockEvent(string actions, DialogueTalking afterTalking)
+    {
+        switch (actions)
+        {
+            case "StartTimeline":
+                afterTalking.timelineToPlay.Play();
+                break;
+            case "UnlockDoor":
+                afterTalking.dialogueInTimeline.OnEndDialogue();
+                QuestCheck.isDoorlockEventPlayed = true;
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
