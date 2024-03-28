@@ -12,7 +12,7 @@ public class CashierCounter : MonoBehaviour
 
     bool playerInRange;
     bool isEnterCashier;
-    public bool isStartEventday1;
+    public bool isStartEvent;
 
     public void interact(InputAction.CallbackContext context)
     {
@@ -45,7 +45,7 @@ public class CashierCounter : MonoBehaviour
             interactIcon.SetActive(false);
         }
 
-        if (isStartEventday1)
+        if (isStartEvent)
         {
             playerController.PlayerCanMove(false);
         }
@@ -54,7 +54,8 @@ public class CashierCounter : MonoBehaviour
     {
         if (!isEnterCashier)
         {
-            if (QuestCheck.orderQuest == 4)
+            #region CashierEvent
+            if (QuestCheck.orderQuest == 4)//เริ่ม Event วันแรก
             {
                 if (QuestCheck.orderQuest == 4)
                 {
@@ -63,10 +64,20 @@ public class CashierCounter : MonoBehaviour
                 //เริ่มเล่น C3 ถ้ายังไม่เคยเล่น
                 if (!QuestCheck.isPlayedC3)
                 {
-                    isStartEventday1 = true;
+                    isStartEvent = true;
                     fadingScreen.FadeIn();
                 }
             }
+
+            if (QuestCheck.orderQuest == 13)//เริ่ม Event วันที่ 2
+            {
+                if (QuestCheck.orderQuest == 13)
+                {
+                    QuestManager.instance.OnCompleteQuest();
+                    fadingScreen.FadeIn();
+                }
+            }
+            #endregion
 
 
             player.GetComponent<SpriteRenderer>().sortingOrder = -2;
@@ -79,7 +90,7 @@ public class CashierCounter : MonoBehaviour
         }
         else
         {
-            if (!isStartEventday1)
+            if (!isStartEvent)
             {
 
                 player.GetComponent<SpriteRenderer>().sortingOrder = 0;

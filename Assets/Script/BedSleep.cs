@@ -63,7 +63,8 @@ public class BedSleep : MonoBehaviour
     IEnumerator SleepNormal()
     {
         faderScreen.FadeIn();
-        yield return new WaitForSeconds(faderScreen.fadeSpeed + 1f);
+        yield return new WaitForSeconds(faderScreen.fadeSpeed + 3f);
+        QuestManager.instance.OnCompleteQuest();
         faderScreen.FadeOut();
     }
 

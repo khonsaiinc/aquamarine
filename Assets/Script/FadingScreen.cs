@@ -12,11 +12,13 @@ public class FadingScreen : MonoBehaviour
     [Header("NPC")]
     [SerializeField] GameObject oldLady;
     [SerializeField] GameObject takedaChangeShift;
+    [SerializeField] GameObject takedaChangeShiftDay2;
     [Header("OldladyMoveCashier")]
     [SerializeField] OldLadyTalking oldLadyTalking;
     [Header("Text")]
     [SerializeField] TextMeshProUGUI text;
     [SerializeField] float timeToShowText;
+
     [Header("FadeSpeed")]
     [SerializeField] float fadeSpeed;
 
@@ -52,6 +54,12 @@ public class FadingScreen : MonoBehaviour
                         text.text = "หลังจากนั้นไม่นาน"; // เปลี่ยนข้อความ
                         text.enabled = true;
                         StartCoroutine(WaitCutSceneC4());
+                    }
+                    if(QuestCheck.orderQuest == 14)
+                    {
+                        text.text = "ถึงเวลาเปลี่ยนกะ"; // เปลี่ยนข้อความ
+                        text.enabled = true;
+                        StartCoroutine(WaitChangeShiftDay2());
                     }
                 }
             }
@@ -94,15 +102,26 @@ public class FadingScreen : MonoBehaviour
         if(!QuestCheck.questTalkOldLady)
         {
             oldLady.SetActive(true);
+            yield return new WaitForSeconds(3f);
             
         }
         
         if(QuestCheck.questTalkOldLady && !QuestCheck.questTalkTakeda_inSuperMarket)
         {
             takedaChangeShift.SetActive(true);
+            yield return new WaitForSeconds(3f);
         }
+    }
 
-        yield return new WaitForSeconds(3f);
+    IEnumerator WaitChangeShiftDay2()
+    {
+        yield return new WaitForSeconds(5f);
+        if(QuestCheck.orderQuest == 14)
+        {
+            takedaChangeShiftDay2.SetActive(true);
+            yield return new WaitForSeconds(1f);
+        }
+        FadeOut();
     }
 
     public void FadeIn()

@@ -19,7 +19,7 @@ public class DisableTalking : MonoBehaviour
     {
         if(cashierCounter != null)
         {
-            cashierCounter.isStartEventday1 = changeShift;
+            cashierCounter.isStartEvent = changeShift;
         }
     }
 

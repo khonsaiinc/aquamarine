@@ -8,6 +8,7 @@ public class DialogueTalking : MonoBehaviour
     public TakedaOutside takedaOutside;
     public OldLadyTalking oldLadyTalking;
     public DisableTalking disableTalking;
+    public DisableTalking disableTalking2;
     public SurveyEvent surveyEvent;
     public ChangeOutfit changeOutfit;
     public TakedaOutsideDay2 takedaOutsideDay2;
@@ -23,6 +24,8 @@ public class DialogueTalking : MonoBehaviour
         if (oldLadyTalking == null)
             return;
         if (disableTalking == null)
+            return;
+        if (disableTalking2 == null)
             return;
         if (surveyEvent == null)
             return;

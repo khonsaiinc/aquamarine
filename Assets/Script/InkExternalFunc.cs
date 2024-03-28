@@ -88,6 +88,11 @@ public class InkExternalFunctions
                 afterTalking.disableTalking.changeShift = false;
                 QuestManager.instance.OnCompleteQuest();
                 break;
+            case "DisableTriggerTakedaChangeShift2":
+                afterTalking.disableTalking2.DisableTirgger();
+                afterTalking.disableTalking2.changeShift = false;
+                QuestManager.instance.OnCompleteQuest();
+                break;
             case "TakedaFrontSuperMarketDay2":
                 QuestCheck.questTalkTakedaDay2 = true;
                 afterTalking.takedaOutsideDay2.isTalkedEnableDoor();

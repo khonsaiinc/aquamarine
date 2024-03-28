@@ -31,7 +31,7 @@ public class ChangeOutfit : MonoBehaviour
                     QuestCheck.canChangeOutfit = false;
                     QuestManager.instance.OnCompleteQuest();
                 }
-                else if (QuestCheck.orderQuest == 7)
+                else if (QuestCheck.orderQuest == 7 || QuestCheck.orderQuest == 16)
                 {
                     playerController.HinaChangeOutfit("YellowPajama");
                     source.PlayOneShot(clip);
@@ -44,6 +44,9 @@ public class ChangeOutfit : MonoBehaviour
                     {
                         setVase.CheckBox();
                         bedSleep.bedTrigger.enabled = true;
+                    }else
+                    {
+                        bedSleep.bedTrigger.enabled = true;
                     }
                 }
             }
@@ -55,7 +58,8 @@ public class ChangeOutfit : MonoBehaviour
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         setVase = GameObject.Find("Box").GetComponent<SetVase>();
         bedSleep = GameObject.Find("BedSleep").GetComponent<BedSleep>();
-        if (QuestCheck.canChangeOutfit)
+
+        if (QuestCheck.canChangeOutfit || QuestCheck.orderQuest == 15)
         {
             WardrobeOpen();
         }
