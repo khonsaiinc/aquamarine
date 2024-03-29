@@ -21,7 +21,7 @@ public class ChangeOutfit : MonoBehaviour
             if (context.performed)
             {
                 //เปลี่ยนชุด
-                if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 10)
+                if (QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 10 || QuestCheck.orderQuest == 18)
                 {
                     playerController.HinaChangeOutfit("WorkUniform");
                     source.PlayOneShot(clip);
@@ -44,7 +44,8 @@ public class ChangeOutfit : MonoBehaviour
                     {
                         setVase.CheckBox();
                         bedSleep.bedTrigger.enabled = true;
-                    }else
+                    }
+                    else
                     {
                         bedSleep.bedTrigger.enabled = true;
                     }
@@ -59,7 +60,7 @@ public class ChangeOutfit : MonoBehaviour
         setVase = GameObject.Find("Box").GetComponent<SetVase>();
         bedSleep = GameObject.Find("BedSleep").GetComponent<BedSleep>();
 
-        if (QuestCheck.canChangeOutfit || QuestCheck.orderQuest == 15)
+        if (QuestCheck.canChangeOutfit || QuestCheck.orderQuest == 15 || QuestCheck.orderQuest == 16)
         {
             WardrobeOpen();
         }

@@ -65,6 +65,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1eb386398ff574a4da22c8681f25d181, type: 2}
   - {fileID: 11400000, guid: 702d8d0ea59e7b543a41f14b04fc6b8c, type: 2}
   - {fileID: 11400000, guid: e8cf0bd3098677f4eb504cbb4f70da94, type: 2}
+  - {fileID: 11400000, guid: 414084ea3b441b143898055ebbbb2552, type: 2}
+  - {fileID: 11400000, guid: 598f0c77e6304a34e894e8abf262bcd6, type: 2}
+  - {fileID: 11400000, guid: 0612fa95c6da55847867bf251318f6b5, type: 2}
+  - {fileID: 11400000, guid: 9ba3fad7c0dc0c448a2c672df7e3c04b, type: 2}
   allGoodsInStocks:
   - {fileID: 11400000, guid: 11df8e18e8dff144188dce96ebfa9db7, type: 2}
   - {fileID: 11400000, guid: 43ca7b4e80be9c641ac2c373fde41649, type: 2}

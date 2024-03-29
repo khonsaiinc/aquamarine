@@ -9,6 +9,7 @@ public class FadingScreen : MonoBehaviour
     [Header("Video")]
     [SerializeField] CutSceneOldLady cutSceneOldLady;
     [SerializeField] CutsceneTakedaChangeShift cTCS;
+    [SerializeField] CutsceneCoffe cutsceneCoffe;
     [Header("NPC")]
     [SerializeField] GameObject oldLady;
     [SerializeField] GameObject takedaChangeShift;
@@ -61,6 +62,12 @@ public class FadingScreen : MonoBehaviour
                         text.enabled = true;
                         StartCoroutine(WaitChangeShiftDay2());
                     }
+                    if(QuestCheck.orderQuest == 21)
+                    {
+                        text.text = "เวลาผ่านไป.."; // เปลี่ยนข้อความ
+                        text.enabled = true;
+                        StartCoroutine(WaitCutSceneCoffe());
+                    }
                 }
             }
         }
@@ -93,6 +100,14 @@ public class FadingScreen : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToShowText);
         cTCS.CutScenePlay();
+        yield return new WaitForSeconds(3f);
+        fadeOut = true;
+    }
+
+    IEnumerator WaitCutSceneCoffe()
+    {
+        yield return new WaitForSeconds(timeToShowText);
+        cutsceneCoffe.CutScenePlay();
         yield return new WaitForSeconds(3f);
         fadeOut = true;
     }

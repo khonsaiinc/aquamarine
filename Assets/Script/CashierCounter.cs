@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 
 public class CashierCounter : MonoBehaviour
@@ -76,6 +77,11 @@ public class CashierCounter : MonoBehaviour
                     QuestManager.instance.OnCompleteQuest();
                     fadingScreen.FadeIn();
                 }
+            }
+
+            if(QuestCheck.orderQuest == 21)
+            {
+                fadingScreen.FadeIn();
             }
             #endregion
 

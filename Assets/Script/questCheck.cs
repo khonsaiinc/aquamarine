@@ -31,6 +31,7 @@ public static class QuestCheck
     public static bool isPlayedC2;
     public static bool isPlayedC3;
     public static bool isPlayedC4;
+    public static bool isPlayedCoffe;
 
     #endregion
     #region Outfit

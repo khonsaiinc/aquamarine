@@ -56,6 +56,7 @@ public class BedSleep : MonoBehaviour
             StartCoroutine(SleepNormal());
             QuestCheck.canChangeOutfit = true;
             changeOutfit.WardrobeOpen();
+
         }
 
     }
@@ -65,6 +66,7 @@ public class BedSleep : MonoBehaviour
         faderScreen.FadeIn();
         yield return new WaitForSeconds(faderScreen.fadeSpeed + 3f);
         QuestManager.instance.OnCompleteQuest();
+        QuestManager.instance.ResetStock();
         faderScreen.FadeOut();
     }
 
