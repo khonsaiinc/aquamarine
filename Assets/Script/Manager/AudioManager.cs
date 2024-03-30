@@ -8,7 +8,7 @@ public class AudioManager : MonoBehaviour
     void Awake() { instance = this; }
 
     //Sound Effects
-    public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker;
+    public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen;
     //BackGround Music
     //public AudioClip roomMusic, marketMusic, outsideMusic;
     //Current Music Object
@@ -32,6 +32,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "lightflicker":
                 SoundObjectCreation(lightsFlicker);
+                break;
+            case "openbox":
+                SoundObjectCreation(boxOpen);
                 break;
         }
     }
