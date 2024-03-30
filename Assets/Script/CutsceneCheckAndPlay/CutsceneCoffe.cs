@@ -11,6 +11,9 @@ public class CutsceneCoffe : MonoBehaviour
     [SerializeField] GameObject screenVideo;
     [SerializeField] RenderTexture screenTexture;
 
+    [Header("EndScreen")]
+    [SerializeField] GameObject endScreen;
+
     void Start()
     {
         screenVideo.SetActive(false);
@@ -39,6 +42,7 @@ public class CutsceneCoffe : MonoBehaviour
         yield return new WaitForSeconds(4f);
 
         screenVideo.SetActive(false);
+        endScreen.SetActive(true);
         QuestCheck.isPlayedCoffe = true;
 
         screenTexture.Release(); // รีเซ็ต VideoScreen ให้เป็นสีดำ
