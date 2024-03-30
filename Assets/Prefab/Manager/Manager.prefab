@@ -356,6 +356,11 @@ PrefabInstance:
     - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0,
         type: 3}
       propertyPath: dataQuests.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0,
+        type: 3}
+      propertyPath: dataQuests.Array.size
       value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0,
@@ -364,11 +369,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 545b46d0df9797a4e8a7b1e8ef1b519f,
         type: 2}
-    - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0,
-        type: 3}
-      propertyPath: dataQuests.Array.size
-      value: 13
-      objectReference: {fileID: 0}
     - target: {fileID: 5678567924420967022, guid: fada1161ba037ce408660e585d6952a0,
         type: 3}
       propertyPath: dataQuests.Array.data[12]
@@ -612,12 +612,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2261087697085421619, guid: 27f9f50171faad64fa72e8c589d11f96,
+        type: 3}
+      propertyPath: m_sendNavigationEvents
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968329788766515067, guid: 27f9f50171faad64fa72e8c589d11f96,
+        type: 3}
+      propertyPath: m_PointAction
+      value: 
+      objectReference: {fileID: -2756408953247186567, guid: aef93a09368718942b2d07d2198fb010,
+        type: 3}
     - target: {fileID: 5968329788766515067, guid: 27f9f50171faad64fa72e8c589d11f96,
         type: 3}
       propertyPath: m_CancelAction
       value: 
       objectReference: {fileID: -5067260912607722987, guid: aef93a09368718942b2d07d2198fb010,
         type: 3}
+    - target: {fileID: 5968329788766515067, guid: 27f9f50171faad64fa72e8c589d11f96,
+        type: 3}
+      propertyPath: m_LeftClickAction
+      value: 
+      objectReference: {fileID: -4982556940057042575, guid: aef93a09368718942b2d07d2198fb010,
+        type: 3}
+    - target: {fileID: 5968329788766515067, guid: 27f9f50171faad64fa72e8c589d11f96,
+        type: 3}
+      propertyPath: m_PointerBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5968329788766515067, guid: 27f9f50171faad64fa72e8c589d11f96,
+        type: 3}
+      propertyPath: m_DeselectOnBackgroundClick
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6877908679551837525, guid: 27f9f50171faad64fa72e8c589d11f96,
         type: 3}
       propertyPath: m_Name
