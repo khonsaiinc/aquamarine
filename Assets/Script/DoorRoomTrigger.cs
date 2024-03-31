@@ -137,7 +137,7 @@ public class DoorRoomTrigger : MonoBehaviour
         isPlayed = true;
         screenVideo.SetActive(true);
         videoPlayer.Play();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(7.5f);
         postMan.SetActive(true);
         renderTexture.Release();
         faderScreen.FadeOut();
