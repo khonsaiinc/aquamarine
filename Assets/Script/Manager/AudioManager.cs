@@ -10,9 +10,9 @@ public class AudioManager : MonoBehaviour
     //Sound Effects
     public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen;
     //BackGround Music
-    //public AudioClip roomMusic, marketMusic, outsideMusic;
+    public AudioClip roomMusic, marketMusic, outsideMusic, hallapartmentMusic;
     //Current Music Object
-    //public GameObject currentMusicObject;
+    public GameObject currentMusicObject;
     
     //Sound Object
     public GameObject soundObject;
@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour
         newObject.GetComponent<AudioSource>().Play();
     }
 
-    /*public void PlayMusic(string musicName)
+    public void PlayMusic(string musicName)
     {
         switch(musicName)
         {
@@ -61,6 +61,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "outside":
                 MusicObjectCreation(outsideMusic);
+                break;
+            case "hallapartment":
+                MusicObjectCreation(hallapartmentMusic);
                 break;
         }
     }
@@ -78,5 +81,5 @@ public class AudioManager : MonoBehaviour
         currentMusicObject.GetComponent<AudioSource>().loop = true;
         //Play the audio
         currentMusicObject.GetComponent<AudioSource>().Play();
-    }*/
+    }
 }
