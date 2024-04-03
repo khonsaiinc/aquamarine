@@ -2817,8 +2817,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00009998679, y: 0, z: 0}
-    m_Extent: {x: 0.5001, y: 0.5009, z: 0}
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0.5009, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3460,8 +3460,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00020000339, y: -0.00020000339, z: 0}
-    m_Extent: {x: 0.5008, y: 0.5008, z: 0}
+    m_Center: {x: 0.00024998188, y: -0.00014999509, z: 0}
+    m_Extent: {x: 0.50035, y: 0.50014997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3996,7 +3996,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.125
+  orthographic size: 0
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4171,8 +4171,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: -0.00020000339, z: 0}
-    m_Extent: {x: 0.5009, y: 0.50039995, z: 0}
+    m_Center: {x: 0.00020000339, y: 0.00025001168, z: 0}
+    m_Extent: {x: 0.50020003, y: 0.50055003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4607,8 +4607,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00044998527, y: -0.00049999356, z: 0}
-    m_Extent: {x: 0.50045, y: 0.50049996, z: 0}
+    m_Center: {x: 0.00029999018, y: 0.00009998679, z: 0}
+    m_Extent: {x: 0.5003, y: 0.5001, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5565,8 +5565,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00029999018, y: 0, z: 0}
-    m_Extent: {x: 0.5003, y: 0.5, z: 0}
+    m_Center: {x: -0.00034999847, y: -0.00020000339, z: 0}
+    m_Extent: {x: 0.50035, y: 0.50039995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6238,35 +6238,9 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8976797642261773656, guid: 75b5ae78988ef23438567fb20015c7aa,
         type: 3}
-      propertyPath: roomMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 94f0cfeab4f302f42a025964aa86b340, type: 3}
-    - target: {fileID: 8976797642261773656, guid: 75b5ae78988ef23438567fb20015c7aa,
-        type: 3}
       propertyPath: MusicScene
       value: room
       objectReference: {fileID: 0}
-    - target: {fileID: 8976797642261773656, guid: 75b5ae78988ef23438567fb20015c7aa,
-        type: 3}
-      propertyPath: marketMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: a60aed333db7a574db0898c44a7d1141, type: 3}
-    - target: {fileID: 8976797642261773656, guid: 75b5ae78988ef23438567fb20015c7aa,
-        type: 3}
-      propertyPath: outsideMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 4b3437c2331f8b5479f31cc5f8af71b8, type: 3}
-    - target: {fileID: 8976797642261773656, guid: 75b5ae78988ef23438567fb20015c7aa,
-        type: 3}
-      propertyPath: currentMusicObject
-      value: 
-      objectReference: {fileID: 645768961999385991, guid: afe6d17cc0508f943ad15bdf724a3cda,
-        type: 3}
-    - target: {fileID: 8976797642261773656, guid: 75b5ae78988ef23438567fb20015c7aa,
-        type: 3}
-      propertyPath: hallapartmentMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: 7057d0fd33781324681425718fc21d4e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
