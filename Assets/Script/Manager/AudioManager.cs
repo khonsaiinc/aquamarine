@@ -10,12 +10,12 @@ public class AudioManager : MonoBehaviour
     //Sound Effects
     public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen;
     //BackGround Music
-    public AudioClip roomMusic, marketMusic, outsideMusic, storageroomMusic, hallapartmentMusic;
+    public AudioClip roomMusic, marketMusic, outsideMusic, storageroomMusic, hallapartmentMusic, die;
     //Current Music Object
     public GameObject currentMusicObject;
     
     //Sound Object
-    public GameObject soundObject;
+    public GameObject soundObject, bgsoundObject;
     
     public void PlaySFX(string sfxName)
     {
@@ -68,6 +68,9 @@ public class AudioManager : MonoBehaviour
             case "hallapartment":
                 MusicObjectCreation(hallapartmentMusic);
                 break;
+            case "die":
+                SoundObjectCreation(die);
+                break;
         }
     }
 
@@ -77,7 +80,7 @@ public class AudioManager : MonoBehaviour
         if(currentMusicObject)
            Destroy(currentMusicObject);
         //Create SoundObject gameobject
-        currentMusicObject = Instantiate(soundObject, transform);
+        currentMusicObject = Instantiate(bgsoundObject, transform);
         //Assign audioclip to its audiosource
         currentMusicObject.GetComponent<AudioSource>().clip = clip;
         //Make the audio source looping

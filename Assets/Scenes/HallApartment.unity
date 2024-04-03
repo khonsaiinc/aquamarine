@@ -2109,8 +2109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ef0ae57d3be504c90638ddd6e9463f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  clip: {fileID: 0}
   videoPlayer: {fileID: 1490797425}
   screenVideo: {fileID: 755453841}
   renderTexture: {fileID: 8400000, guid: 220dec0eac5440345a346a0ab893b233, type: 2}
@@ -2256,7 +2254,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 0.9525
+  orthographic size: 1.125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2760,8 +2758,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000050008297, y: -0.00019997358, z: 0}
-    m_Extent: {x: 0.50095, y: 0.5007, z: 0}
+    m_Center: {x: 0.00019997358, y: 0.00014999509, z: 0}
+    m_Extent: {x: 0.5007, y: 0.50074995, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

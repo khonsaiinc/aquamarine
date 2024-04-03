@@ -100,5 +100,7 @@ MonoBehaviour:
   outsideMusic: {fileID: 8300000, guid: 4b3437c2331f8b5479f31cc5f8af71b8, type: 3}
   storageroomMusic: {fileID: 8300000, guid: 47ecaa726dc7c3d45a8ad4964c8c8548, type: 3}
   hallapartmentMusic: {fileID: 8300000, guid: 7057d0fd33781324681425718fc21d4e, type: 3}
-  currentMusicObject: {fileID: 645768961999385991, guid: afe6d17cc0508f943ad15bdf724a3cda, type: 3}
+  die: {fileID: 8300000, guid: b7ef171b691af8a4db345b9092a799b2, type: 3}
+  currentMusicObject: {fileID: 4547655672750473080, guid: 97ab258f627d6324b82dbdbb3358bcd4, type: 3}
   soundObject: {fileID: 645768961999385991, guid: afe6d17cc0508f943ad15bdf724a3cda, type: 3}
+  bgsoundObject: {fileID: 4547655672750473080, guid: 97ab258f627d6324b82dbdbb3358bcd4, type: 3}
