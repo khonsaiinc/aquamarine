@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     //Sound Effects
     public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen;
     //BackGround Music
-    public AudioClip roomMusic, marketMusic, outsideMusic, hallapartmentMusic;
+    public AudioClip roomMusic, marketMusic, outsideMusic, storageroomMusic, hallapartmentMusic;
     //Current Music Object
     public GameObject currentMusicObject;
     
@@ -61,6 +61,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "outside":
                 MusicObjectCreation(outsideMusic);
+                break;
+            case "storageroom":
+                MusicObjectCreation(storageroomMusic);
                 break;
             case "hallapartment":
                 MusicObjectCreation(hallapartmentMusic);
