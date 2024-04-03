@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5143266249673099306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4659361254217302465}
+  - component: {fileID: 7941910001242133218}
+  m_Layer: 0
+  m_Name: SceneCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4659361254217302465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143266249673099306}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9113850299129475631}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7941910001242133218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5143266249673099306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e095bb1be698d34bac237e7c58aa712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Musicname: 
 --- !u!1 &7567070456312229581
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,7 +74,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4659361254217302465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4312031610936707542
@@ -49,4 +95,12 @@ MonoBehaviour:
   changeUniform: {fileID: 8300000, guid: 8236857770e70d048b38fb873c5b3d3f, type: 3}
   lightsFlicker: {fileID: 8300000, guid: 086ec971957598a448de922b575ef084, type: 3}
   boxOpen: {fileID: 8300000, guid: 6661a296d61b7b44b95bcad3a6032cae, type: 3}
+  roomMusic: {fileID: 8300000, guid: 94f0cfeab4f302f42a025964aa86b340, type: 3}
+  marketMusic: {fileID: 8300000, guid: a60aed333db7a574db0898c44a7d1141, type: 3}
+  outsideMusic: {fileID: 8300000, guid: 4b3437c2331f8b5479f31cc5f8af71b8, type: 3}
+  storageroomMusic: {fileID: 8300000, guid: 47ecaa726dc7c3d45a8ad4964c8c8548, type: 3}
+  hallapartmentMusic: {fileID: 8300000, guid: 7057d0fd33781324681425718fc21d4e, type: 3}
+  die: {fileID: 8300000, guid: b7ef171b691af8a4db345b9092a799b2, type: 3}
+  currentMusicObject: {fileID: 4547655672750473080, guid: 97ab258f627d6324b82dbdbb3358bcd4, type: 3}
   soundObject: {fileID: 645768961999385991, guid: afe6d17cc0508f943ad15bdf724a3cda, type: 3}
+  bgsoundObject: {fileID: 4547655672750473080, guid: 97ab258f627d6324b82dbdbb3358bcd4, type: 3}

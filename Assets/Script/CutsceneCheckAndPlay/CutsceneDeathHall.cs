@@ -7,9 +7,6 @@ using TMPro;
 
 public class CutsceneDeathHall : MonoBehaviour
 {
-    public AudioSource source;
-    public AudioClip clip;
-    
     [Header("Video")]
     [SerializeField] VideoPlayer videoPlayer;
     [SerializeField] GameObject screenVideo;
@@ -67,10 +64,10 @@ public class CutsceneDeathHall : MonoBehaviour
         screenVideo.SetActive(true);
         videoPlayer.Play();
         
-        yield return new WaitForSeconds(11f);
+        yield return new WaitForSeconds(12f);
 
         renderTexture.Release();
-        source .PlayOneShot(clip);
+        AudioManager.instance.PlayMusic("die");
 
         deadScreen.SetActive(true);
         deadText.SetActive(true);
