@@ -43,7 +43,7 @@ public class PauseMenu : MonoBehaviour
     {
         dontMoveGlobal.PlayerCanMove(false);
         pauseMenuUI.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(firstSelectedButton);
+        // EventSystem.current.SetSelectedGameObject(firstSelectedButton); // *disable for now
         Time.timeScale = 0f;
         isPaused = true;
     }
