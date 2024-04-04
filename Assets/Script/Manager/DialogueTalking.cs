@@ -15,6 +15,7 @@ public class DialogueTalking : MonoBehaviour
     public DontMoveGlobal dontMoveGlobal;
     public DialogueInTimeline dialogueInTimeline;
     public PlayableDirector timelineToPlay;
+    public DialogueTriggerDestroy radio;
     void Start()
     {
         if (setVase == null)
@@ -38,6 +39,8 @@ public class DialogueTalking : MonoBehaviour
         if (dialogueInTimeline == null)
             return;
         if (timelineToPlay == null)
+            return;
+        if (radio == null)
             return;
     }
 }

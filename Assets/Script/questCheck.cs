@@ -9,7 +9,12 @@ public static class QuestCheck
     public static bool questGoToSleep{get;set;}
     public static bool questCheckWakeUpDay2{get;set;}
     public static bool questTalkTakedaDay2{get;set;}
-
+    
+    # region Gimmic
+    public static bool objectcheck{get;set;} // * destroy object after talking only
+    
+    #endregion
+    
     #region QuestText
 
     public static int orderQuest{get;set;}
