@@ -33,7 +33,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        StopAllCoroutines();
+        StopCoroutine(DelayPause());
+        dontMoveGlobal.PlayerCanMove(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
