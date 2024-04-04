@@ -35,7 +35,7 @@ public class CutSceneOldLady : MonoBehaviour
         screenVideo.SetActive(true);
         videoPlayer.Play();
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6f);
 
         screenVideo.SetActive(false);
         QuestCheck.isPlayedC3 = true;

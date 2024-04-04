@@ -10,12 +10,12 @@ public class AudioManager : MonoBehaviour
     //Sound Effects
     public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen;
     //BackGround Music
-    //public AudioClip roomMusic, marketMusic, outsideMusic;
+    public AudioClip roomMusic, marketMusic, outsideMusic, storageroomMusic, hallapartmentMusic, die;
     //Current Music Object
-    //public GameObject currentMusicObject;
+    public GameObject currentMusicObject;
     
     //Sound Object
-    public GameObject soundObject;
+    public GameObject soundObject, bgsoundObject;
     
     public void PlaySFX(string sfxName)
     {
@@ -49,7 +49,7 @@ public class AudioManager : MonoBehaviour
         newObject.GetComponent<AudioSource>().Play();
     }
 
-    /*public void PlayMusic(string musicName)
+    public void PlayMusic(string musicName)
     {
         switch(musicName)
         {
@@ -62,6 +62,15 @@ public class AudioManager : MonoBehaviour
             case "outside":
                 MusicObjectCreation(outsideMusic);
                 break;
+            case "storageroom":
+                MusicObjectCreation(storageroomMusic);
+                break;
+            case "hallapartment":
+                MusicObjectCreation(hallapartmentMusic);
+                break;
+            case "die":
+                SoundObjectCreation(die);
+                break;
         }
     }
 
@@ -71,12 +80,12 @@ public class AudioManager : MonoBehaviour
         if(currentMusicObject)
            Destroy(currentMusicObject);
         //Create SoundObject gameobject
-        currentMusicObject = Instantiate(soundObject, transform);
+        currentMusicObject = Instantiate(bgsoundObject, transform);
         //Assign audioclip to its audiosource
         currentMusicObject.GetComponent<AudioSource>().clip = clip;
         //Make the audio source looping
         currentMusicObject.GetComponent<AudioSource>().loop = true;
         //Play the audio
         currentMusicObject.GetComponent<AudioSource>().Play();
-    }*/
+    }
 }
