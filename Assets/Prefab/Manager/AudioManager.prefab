@@ -95,6 +95,7 @@ MonoBehaviour:
   changeUniform: {fileID: 8300000, guid: 8236857770e70d048b38fb873c5b3d3f, type: 3}
   lightsFlicker: {fileID: 8300000, guid: 086ec971957598a448de922b575ef084, type: 3}
   boxOpen: {fileID: 8300000, guid: 6661a296d61b7b44b95bcad3a6032cae, type: 3}
+  placeBox: {fileID: 8300000, guid: c7af1c4886f30d6408bc40eeab6bbc05, type: 3}
   roomMusic: {fileID: 8300000, guid: 94f0cfeab4f302f42a025964aa86b340, type: 3}
   marketMusic: {fileID: 8300000, guid: a60aed333db7a574db0898c44a7d1141, type: 3}
   outsideMusic: {fileID: 8300000, guid: 4b3437c2331f8b5479f31cc5f8af71b8, type: 3}
