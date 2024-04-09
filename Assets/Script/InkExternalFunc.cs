@@ -99,6 +99,10 @@ public class InkExternalFunctions
                 afterTalking.takedaOutsideDay2.isTalkedEnableDoor();
                 QuestManager.instance.ResetStock();
                 break;
+            case "objectisenabled":
+                afterTalking.radio.disableObject();
+                QuestCheck.objectcheck = true;
+                break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
                 break;
