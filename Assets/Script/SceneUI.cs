@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneUI : MonoBehaviour {
     public void loadGameSceneFirst(){
+        AudioManager.instance.PlaySFX("mouseclick");
         SceneManager.LoadScene("Room");
         Debug.Log("Clicked");
     }
