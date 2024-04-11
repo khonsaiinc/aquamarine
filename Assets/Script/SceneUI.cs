@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class SceneUI : MonoBehaviour {
     public void loadGameSceneFirst(){
         SceneManager.LoadScene("Room");
+        Debug.Log("Clicked");
     }
 
     public void soundManagement(){

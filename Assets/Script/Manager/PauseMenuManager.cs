@@ -33,7 +33,8 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        StopAllCoroutines();
+        StopCoroutine(DelayPause());
+        dontMoveGlobal.PlayerCanMove(true);
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -43,7 +44,7 @@ public class PauseMenu : MonoBehaviour
     {
         dontMoveGlobal.PlayerCanMove(false);
         pauseMenuUI.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(firstSelectedButton);
+        // EventSystem.current.SetSelectedGameObject(firstSelectedButton); // *disable for now
         Time.timeScale = 0f;
         isPaused = true;
     }
