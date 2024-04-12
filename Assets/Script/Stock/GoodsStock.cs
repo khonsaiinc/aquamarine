@@ -27,6 +27,7 @@ public class GoodsStock : MonoBehaviour
             if (context.performed)
             {
                 Restock();
+                AudioManager.instance.PlaySFX("placebox");
             }
         }
     }

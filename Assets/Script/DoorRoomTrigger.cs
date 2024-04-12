@@ -52,7 +52,9 @@ public class DoorRoomTrigger : MonoBehaviour
             Destroy(DoorPostMan);
             Destroy(postMan);
         }
-        else { doorReal.SetActive(false); }
+        else { 
+            doorReal.SetActive(false);
+            AudioManager.instance.PlaySFX("doorknocks"); }
     }
 
     void Update()
