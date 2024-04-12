@@ -7,11 +7,17 @@ using UnityEngine.Rendering.Universal;
 
 public class CycleLightOutside : MonoBehaviour
 {
+    [Header("PostProcessingVolume")]
     [SerializeField] Volume volumePostPocessing;
-    [SerializeField] Light2D globalLight;
     [SerializeField] List<VolumeProfile> volumeProfiles = new List<VolumeProfile>();
+    [Header("GlobalLight")]
+    [SerializeField] Light2D globalLight;
     [SerializeField] List<CycleLightingData> cycleLightingDatas = new List<CycleLightingData>();
+    [Header("SkyBackground")]
     [SerializeField] List<GameObject> background = new List<GameObject>();
+    [Header("Sunlight")]
+    [SerializeField] Light2D sunlight;
+    [Header("LightingObject")]
     [SerializeField] List<GameObject> LightingsInScene = new List<GameObject>();
 
     void Start()
@@ -29,12 +35,16 @@ public class CycleLightOutside : MonoBehaviour
             globalLight.intensity = cycleLightingDatas[0].intensityLight;
             SwichLightInScene();
             background[1].SetActive(false);
+
+            
         }
         else //ตอนกลางคืน
         {
             volumePostPocessing.profile = volumeProfiles[1];
             globalLight.intensity = cycleLightingDatas[1].intensityLight;
             background[0].SetActive(false);
+
+            sunlight.intensity = 0.3f;
         }
     }
 
