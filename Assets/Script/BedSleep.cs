@@ -74,6 +74,8 @@ public class BedSleep : MonoBehaviour
     {
         faderScreen.FadeIn();
         yield return new WaitForSeconds(faderScreen.fadeSpeed + 3f);
+        AudioManager.instance.PlaySFX("somethingoutside");
+        yield return new WaitForSeconds(1f);
         DialogueManager.GetInstance().EnterDialogueMode(inkJSON, afterTalking);
     }
 
