@@ -237,6 +237,7 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        //AudioManager.instance.PlaySFX("mouseclick"); ปิดเผือไว้ก่อน
         ContinueStory();
     }
 
