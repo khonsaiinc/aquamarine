@@ -242,8 +242,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00020000339, y: -0.00025001168, z: 0}
-    m_Extent: {x: 0.50020003, y: 0.50025, z: 0}
+    m_Center: {x: -0.00029999018, y: 0.00044998527, z: 0}
+    m_Extent: {x: 0.5003, y: 0.50045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -809,8 +809,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: 0, z: 0}
-    m_Extent: {x: 0.50065005, y: 0.5, z: 0}
+    m_Center: {x: -0.00049999356, y: -0.00025001168, z: 0}
+    m_Extent: {x: 0.50049996, y: 0.50055003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2989,8 +2989,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.5007, z: 0}
+    m_Center: {x: 0, y: -0.00009998679, z: 0}
+    m_Extent: {x: 0.5, y: 0.50049996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4052,7 +4052,6 @@ GameObject:
   m_Component:
   - component: {fileID: 641989256}
   - component: {fileID: 641989259}
-  - component: {fileID: 641989258}
   - component: {fileID: 641989257}
   - component: {fileID: 641989260}
   m_Layer: 3
@@ -4121,14 +4120,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &641989258
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641989255}
-  m_Enabled: 1
 --- !u!20 &641989259
 Camera:
   m_ObjectHideFlags: 0
@@ -4618,9 +4609,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1728148393
+  m_SortingLayer: -5
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -12537,8 +12528,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00034999847, y: 0.00029999018, z: 0}
-    m_Extent: {x: 0.50035, y: 0.5003, z: 0}
+    m_Center: {x: 0.00044998527, y: 0.00025001168, z: 0}
+    m_Extent: {x: 0.50045, y: 0.50055003, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -12684,7 +12675,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1491417447864900541, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14613,7 +14605,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1728148393
   m_SortingLayer: -5
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -20925,8 +20917,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00014999509, y: 0.00025001168, z: 0}
-    m_Extent: {x: 0.50014997, y: 0.50055003, z: 0}
+    m_Center: {x: 0.00029999018, y: -0.00014999509, z: 0}
+    m_Extent: {x: 0.5003, y: 0.50014997, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

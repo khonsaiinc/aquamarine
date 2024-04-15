@@ -2104,7 +2104,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.125
+  orthographic size: 0.8625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2594,8 +2594,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00025001168, y: 0.00014999509, z: 0}
-    m_Extent: {x: 0.50055003, y: 0.50014997, z: 0}
+    m_Center: {x: -0.00029999018, y: 0.00044998527, z: 0}
+    m_Extent: {x: 0.5003, y: 0.50045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3107,7 +3107,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1491417447864900541, guid: 267b3ac28ce51204ca68ded196a9d439, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
