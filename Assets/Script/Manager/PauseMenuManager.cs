@@ -19,18 +19,6 @@ public class PauseMenu : MonoBehaviour
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
-    void FixedUpdate()
-    {
-        if (isPaused)
-        {
-            StartCoroutine(DelayPause());
-        }
-        if (!isPaused)
-        {
-            ResumeGame();
-        }
-    }
-
     public void ResumeGame()
     {
         StopCoroutine(DelayPause());
