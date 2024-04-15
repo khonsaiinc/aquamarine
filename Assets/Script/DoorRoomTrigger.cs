@@ -52,7 +52,9 @@ public class DoorRoomTrigger : MonoBehaviour
             Destroy(DoorPostMan);
             Destroy(postMan);
         }
-        else { doorReal.SetActive(false); }
+        else { 
+            doorReal.SetActive(false);
+            AudioManager.instance.PlaySFX("doorknocks"); }
     }
 
     void Update()
@@ -132,13 +134,13 @@ public class DoorRoomTrigger : MonoBehaviour
 
     IEnumerator isVideoEnd()
     {
-        AudioManager.instance.PlaySFX("opendoor");
+        //AudioManager.instance.PlaySFX("opendoor");
         faderScreen.FadeIn();
         yield return new WaitForSeconds(faderScreen.fadeSpeed);
         isPlayed = true;
         screenVideo.SetActive(true);
         videoPlayer.Play();
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(7f);
         postMan.SetActive(true);
         renderTexture.Release();
         faderScreen.FadeOut();

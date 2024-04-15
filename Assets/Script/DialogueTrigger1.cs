@@ -27,6 +27,7 @@ public class DialogueTrigger1 : MonoBehaviour
             if(context.performed)
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON,afterTalking);
+                Debug.Log("pressed, move to manager");
             }
         }
     }
