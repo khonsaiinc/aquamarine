@@ -242,8 +242,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00020000339, y: -0.00025001168, z: 0}
-    m_Extent: {x: 0.50020003, y: 0.50025, z: 0}
+    m_Center: {x: 0.000049978495, y: -0.00034999847, z: 0}
+    m_Extent: {x: 0.50055003, y: 0.50065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -809,8 +809,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00014999509, y: 0, z: 0}
-    m_Extent: {x: 0.50065005, y: 0.5, z: 0}
+    m_Center: {x: 0.00009998679, y: -0.000050008297, z: 0}
+    m_Extent: {x: 0.5001, y: 0.50095, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -1611,7 +1611,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 0}
   sceneController: {fileID: 218819399}
   faderScreen: {fileID: 319920658}
-  nameSFXDoor: 
+  nameSFXDoor: opendoor
   locationName: StorageRoom
 --- !u!1 &239938309
 GameObject:
@@ -2989,8 +2989,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0.5007, z: 0}
+    m_Center: {x: -0.00014999509, y: -0.00039997697, z: 0}
+    m_Extent: {x: 0.50014997, y: 0.50049996, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3501,7 +3501,35 @@ PrefabInstance:
     - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 8987916935775fd4f8decf5e55b8a729, type: 3}
+      objectReference: {fileID: 32900000, guid: 0482cd1eb6367a04bb92baef51499bf2, type: 3}
+    - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_ControlledAudioTrackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_DirectAudioMutes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_TargetAudioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 321233243067751573, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 568373976111025071, guid: 85ec52f8520a69b4980c31419929c973, type: 3}
       propertyPath: m_Name
       value: CutsceneCheckC3
@@ -5544,7 +5572,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744004546}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 4ca04bd2e14eccb49ad9f43606a09ceb, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 2ed118ceb56eea24d8b8fccd7861989f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -5558,12 +5586,14 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -11287,7 +11317,7 @@ MonoBehaviour:
   spawnPlayer: {fileID: 911557588}
   sceneController: {fileID: 218819399}
   faderScreen: {fileID: 319920658}
-  nameSFXDoor: 
+  nameSFXDoor: marketdooropen
   locationName: Outside
 --- !u!114 &931227939
 MonoBehaviour:
@@ -11955,7 +11985,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971892264}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 3402194b638b4b54485d3b0bb31e20cf, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 257c0e568b320dc47a30534c9d38c889, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -11969,12 +11999,14 @@ VideoPlayer:
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -12537,8 +12569,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00034999847, y: 0.00029999018, z: 0}
-    m_Extent: {x: 0.50035, y: 0.5003, z: 0}
+    m_Center: {x: 0.00040000677, y: 0.00024998188, z: 0}
+    m_Extent: {x: 0.5004, y: 0.50065, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -14103,6 +14135,10 @@ PrefabInstance:
     - target: {fileID: 7567070456312229581, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941910001242133218, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
+      propertyPath: Musicname
+      value: supermarket
       objectReference: {fileID: 0}
     - target: {fileID: 9113850299129475631, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
       propertyPath: m_LocalPosition.x
@@ -20925,8 +20961,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.00014999509, y: 0.00025001168, z: 0}
-    m_Extent: {x: 0.50014997, y: 0.50055003, z: 0}
+    m_Center: {x: -0.000050008297, y: -0.00014999509, z: 0}
+    m_Extent: {x: 0.50005, y: 0.50065005, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -21146,7 +21182,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 1.895
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
