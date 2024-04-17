@@ -36,6 +36,8 @@ public class CycleLightOutside : MonoBehaviour
             SwichLightInScene();
             background[1].SetActive(false);
 
+            sunlight.intensity = 0.4f;
+
             
         }
         else //ตอนกลางคืน
@@ -44,7 +46,7 @@ public class CycleLightOutside : MonoBehaviour
             globalLight.intensity = cycleLightingDatas[1].intensityLight;
             background[0].SetActive(false);
 
-            sunlight.intensity = 0.3f;
+            //sunlight.intensity = 0.3f;
         }
     }
 

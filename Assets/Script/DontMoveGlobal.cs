@@ -3,7 +3,7 @@ using UnityEngine;
     public class DontMoveGlobal : MonoBehaviour
     {
         PlayerController playerController;
-        bool canMove;
+        [SerializeField] bool canMove;
 
         void Start()
         {
@@ -15,11 +15,14 @@ using UnityEngine;
         {
             if(canMove)
             {
-                playerController.enabled = true;
+                playerController.speed = playerController.baseSpeed;
+                playerController.playAnimMove = true;
             }
             else
             {
-                playerController.enabled = false;
+                playerController.speed = 0;
+                playerController.playAnimMove = false;
+                playerController.animator.Rebind();
             }
         }
 

@@ -10,6 +10,8 @@ public class CashierCounter : MonoBehaviour
     [SerializeField] Transform standHere;
     [SerializeField] GameObject interactIcon;
     [SerializeField] FadingScreen fadingScreen;
+    [Header("Timeline")]
+    [SerializeField] PlayableDirector cameraShotEvent;
 
     bool playerInRange;
     bool isEnterCashier;
@@ -75,7 +77,7 @@ public class CashierCounter : MonoBehaviour
                 if (QuestCheck.orderQuest == 13)
                 {
                     QuestManager.instance.OnCompleteQuest();
-                    fadingScreen.FadeIn();
+                    cameraShotEvent.Play();
                 }
             }
 
