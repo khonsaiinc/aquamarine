@@ -99,7 +99,7 @@ MonoBehaviour:
   mouseClick: {fileID: 8300000, guid: f96ef9a9619579d4e8131a2a9e6abf27, type: 3}
   doorKnocks: {fileID: 8300000, guid: acd3c63ce1ce2aa45ae09b3cdb2b05be, type: 3}
   somethingOutside: {fileID: 8300000, guid: 147f480a8036376479822972d47e369d, type: 3}
-  roomMusic: {fileID: 8300000, guid: 94f0cfeab4f302f42a025964aa86b340, type: 3}
+  roomMusic: {fileID: 8300000, guid: 05c15518dbb4fc949b1a16f65d1b90dc, type: 3}
   marketMusic: {fileID: 8300000, guid: a60aed333db7a574db0898c44a7d1141, type: 3}
   outsideMusic: {fileID: 8300000, guid: 4b3437c2331f8b5479f31cc5f8af71b8, type: 3}
   storageroomMusic: {fileID: 8300000, guid: 47ecaa726dc7c3d45a8ad4964c8c8548, type: 3}

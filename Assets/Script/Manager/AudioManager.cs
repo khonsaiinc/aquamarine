@@ -12,10 +12,10 @@ public class AudioManager : MonoBehaviour
     //BackGround Music
     public AudioClip roomMusic, marketMusic, outsideMusic, storageroomMusic, hallapartmentMusic, die, menu;
     //Current Music Object
-    public GameObject currentMusicObject;
-    
+    public static GameObject currentMusicObject;
     //Sound Object
-    public GameObject soundObject, bgsoundObject;
+    public GameObject soundObject;
+    public GameObject bgsoundObject;
     
     public void PlaySFX(string sfxName)
     {
@@ -81,10 +81,10 @@ public class AudioManager : MonoBehaviour
                 MusicObjectCreation(hallapartmentMusic);
                 break;
             case "die":
-                SoundObjectCreation(die);
+                MusicObjectCreation(die);
                 break;
             case "menu":
-                SoundObjectCreation(menu);
+                MusicObjectCreation(menu);
                 break;
         }
     }
