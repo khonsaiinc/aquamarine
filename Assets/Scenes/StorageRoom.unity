@@ -2843,6 +2843,8 @@ PlayableDirector:
     value: {fileID: 1347344127}
   - key: {fileID: 8331467016699700890, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
     value: {fileID: 62270723}
+  - key: {fileID: -4012192067420537359, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1242909332
@@ -5803,8 +5805,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0, y: 0.000050008297, z: 0}
-    m_Extent: {x: 0.5, y: 0.50025, z: 0}
+    m_Center: {x: -0.00020000339, y: -0.00044998527, z: 0}
+    m_Extent: {x: 0.5008, y: 0.50045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

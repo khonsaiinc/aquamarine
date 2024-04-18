@@ -64,8 +64,8 @@ public class FadingScreen : MonoBehaviour
                     }
                     if(QuestCheck.orderQuest == 21)
                     {
-                        text.text = "เวลาผ่านไป.."; // เปลี่ยนข้อความ
-                        text.enabled = true;
+                        text.text = ""; // เปลี่ยนข้อความ
+                        text.enabled = false;
                         StartCoroutine(WaitCutSceneCoffe());
                     }
                 }

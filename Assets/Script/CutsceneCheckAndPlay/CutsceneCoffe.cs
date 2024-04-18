@@ -39,7 +39,7 @@ public class CutsceneCoffe : MonoBehaviour
         screenVideo.SetActive(true);
         videoPlayer.Play();
 
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(13f);
 
         screenVideo.SetActive(false);
         endScreen.SetActive(true);
