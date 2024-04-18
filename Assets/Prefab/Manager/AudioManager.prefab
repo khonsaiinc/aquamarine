@@ -94,7 +94,7 @@ MonoBehaviour:
   marketDoorOpen: {fileID: 8300000, guid: 68ca025db8f7b694496237f70b39376c, type: 3}
   changeUniform: {fileID: 8300000, guid: 8236857770e70d048b38fb873c5b3d3f, type: 3}
   lightsFlicker: {fileID: 8300000, guid: 086ec971957598a448de922b575ef084, type: 3}
-  boxOpen: {fileID: 8300000, guid: 6661a296d61b7b44b95bcad3a6032cae, type: 3}
+  boxOpen: {fileID: 8300000, guid: 1908883ed5be0a344a5f513ed29a5762, type: 3}
   placeBox: {fileID: 8300000, guid: c7af1c4886f30d6408bc40eeab6bbc05, type: 3}
   mouseClick: {fileID: 8300000, guid: f96ef9a9619579d4e8131a2a9e6abf27, type: 3}
   doorKnocks: {fileID: 8300000, guid: acd3c63ce1ce2aa45ae09b3cdb2b05be, type: 3}
@@ -106,6 +106,5 @@ MonoBehaviour:
   hallapartmentMusic: {fileID: 8300000, guid: 7057d0fd33781324681425718fc21d4e, type: 3}
   die: {fileID: 8300000, guid: b7ef171b691af8a4db345b9092a799b2, type: 3}
   menu: {fileID: 8300000, guid: 93b187a5f39d4444fa15d62061d08d9e, type: 3}
-  currentMusicObject: {fileID: 4547655672750473080, guid: 97ab258f627d6324b82dbdbb3358bcd4, type: 3}
   soundObject: {fileID: 645768961999385991, guid: afe6d17cc0508f943ad15bdf724a3cda, type: 3}
   bgsoundObject: {fileID: 4547655672750473080, guid: 97ab258f627d6324b82dbdbb3358bcd4, type: 3}

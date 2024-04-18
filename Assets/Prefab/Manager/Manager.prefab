@@ -523,6 +523,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1113394174821761294}
     m_Modifications:
+    - target: {fileID: 4312031610936707542, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
+      propertyPath: roomMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 94f0cfeab4f302f42a025964aa86b340, type: 3}
     - target: {fileID: 7567070456312229581, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
       propertyPath: m_Name
       value: AudioManager
