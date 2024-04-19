@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Lighting
+  - SFX
+  - BG
   layers:
   - Default
   - TransparentFX
