@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbf91564ebb27e4f9d3fa93fb78b716, type: 3}
   m_Name: Outside_Day_Intensity
   m_EditorClassIdentifier: 
-  intensityLight: 1
+  intensityLight: 0.5

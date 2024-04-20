@@ -22,6 +22,7 @@ public class KeepBox : MonoBehaviour
                 {
                     if (QuestCheck.outFit == "WorkUniform")
                     {
+                        AudioManager.instance.PlaySFX("openbox");
                         playerController.HinaChangeOutfit("WorkUniform_HoldingBox");
                     }
                     else if (QuestCheck.outFit == "WorkUniform_HoldingBox")

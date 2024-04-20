@@ -11,8 +11,10 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     private float horizontal;
-    [SerializeField] private float speed = 1f;
+    [SerializeField] public float speed = 1f;
+    public float baseSpeed;
     private bool isFacingRight = true;
+    public bool playAnimMove;
 
     [Header("AnimationController")]
     [SerializeField] RuntimeAnimatorController brownPajama;
@@ -27,6 +29,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         HinaChangeOutfit(QuestCheck.outFit);
+        baseSpeed = speed;
     }
     void Update()
     {
@@ -38,7 +41,11 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        if(playAnimMove)
+        {
+            animator.SetFloat("Speed", Mathf.Abs(horizontal));
+        }
+        
     }
 
     private void FixedUpdate()
@@ -58,6 +65,8 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = context.ReadValue<Vector2>().x;
     }
+
+
     public void HinaChangeOutfit(string nameOutfit)
     {
         switch (nameOutfit)

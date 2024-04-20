@@ -12,6 +12,7 @@ public class InkExternalFunctions
         story.BindExternalFunction("openItem", (string itemName) => openItemManager(itemName, afterTalking));
         story.BindExternalFunction("neighborEvent", (string sleepOrsurvey) => NeighborEvent(sleepOrsurvey, afterTalking));
         story.BindExternalFunction("doorLockEvent", (string actions) => DoorLockEvent(actions, afterTalking));
+        story.BindExternalFunction("coffeeEvent", (string timeline) => coffeeEvent(timeline, afterTalking));
     }
 
     public void Unbind(Story story)
@@ -143,6 +144,19 @@ public class InkExternalFunctions
             case "UnlockDoor":
                 afterTalking.dialogueInTimeline.OnEndDialogue();
                 QuestCheck.isDoorlockEventPlayed = true;
+                break;
+            default:
+                Debug.Log("it's not correct on argument, dosen't work");
+                break;
+        }
+    }
+
+    public void coffeeEvent(string timeline, DialogueTalking afterTalking)
+    {
+        switch (timeline)
+        {
+            case "Resuming":
+                afterTalking.dialogueInTimeline.OnEndDialogue();
                 break;
             default:
                 Debug.Log("it's not correct on argument, dosen't work");
