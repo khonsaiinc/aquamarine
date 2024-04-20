@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,20 +10,24 @@ public class AudioManager : MonoBehaviour
     private List<AudioSource> bgAudioSources = new List<AudioSource>();
     // Audio source for SFX sounds
     private AudioSource sfxAudioSource;
-    // Boolean variables to track mute status
-    private bool sfxMuted = false;
-    private bool bgMuted = false;
+   // Boolean variables to track mute status
+    public bool sfxMuted = false;
+    public bool bgMuted = false;
     void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
         }
+
+        // Load mute states from PlayerPrefs
+        sfxMuted = PlayerPrefs.GetInt("SFXMuted", 0) == 1;
+        bgMuted = PlayerPrefs.GetInt("BGSoundMuted", 0) == 1;
 
         // Create an audio source for SFX sounds
         sfxAudioSource = gameObject.AddComponent<AudioSource>();
@@ -157,6 +161,10 @@ public class AudioManager : MonoBehaviour
     public void ToggleSFXMute()
     {
         sfxMuted = !sfxMuted;
+
+        // Save mute state to PlayerPrefs
+        PlayerPrefs.SetInt("SFXMuted", sfxMuted ? 1 : 0);
+        PlayerPrefs.Save();
     }
 
     // Method to toggle mute state for BG sound
@@ -173,5 +181,15 @@ public class AudioManager : MonoBehaviour
         // Save mute state to PlayerPrefs
         PlayerPrefs.SetInt("BGSoundMuted", bgMuted ? 1 : 0);
         PlayerPrefs.Save();
+    }
+
+    // Method to handle sceneLoaded event
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Reapply mute state to BG audio sources when a scene is loaded
+        foreach (AudioSource audioSource in bgAudioSources)
+        {
+            audioSource.mute = bgMuted;
+        }
     }
 }

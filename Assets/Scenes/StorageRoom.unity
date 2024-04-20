@@ -3423,6 +3423,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2337684802119492027, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1920978560}
+    - target: {fileID: 2337684802119492027, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleBGSoundMute
+      objectReference: {fileID: 0}
     - target: {fileID: 2499260429039821249, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_text
       value: "\u0E2A\u0E15\u0E4A\u0E2D\u0E04\u0E41\u0E08\u0E4A\u0E01\u0E1E\u0E2D\u0E15\u0E14\u0E34\u0E2A\u0E40\u0E04\u0E23\u0E14\u0E34\u0E15\u0E2E\u0E2D\u0E15\u0E14\u0E2D\u0E01\u0E2B\u0E07\u0E27\u0E19\u0E1B\u0E32\u0E2A\u0E01\u0E32\u0E25\u0E40\u0E1B\u0E48\u0E32\u0E22\u0E34\u0E49\u0E07\u0E09\u0E38\u0E1A
@@ -3489,6 +3497,14 @@ PrefabInstance:
     - target: {fileID: 3230122615864049893, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522458094840365956, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1920978560}
+    - target: {fileID: 3522458094840365956, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleSFXMute
       objectReference: {fileID: 0}
     - target: {fileID: 3815197789165090955, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_fontAsset
@@ -5738,6 +5754,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9113850299129475631, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
   m_PrefabInstance: {fileID: 1920978558}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1920978560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4312031610936707542, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
+  m_PrefabInstance: {fileID: 1920978558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf2f394569042b4c9ccc855f5d561ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1951403866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,8 +5832,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00020000339, y: -0.00044998527, z: 0}
-    m_Extent: {x: 0.5008, y: 0.50045, z: 0}
+    m_Center: {x: 0, y: 0.00044998527, z: 0}
+    m_Extent: {x: 0.5001, y: 0.50045, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
