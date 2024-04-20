@@ -1,14 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    void Awake() { instance = this; }
+    // Lists to hold all SFX and BG audio sources
+    private List<AudioSource> sfxAudioSources = new List<AudioSource>();
+    private List<AudioSource> bgAudioSources = new List<AudioSource>();
+    // Audio source for SFX sounds
+    private AudioSource sfxAudioSource;
+   // Boolean variables to track mute status
+    public bool sfxMuted = false;
+    public bool bgMuted = false;
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        // Load mute states from PlayerPrefs
+        sfxMuted = PlayerPrefs.GetInt("SFXMuted", 0) == 1;
+        bgMuted = PlayerPrefs.GetInt("BGSoundMuted", 0) == 1;
+
+        // Create an audio source for SFX sounds
+        sfxAudioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     //Sound Effects
-    public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen, placeBox, mouseClick, doorKnocks, somethingOutside;
+    public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen, placeBox, mouseClick, doorKnocks, somethingOutside, doorUnlock;
     //BackGround Music
     public AudioClip roomMusic, marketMusic, outsideMusic, storageroomMusic, hallapartmentMusic, die, menu;
     //Current Music Object
@@ -16,6 +42,29 @@ public class AudioManager : MonoBehaviour
     //Sound Object
     public GameObject soundObject;
     public GameObject bgsoundObject;
+
+    void Start()
+    {
+        // Get all audio sources in the scene and categorize them as SFX or BG
+        AudioSource[] allAudioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            if (audioSource.CompareTag("SFX"))
+            {
+                sfxAudioSources.Add(audioSource);
+            }
+            else if (audioSource.CompareTag("BG"))
+            {
+                bgAudioSources.Add(audioSource);
+            }
+        }
+
+        // Apply mute state to BG audio sources
+        foreach (AudioSource audioSource in bgAudioSources)
+        {
+            audioSource.mute = bgMuted;
+        }
+    }
     
     public void PlaySFX(string sfxName)
     {
@@ -48,11 +97,18 @@ public class AudioManager : MonoBehaviour
             case "somethingoutside":
                 SoundObjectCreation(somethingOutside);
                 break;
+            case "doorunlock":
+                SoundObjectCreation(doorUnlock);
+                break;
         }
     }
 
     void SoundObjectCreation(AudioClip clip)
     {
+        if (sfxMuted)
+        {
+            return;
+        }
         //Create SoundObject gameobject
         GameObject newObject = Instantiate(soundObject, transform);
         //Assign audioclip to its audiosource
@@ -102,5 +158,41 @@ public class AudioManager : MonoBehaviour
         currentMusicObject.GetComponent<AudioSource>().loop = true;
         //Play the audio
         currentMusicObject.GetComponent<AudioSource>().Play();
+    }
+
+    // Method to toggle mute state for SFX sound
+    public void ToggleSFXMute()
+    {
+        sfxMuted = !sfxMuted;
+
+        // Save mute state to PlayerPrefs
+        PlayerPrefs.SetInt("SFXMuted", sfxMuted ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    // Method to toggle mute state for BG sound
+    public void ToggleBGSoundMute()
+    {
+        bgMuted = !bgMuted;
+
+        // Mute or unmute all BG audio sources
+        foreach (AudioSource audioSource in bgAudioSources)
+        {
+            audioSource.mute = bgMuted;
+        }
+
+        // Save mute state to PlayerPrefs
+        PlayerPrefs.SetInt("BGSoundMuted", bgMuted ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    // Method to handle sceneLoaded event
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Reapply mute state to BG audio sources when a scene is loaded
+        foreach (AudioSource audioSource in bgAudioSources)
+        {
+            audioSource.mute = bgMuted;
+        }
     }
 }

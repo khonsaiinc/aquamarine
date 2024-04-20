@@ -2867,6 +2867,7 @@ Transform:
   - {fileID: 1658768158}
   - {fileID: 1347344128}
   - {fileID: 1058023563}
+  - {fileID: 1872233834}
   m_Father: {fileID: 578313023}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1242909330
@@ -2909,8 +2910,6 @@ PlayableDirector:
     value: {fileID: 1658768160}
   - key: {fileID: 1384118966237908328, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
     value: {fileID: 1658768160}
-  - key: {fileID: 4827880213403826309, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
-    value: {fileID: 0}
   - key: {fileID: -8780360863550384295, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
     value: {fileID: 932204874}
   - key: {fileID: 1496232039763527595, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
@@ -2927,8 +2926,6 @@ PlayableDirector:
     value: {fileID: 1347344127}
   - key: {fileID: 8331467016699700890, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
     value: {fileID: 62270723}
-  - key: {fileID: -4012192067420537359, guid: 10e39bf75fdf57542ba3a7159e64e905, type: 2}
-    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1242909332
@@ -2948,12 +2945,13 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cad391ba9e7e69348a87f2b67623f97c, type: 2}
     - {fileID: 11400000, guid: edb57e05eb5be604aaf2ea75d6b0d53a, type: 2}
     - {fileID: 11400000, guid: d56d98cb527709043b24c624f0c76728, type: 2}
+    - {fileID: 11400000, guid: 04b2a80fc2830924eaafb1a6c81368e7, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1242909333}
+        - m_Target: {fileID: 1242909328}
           m_TargetAssemblyTypeName: DialogueInTimeline, Assembly-CSharp
-          m_MethodName: OnStartDialogue
+          m_MethodName: 
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2982,6 +2980,20 @@ MonoBehaviour:
         - m_Target: {fileID: 1242909335}
           m_TargetAssemblyTypeName: DialogueInTimeline, Assembly-CSharp
           m_MethodName: OnStartDialogue
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1872233836}
+          m_TargetAssemblyTypeName: DS.SoundTimeline, Assembly-CSharp
+          m_MethodName: Start
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -3507,6 +3519,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2337684802119492027, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1920978560}
+    - target: {fileID: 2337684802119492027, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleBGSoundMute
+      objectReference: {fileID: 0}
     - target: {fileID: 2499260429039821249, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_text
       value: "\u0E2A\u0E15\u0E4A\u0E2D\u0E04\u0E41\u0E08\u0E4A\u0E01\u0E1E\u0E2D\u0E15\u0E14\u0E34\u0E2A\u0E40\u0E04\u0E23\u0E14\u0E34\u0E15\u0E2E\u0E2D\u0E15\u0E14\u0E2D\u0E01\u0E2B\u0E07\u0E27\u0E19\u0E1B\u0E32\u0E2A\u0E01\u0E32\u0E25\u0E40\u0E1B\u0E48\u0E32\u0E22\u0E34\u0E49\u0E07\u0E09\u0E38\u0E1A
@@ -3573,6 +3593,14 @@ PrefabInstance:
     - target: {fileID: 3230122615864049893, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3522458094840365956, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1920978560}
+    - target: {fileID: 3522458094840365956, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToggleSFXMute
       objectReference: {fileID: 0}
     - target: {fileID: 3815197789165090955, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
       propertyPath: m_fontAsset
@@ -5696,6 +5724,42 @@ Transform:
   - {fileID: 1617801644}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1872233833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3587200854717826989, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+  m_PrefabInstance: {fileID: 1991430968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1872233834 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+  m_PrefabInstance: {fileID: 1991430968}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1872233835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872233833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals: []
+    m_Events: []
+--- !u!114 &1872233836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6685710239339727953, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+  m_PrefabInstance: {fileID: 1991430968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872233833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 274fbd15d92ffa54a9b4453c997ebcc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1883884572
 GameObject:
   m_ObjectHideFlags: 0
@@ -5764,6 +5828,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 563342140}
     m_Modifications:
+    - target: {fileID: 4312031610936707542, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
+      propertyPath: bgMuted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312031610936707542, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
+      propertyPath: sfxMuted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312031610936707542, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
+      propertyPath: doorUnlock
+      value: 
+      objectReference: {fileID: 8300000, guid: 076659050d1d09b46b42bf3583eb7ffb, type: 3}
     - target: {fileID: 7567070456312229581, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -5822,6 +5898,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9113850299129475631, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
   m_PrefabInstance: {fileID: 1920978558}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1920978560 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4312031610936707542, guid: 1adb4dfa6dd44d04c9149f8487cd5070, type: 3}
+  m_PrefabInstance: {fileID: 1920978558}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf2f394569042b4c9ccc855f5d561ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1951403866
 GameObject:
   m_ObjectHideFlags: 0
@@ -5889,8 +5976,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00049999356, y: -0.00034999847, z: 0}
-    m_Extent: {x: 0.50049996, y: 0.50035, z: 0}
+    m_Center: {x: -0.00029999018, y: -0.00029999018, z: 0}
+    m_Extent: {x: 0.5007, y: 0.5007, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5962,6 +6049,74 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5050122592063315076, guid: f938aed18c4fa3541979f1ee53a6c278, type: 3}
   m_PrefabInstance: {fileID: 1419162078}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1991430968
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1242909329}
+    m_Modifications:
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1863544228442985159, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587200854717826989, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_Name
+      value: Soundtimeline
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587200854717826989, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685710239339727953, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      propertyPath: sfxname
+      value: doorunlock
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3587200854717826989, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1872233835}
+  m_SourcePrefab: {fileID: 100100000, guid: 7ce8ab4c36ba6c44daf6936411121df1, type: 3}
 --- !u!1 &2004275463
 GameObject:
   m_ObjectHideFlags: 0
