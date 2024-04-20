@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
     }
 
     //Sound Effects
-    public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen, placeBox, mouseClick, doorKnocks, somethingOutside;
+    public AudioClip openDoor, marketDoorOpen, changeUniform, lightsFlicker, boxOpen, placeBox, mouseClick, doorKnocks, somethingOutside, doorUnlock;
     //BackGround Music
     public AudioClip roomMusic, marketMusic, outsideMusic, storageroomMusic, hallapartmentMusic, die, menu;
     //Current Music Object
@@ -96,6 +96,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "somethingoutside":
                 SoundObjectCreation(somethingOutside);
+                break;
+            case "doorunlock":
+                SoundObjectCreation(doorUnlock);
                 break;
         }
     }
