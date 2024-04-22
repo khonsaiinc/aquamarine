@@ -267,7 +267,19 @@ MonoBehaviour:
     m_ActionId: 5efc5959-6722-4fbf-be96-9d928e52429d
     m_ActionName: UI/Select[/Keyboard/e,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7258536487301099085, guid: 402301e791b4dfb45b1b5db51161a42d, type: 3}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: OnPauseGame
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 175ddee3-070d-4c4e-b899-0a52ef3777ea
     m_ActionName: PlayerInput/Pause[/Keyboard/escape]
   - m_PersistentCalls:

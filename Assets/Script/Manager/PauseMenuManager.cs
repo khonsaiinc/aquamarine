@@ -53,7 +53,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (context.performed)
         {
-            isPaused = true;
+            BackToMenu();
         }
     }
 
