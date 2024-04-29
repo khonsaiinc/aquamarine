@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using UnityEngine.EventSystems;
 using System.Collections;
 
 public class PauseMenu : MonoBehaviour
