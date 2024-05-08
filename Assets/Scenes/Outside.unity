@@ -2944,8 +2944,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 38.930138, y: 0.16081095, z: 0}
-    m_Extent: {x: 28.806938, y: 2.265089, z: 0}
+    m_Center: {x: 38.93064, y: 0.16042781, z: 0}
+    m_Extent: {x: 28.806757, y: 2.264706, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -3524,8 +3524,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.00040000677, y: -0.00034999847, z: 0}
-    m_Extent: {x: 0.5004, y: 0.50035, z: 0}
+    m_Center: {x: -0.00034999847, y: 0, z: 0}
+    m_Extent: {x: 0.50065, y: 0.5, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4341,6 +4341,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4370970824785405829, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4370970824785405829, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 32823305
+      objectReference: {fileID: 0}
     - target: {fileID: 4448546980290641692, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4540,6 +4548,14 @@ PrefabInstance:
     - target: {fileID: 8263297786991345797, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 29.422
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283699303664087032, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8283699303664087032, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 32823305
       objectReference: {fileID: 0}
     - target: {fileID: 8469115077319138829, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: m_FlipX
