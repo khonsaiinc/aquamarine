@@ -12,14 +12,21 @@ public class RoomObject : MonoBehaviour {
 
 #region objectradio
     void loadRadio() {
-        if (QuestCheck.orderQuest == 2 || QuestCheck.orderQuest == 3 ) {
+        if (QuestCheck.orderQuest == 2) {
             RadioEvent2Script();
+        }
+        else if (QuestCheck.orderQuest == 4 || QuestCheck.orderQuest == 5 || QuestCheck.orderQuest == 6 || QuestCheck.orderQuest == 7) {
+            DisableAllEvent();
+
         }
         else if (QuestCheck.orderQuest == 8) {
             DisableAllEvent();
             RadioEvent8Script();
 
         }
+        else if (QuestCheck.orderQuest == 10){
+            DisableAllEvent();
+        }  
         else if (QuestCheck.orderQuest == 11) {
             DisableAllEvent();
             RadioEvent11Script();
