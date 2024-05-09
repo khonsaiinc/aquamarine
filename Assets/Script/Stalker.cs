@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
     public string playerTag = "Player";
     private Transform player;
     private Rigidbody2D rb;
+    public Animator animator;
 
     void Start()
     {
