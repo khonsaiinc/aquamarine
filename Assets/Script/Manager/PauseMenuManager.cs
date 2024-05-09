@@ -10,12 +10,24 @@ public class PauseMenu : MonoBehaviour
     public PlayerController playerController;
     public DontMoveGlobal dontMoveGlobal;
 
-    static bool isPaused {get; set;}
+    static bool isPaused { get; set; }
 
     public void Start()
     {
         isPaused = false;
         playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        if (playerController == null)
+        {
+            Debug.LogError("PlayerController not found!");
+        }
+        if (firstSelectedButton == null)
+        {
+            Debug.LogWarning("FirstSelectedButton not assigned!");
+        }
+        if (dontMoveGlobal == null)
+        {
+            Debug.LogWarning("DontMoveGlobal not assigned!");
+        }
     }
 
     public void ResumeGame()
@@ -25,6 +37,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        Debug.Log("Game Resumed!");
     }
 
     public void PauseGame()
@@ -34,6 +47,7 @@ public class PauseMenu : MonoBehaviour
         // EventSystem.current.SetSelectedGameObject(firstSelectedButton); // *disable for now
         Time.timeScale = 0f;
         isPaused = true;
+        Debug.Log("Game Paused!");
     }
 
     public void BackToMenu()
@@ -52,7 +66,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (context.performed)
         {
-            BackToMenu();
+            PauseGame();
         }
     }
 
@@ -60,7 +74,14 @@ public class PauseMenu : MonoBehaviour
     {
         if (context.performed) // Check if paused first
         {
-            isPaused = false;
+            if (isPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                Debug.LogWarning("Game is not paused!");
+            }
         }
     }
 }

@@ -16,13 +16,11 @@ public class CutsceneTakedaChangeShift : MonoBehaviour
     {
         screenVideo.SetActive(false);
         videoPlayer.playOnAwake = false;
-
         if (QuestCheck.isPlayedC4) // ทำลาย gameobject เมื่อเคยเล่นไปแล้ว
         {
             Destroy(videoPlayer.gameObject);
             Destroy(gameObject);
         }
-
     }
 
     public void CutScenePlay()
@@ -47,8 +45,5 @@ public class CutsceneTakedaChangeShift : MonoBehaviour
         Destroy(videoPlayer.gameObject);
         Destroy(gameObject);
     }
-
-    
-
 }
 
