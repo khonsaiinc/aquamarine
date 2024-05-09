@@ -12,41 +12,55 @@ public class EnemyController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag(playerTag).transform;
+        animator.Play("Stalker_Idle");
     }
 
     void Update()
+{
+    if (player != null)
     {
-        if (player != null)
+        Vector3 moveDirection = (player.position - transform.position).normalized;
+
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(player.position, new Vector2(1f, 1f), 0f);
+        bool playerOnBoxCollider = false;
+        foreach (Collider2D collider in colliders)
         {
-            
-            Vector3 moveDirection = (player.position - transform.position).normalized;
-
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(player.position, new Vector2(1f, 1f), 0f);
-            bool playerOnBoxCollider = false;
-            foreach (Collider2D collider in colliders)
+            if (collider.CompareTag("StalkerStop")) // Set Tag as "StalkerStop"
             {
-                if (collider.CompareTag("StalkerStop")) // ! Set Tag as "Stalkerstop"
-                {
-                    playerOnBoxCollider = true;
-                    break;
-                }
+                playerOnBoxCollider = true;
+                break;
             }
+        }
 
-            // Move the enemy towards the player if not on a box collider
-            if (!playerOnBoxCollider)
+        // Move the enemy towards the player if not on a box collider
+        if (!playerOnBoxCollider)
+        {
+            animator.Play("Stalker_Walk");
+            rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+
+            // Flip the character sprite based on movement direction
+            if (moveDirection.x > 0)
             {
-                rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+                transform.localScale = new Vector3(1, 1, 1); // Facing right
             }
-            else
+            else if (moveDirection.x < 0)
             {
-                // If the player is on a box collider, stop moving
-                rb.velocity = Vector2.zero;
+                transform.localScale = new Vector3(-1, 1, 1); // Facing left
             }
         }
         else
         {
-            // If the player is not found, stop moving
+            // If the player is on a box collider, stop moving
             rb.velocity = Vector2.zero;
+            animator.Play("Stalker_Idle");
         }
     }
+    else
+    {
+        // If the player is not found, stop moving
+        rb.velocity = Vector2.zero;
+        animator.Play("Stalker_Idle");
+    }
+}
+
 }
