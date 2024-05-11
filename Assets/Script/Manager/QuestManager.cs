@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,7 +13,7 @@ public class QuestManager : MonoBehaviour
     string mainText;
     string descriptText;
     [Header("DataQuest")]
-    int orderQuest;
+    public int orderQuest;
     [SerializeField] List<DataQuest> dataQuests = new List<DataQuest>();
 
     [Header("StockData")]
@@ -32,17 +33,41 @@ public class QuestManager : MonoBehaviour
             instance = this;
         }
     }
-
     void Start()
     {
         sceneController = GameObject.Find("SceneController").GetComponent<SceneController>();
-
         orderQuest = QuestCheck.orderQuest; //โหลดลำดับเควสที่บันทึกไว้ เมื่อเริ่มซีน
         OnStartSceneQuestComplete();
 
         MaxGoodsInStock();
     }
 
+#region Debug Quest
+    void UpdateDebugforQuest(){
+        if (orderQuest >= 0 && orderQuest < dataQuests.Count)
+        {
+            DataQuest currentDataQuest = dataQuests[orderQuest];
+            Debug.Log("Current Quest Data - Title: " + currentDataQuest.titleQuest + ", Information: " + currentDataQuest.informationQuest);
+            // Add more debug information as needed for the current DataQuest object
+        }
+        else
+        {
+            Debug.LogWarning("Invalid orderQuest value: " + orderQuest);
+        }
+    }
+    void DebugDataForCurrentQuest()
+    {
+        if (orderQuest >= 0 && orderQuest < dataQuests.Count)
+        {
+            DataQuest currentDataQuest = dataQuests[orderQuest];
+            Debug.Log("Current Quest Data - Title: " + currentDataQuest.titleQuest + ", Information: " + currentDataQuest.informationQuest);
+        }
+        else
+        {
+            Debug.LogWarning("Invalid orderQuest value: " + orderQuest);
+        }
+    }
+    #endregion
     void Update()
     {
         ShowQuestText();
@@ -89,7 +114,7 @@ public class QuestManager : MonoBehaviour
 
         if (QuestCheck.isWorking && QuestCheck.orderQuest == 3 || QuestCheck.isWorking && QuestCheck.orderQuest == 12 || QuestCheck.orderQuest == 20)
         {
-            questText.text = mainText + " : " + descriptText + "(" + currentGoodsInStock + "/" + maxGoodsInStock + ")";
+            questText.text = mainText + " : " + descriptText + " (" + currentGoodsInStock + "/" + maxGoodsInStock + ")";
 
         }
         else

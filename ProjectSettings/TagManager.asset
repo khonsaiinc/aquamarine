@@ -7,6 +7,10 @@ TagManager:
   - Lighting
   - SFX
   - BG
+  - StalkerStart
+  - StalkerStop
+  - StalkerPause
+  - Stalker
   layers:
   - Default
   - TransparentFX

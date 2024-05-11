@@ -21,4 +21,23 @@ public class SceneUI : MonoBehaviour {
             Debug.Log("Application Exit..");
         #endif
     }
+
+    #region resetQuest
+    void resetQuest(){
+        Debug.Log("reset quested");
+        QuestCheck.orderQuest = 0;
+        QuestCheck.fistStarted = false;
+        QuestCheck.questDelivery = false;
+        QuestCheck.questTalkTakeda = false;
+        QuestCheck.questTalkOldLady = false;
+        QuestCheck.questTalkTakeda_inSuperMarket = false;
+        QuestCheck.questGoToSleep = false;
+        QuestCheck.questCheckWakeUpDay2 = false;
+        QuestCheck.questTalkTakedaDay2 = false;
+        
+        // *reset outfit
+        QuestCheck.canChangeOutfit = true;
+        QuestCheck.outFit = "BrownPajama";
+    }
+    #endregion
 }
