@@ -2661,6 +2661,7 @@ MonoBehaviour:
   Night2: {fileID: 1624776990}
   Night3: {fileID: 879781919}
   lemonadeSellPeople: {fileID: 2171648315208582721}
+  TruckCar: {fileID: 632323130}
 --- !u!1001 &582603558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2872,6 +2873,11 @@ MonoBehaviour:
   - {fileID: 6471223921738970505}
   - {fileID: 6471223921738970504}
   - {fileID: 1423957233}
+--- !u!1 &632323130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8769688663166900360, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+  m_PrefabInstance: {fileID: 4898985685420994199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &633347174
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,8 +5098,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 38.93048, y: 0.16024995, z: 0}
-    m_Extent: {x: 28.806597, y: 2.26495, z: 0}
+    m_Center: {x: 38.930187, y: 0.16026688, z: 0}
+    m_Extent: {x: 28.806889, y: 2.2648668, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -7549,6 +7555,10 @@ PrefabInstance:
     - target: {fileID: 8769326683217516099, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: m_FlipX
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769688663166900360, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8799280559762057596, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: afterTalking

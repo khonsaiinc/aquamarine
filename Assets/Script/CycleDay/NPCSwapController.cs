@@ -13,32 +13,40 @@ public class NPCSwapController : MonoBehaviour {
 
     [Header("Other object")]
     [SerializeField] GameObject lemonadeSellPeople;
+    [SerializeField] GameObject TruckCar;
 
     void Update() {
         checkquest();
     }
 
     void checkquest(){
-        // TODO need to swap npc people, change script, and swap all npc in day,night
+        // * Finished npc swap
     if (QuestCheck.orderQuest == 0 ||QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 2 || QuestCheck.orderQuest == 3) {
         npcObjectDayEnabledNight1();
     }
+    // * Day Time
     else if (QuestCheck.orderQuest == 6 || QuestCheck.orderQuest == 7 || QuestCheck.orderQuest == 8) {
         DisableAllNPCObjects();
         npcObjectDayEnabledDay1();
-        }
+        truckCarEnable();
+    }
+    // * Night
     else if (QuestCheck.orderQuest == 10 || QuestCheck.orderQuest == 11 || QuestCheck.orderQuest == 12) {
         DisableAllNPCObjects();
         npcObjectDayEnabledNight2();
+        truckCarDisable();
     }
+    // * Day
     else if (QuestCheck.orderQuest == 15 || QuestCheck.orderQuest == 16 || QuestCheck.orderQuest == 17) {
         DisableAllNPCObjects();
         npcObjectDayEnableDay2();
     }
+    // * Night
     else if (QuestCheck.orderQuest == 18 || QuestCheck.orderQuest == 19 || QuestCheck.orderQuest == 20 ||
     QuestCheck.orderQuest == 21 || QuestCheck.orderQuest == 22) {
         DisableAllNPCObjects();
         npcObjectDayEnabledNight3();
+        truckCarEnable();
     }
     }
     void DisableAllNPCObjects() {
@@ -47,7 +55,14 @@ public class NPCSwapController : MonoBehaviour {
         npcObjectDisableNight1();
         npcObjectDisableNight2();
         npcObjectDisableNight3();
+        truckCarDisable();
         Debug.Log("npc object has reseted");
+    }
+    void truckCarEnable() {
+        TruckCar.SetActive(true);
+    }
+    void truckCarDisable() {
+        TruckCar.SetActive(false);
     }
 
     #region NPC Day Time (include disable/enable)
