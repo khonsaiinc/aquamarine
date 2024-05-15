@@ -1682,7 +1682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9206037881045767378, guid: 4b690315b17f2ed4b9d697327cc26eb1, type: 3}
       propertyPath: QuestOrder
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9206037881045767378, guid: 4b690315b17f2ed4b9d697327cc26eb1, type: 3}
       propertyPath: nameOutfit
@@ -4536,8 +4536,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 38.930202, y: 0.16050005, z: 0}
-    m_Extent: {x: 28.807402, y: 2.2654, z: 0}
+    m_Center: {x: 38.930138, y: 0.16024995, z: 0}
+    m_Extent: {x: 28.806938, y: 2.26495, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
