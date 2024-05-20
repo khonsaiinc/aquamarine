@@ -15,7 +15,10 @@ public class CutsceneDeathHall : MonoBehaviour
     [SerializeField] GameObject deadScreen;
     [SerializeField] CanvasGroup canvasGroupBackground;
     [SerializeField] GameObject deadText;
+    [SerializeField] GameObject deadTextDescrip;
+
     [SerializeField] CanvasGroup canvasGroupDeadText;
+    [SerializeField] CanvasGroup canvasGroupDeadTextDescrip;
     [SerializeField] FaderScreen faderScreen;
 
     [Header("Icon")]
@@ -41,6 +44,7 @@ public class CutsceneDeathHall : MonoBehaviour
          screenVideo.SetActive(false);
          deadScreen.SetActive(false);
          deadText.SetActive(false);
+         deadTextDescrip.SetActive(false);
     }
     void Update()
     {
@@ -71,8 +75,11 @@ public class CutsceneDeathHall : MonoBehaviour
 
         deadScreen.SetActive(true);
         deadText.SetActive(true);
+        deadTextDescrip.SetActive(true);
+        
         canvasGroupBackground.LeanAlpha(1,2f);
         canvasGroupDeadText.LeanAlpha(1,5f);
+        canvasGroupDeadTextDescrip.LeanAlpha(1,5f);
     }
 
     #region CheckCollider Player
