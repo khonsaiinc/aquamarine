@@ -14,6 +14,7 @@ public class NPCSwapController : MonoBehaviour {
     [Header("Other object")]
     [SerializeField] GameObject lemonadeSellPeople;
     [SerializeField] GameObject TruckCar;
+    [SerializeField] GameObject FlowerwithMail;
 
     [Header("Stalker Day")]
     [SerializeField] GameObject StalkerDay2;
@@ -40,9 +41,12 @@ public class NPCSwapController : MonoBehaviour {
         npcObjectDayEnabledNight2();
         truckCarDisable();
     }
+    // *after walking into supermarket, destroy it || หลังออกไปทำงานแล้วให้ทำลาย stalker ออกไปเลย
+    else if (QuestCheck.orderQuest == 13) {
+        Destroy(StalkerDay2);
+    }
     // * Day 2
     else if (QuestCheck.orderQuest == 15 || QuestCheck.orderQuest == 16 || QuestCheck.orderQuest == 17) {
-        Destroy(StalkerDay2);
         Destroy(Night2);
         npcObjectDayEnableDay2();
     }
@@ -53,6 +57,10 @@ public class NPCSwapController : MonoBehaviour {
         npcObjectDayEnabledNight3();
         truckCarEnable();
     }
+    // * หลังจากออกไปทำงานแล้ว ทำลาย stalker กับจดหมายออกไปเลย
+    else if (QuestCheck.orderQuest == 21){
+        Destroy(StalkerDay3);
+        Destroy(FlowerwithMail);
     }
     void truckCarEnable() {
         TruckCar.SetActive(true);
@@ -85,3 +93,4 @@ public class NPCSwapController : MonoBehaviour {
     }
     #endregion
     }
+}
