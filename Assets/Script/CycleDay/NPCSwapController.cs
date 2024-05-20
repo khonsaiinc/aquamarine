@@ -42,7 +42,7 @@ public class NPCSwapController : MonoBehaviour {
         truckCarDisable();
     }
     // *after walking into supermarket, destroy it || หลังออกไปทำงานแล้วให้ทำลาย stalker ออกไปเลย
-    else if (QuestCheck.orderQuest == 13) {
+    else if (QuestCheck.orderQuest == 13 || QuestCheck.orderQuest == 14) {
         Destroy(StalkerDay2);
     }
     // * Day 2
@@ -58,7 +58,7 @@ public class NPCSwapController : MonoBehaviour {
         truckCarEnable();
     }
     // * หลังจากออกไปทำงานแล้ว ทำลาย stalker กับจดหมายออกไปเลย
-    else if (QuestCheck.orderQuest == 21){
+    else if (QuestCheck.orderQuest == 21 || QuestCheck.orderQuest == 22){
         Destroy(StalkerDay3);
         Destroy(FlowerwithMail);
     }
