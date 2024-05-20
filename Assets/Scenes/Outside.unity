@@ -2662,8 +2662,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.000050008297, y: 0.00025001168, z: 0}
-    m_Extent: {x: 0.50005, y: 0.50025, z: 0}
+    m_Center: {x: -0.000050008297, y: -0.00029999018, z: 0}
+    m_Extent: {x: 0.50075, y: 0.5007, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -4536,8 +4536,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 38.930138, y: 0.16024995, z: 0}
-    m_Extent: {x: 28.806938, y: 2.26495, z: 0}
+    m_Center: {x: 38.930286, y: 0.16006684, z: 0}
+    m_Extent: {x: 28.806787, y: 2.2650669, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5301,8 +5301,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.000050008297, y: -0.000050008297, z: 0}
-    m_Extent: {x: 0.50005, y: 0.50095, z: 0}
+    m_Center: {x: 0.00025001168, y: 0, z: 0}
+    m_Extent: {x: 0.50025, y: 0.5008, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5699,7 +5699,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.20444374, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5710,7 +5710,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.408887, y: 1}
   m_EdgeRadius: 0
 --- !u!212 &2053681997
 SpriteRenderer:
@@ -5803,10 +5803,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 4.3529053, y: -0.5}
-      - {x: 4.3529053, y: 0.5}
-      - {x: -4.3529344, y: 0.4999707}
-      - {x: -4.3529053, y: -0.5}
+    - - {x: 4.3529034, y: -0.5}
+      - {x: 4.3529034, y: 0.5}
+      - {x: -7.912654, y: 0.4999707}
+      - {x: -7.912624, y: -0.5}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -6754,6 +6754,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: StalkerStop
       objectReference: {fileID: 0}
+    - target: {fileID: 4678621756390163331, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 4716423081999453214, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: afterTalking
       value: 
@@ -6993,6 +6997,10 @@ PrefabInstance:
     - target: {fileID: 8600654467211288145, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: interactIcon
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8625014825021396375, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8769326683217516099, guid: 6650f00afaa1e7e45b410a8e3a25bdd3, type: 3}
       propertyPath: m_FlipX
