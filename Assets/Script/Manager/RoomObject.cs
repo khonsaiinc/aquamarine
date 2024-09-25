@@ -16,20 +16,22 @@ public class RoomObject : MonoBehaviour {
             RadioEvent2Script();
         }
         else if (QuestCheck.orderQuest == 4 || QuestCheck.orderQuest == 5 || QuestCheck.orderQuest == 6 || QuestCheck.orderQuest == 7) {
-            DisableAllEvent();
-
+            Destroy(RadioEvent2);
         }
         else if (QuestCheck.orderQuest == 8) {
-            DisableAllEvent();
             RadioEvent8Script();
 
         }
         else if (QuestCheck.orderQuest == 10){
-            DisableAllEvent();
+            Destroy(RadioEvent8);
+            
         }  
         else if (QuestCheck.orderQuest == 11) {
-            DisableAllEvent();
             RadioEvent11Script();
+        }
+
+        else if (QuestCheck.orderQuest == 13){
+            Destroy(RadioEvent11);
         }
     }
 
@@ -45,11 +47,9 @@ public class RoomObject : MonoBehaviour {
     }
 
     void RadioEvent8Script(){
-        DestroyRadioEvent2Event();
         RadioEvent8.SetActive(true);
     }
     void RadioEvent11Script(){
-        DestroyRadioEvent8Event();
         RadioEvent11.SetActive(true);
     }
 

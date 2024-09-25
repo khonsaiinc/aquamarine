@@ -13,41 +13,60 @@ public class NPCSwapController : MonoBehaviour {
 
     [Header("Other object")]
     [SerializeField] GameObject lemonadeSellPeople;
+    [SerializeField] GameObject TruckCar;
+    [SerializeField] GameObject FlowerwithMail;
+
+    [Header("Stalker Day")]
+    [SerializeField] GameObject StalkerDay2;
+    [SerializeField] GameObject StalkerDay3;
 
     void Update() {
         checkquest();
     }
 
     void checkquest(){
-        // TODO need to swap npc people, change script, and swap all npc in day,night
+    // *Night 1
     if (QuestCheck.orderQuest == 0 ||QuestCheck.orderQuest == 1 || QuestCheck.orderQuest == 2 || QuestCheck.orderQuest == 3) {
         npcObjectDayEnabledNight1();
     }
+    // * Day 1
     else if (QuestCheck.orderQuest == 6 || QuestCheck.orderQuest == 7 || QuestCheck.orderQuest == 8) {
-        DisableAllNPCObjects();
+        Destroy(Night1);
         npcObjectDayEnabledDay1();
-        }
-    else if (QuestCheck.orderQuest == 10 || QuestCheck.orderQuest == 11 || QuestCheck.orderQuest == 12) {
-        DisableAllNPCObjects();
-        npcObjectDayEnabledNight2();
+        truckCarEnable();
     }
+    // * Night 2
+    else if (QuestCheck.orderQuest == 10 || QuestCheck.orderQuest == 11 || QuestCheck.orderQuest == 12) {
+        Destroy(Day1);
+        npcObjectDayEnabledNight2();
+        truckCarDisable();
+    }
+    // *after walking into supermarket, destroy it || หลังออกไปทำงานแล้วให้ทำลาย stalker ออกไปเลย
+    else if (QuestCheck.orderQuest == 13 || QuestCheck.orderQuest == 14) {
+        Destroy(StalkerDay2);
+    }
+    // * Day 2
     else if (QuestCheck.orderQuest == 15 || QuestCheck.orderQuest == 16 || QuestCheck.orderQuest == 17) {
-        DisableAllNPCObjects();
+        Destroy(Night2);
         npcObjectDayEnableDay2();
     }
+    // * Night 3
     else if (QuestCheck.orderQuest == 18 || QuestCheck.orderQuest == 19 || QuestCheck.orderQuest == 20 ||
     QuestCheck.orderQuest == 21 || QuestCheck.orderQuest == 22) {
-        DisableAllNPCObjects();
+        Destroy(Day2);
         npcObjectDayEnabledNight3();
+        truckCarEnable();
     }
+    // * หลังจากออกไปทำงานแล้ว ทำลาย stalker กับจดหมายออกไปเลย
+    else if (QuestCheck.orderQuest == 21 || QuestCheck.orderQuest == 22){
+        Destroy(StalkerDay3);
+        Destroy(FlowerwithMail);
     }
-    void DisableAllNPCObjects() {
-        npcObjectDisableDay1();
-        npcObjectDisableDay2();
-        npcObjectDisableNight1();
-        npcObjectDisableNight2();
-        npcObjectDisableNight3();
-        Debug.Log("npc object has reseted");
+    void truckCarEnable() {
+        TruckCar.SetActive(true);
+    }
+    void truckCarDisable() {
+        TruckCar.SetActive(false);
     }
 
     #region NPC Day Time (include disable/enable)
@@ -57,14 +76,6 @@ public class NPCSwapController : MonoBehaviour {
 
     void npcObjectDayEnableDay2() {
         Day2.SetActive(true);
-    }
-
-    void npcObjectDisableDay1() {
-        Day1.SetActive(false);
-    }
-
-    void npcObjectDisableDay2() {
-        Day2.SetActive(false);
     }
     #endregion
 
@@ -80,20 +91,6 @@ public class NPCSwapController : MonoBehaviour {
     void npcObjectDayEnabledNight3() {
         Night3.SetActive(true);
     }
-
-    void npcObjectDisableNight1() {
-        Night1.SetActive(false);
-        Debug.Log("Night 1 NPC object disabled");
-    }
-
-    void npcObjectDisableNight2() {
-        Night2.SetActive(false);
-        Debug.Log("Night 2 NPC object disabled");
-    }
-
-    void npcObjectDisableNight3() {
-        Night3.SetActive(false);
-        Debug.Log("Night 3 NPC object disabled");
-    }
     #endregion
     }
+}
